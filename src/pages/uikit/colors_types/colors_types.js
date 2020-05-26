@@ -1,0 +1,1 @@
+import './js/main_colors_types'
