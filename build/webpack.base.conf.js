@@ -5,9 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
 const PATHS = {
-    src: path.join(__dirname, './src'),
-    dist: path.join(__dirname, './dist'),
-    assets: 'assets/'
+    src: path.join(__dirname, '../src'),
+    dist: path.join(__dirname, '../public'),
+    assets: 'static/'
 }
 
 module.exports = {
@@ -21,9 +21,22 @@ module.exports = {
     },
 
     output: {
-        filename: `${PATHS.assets}js/[name].js`,
+        filename: `${PATHS.assets}js/[name].[hash].js`,
         path: PATHS.dist,
         publicPath: '/'
+    },
+
+    optimization:{
+        splitChunks:{
+            cacheGroups:{
+                vendor: {
+                    name: 'vendors',
+                    test: /node_modules/,
+                    chunks: 'all',
+                    enforce: true
+                }
+            }
+        }
     },
 
     module: {
@@ -58,13 +71,12 @@ module.exports = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].css`
+            filename: `${PATHS.assets}css/[name].[hash].css`
         }),
 
         new HtmlWebpackPlugin({
-            hash: false,
             template: `${PATHS.src}/index.html`,
-            filename:'./index.html'
+            filename:'./index.html',
         }),
 
         new CopyWebpackPlugin({
