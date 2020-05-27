@@ -1,2 +1,2 @@
-import './js/main_cards'
-import './cards.scss'
+let add = (a,b) => a + b
+console.log(add(2,6))
