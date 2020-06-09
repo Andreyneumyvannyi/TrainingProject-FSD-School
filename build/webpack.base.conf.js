@@ -11,7 +11,7 @@ const PATHS = {
 };
 
 // const PAGES_DIR = PATHS.src
-const PAGES_DIR = `${PATHS.src}/pug/pages/`;
+const PAGES_DIR = `${PATHS.src}/pages/pug`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter((fileName) => fileName.endsWith(".pug"));

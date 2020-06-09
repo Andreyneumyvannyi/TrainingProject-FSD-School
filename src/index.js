@@ -2,7 +2,4 @@
 // import './'
 
 // SCSS
-import './scss/style.scss'
-
-
-
+import "./style.scss";
