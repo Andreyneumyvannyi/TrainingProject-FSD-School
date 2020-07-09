@@ -1,0 +1,53 @@
+@import "./src/modules/ui-logo/ui-logo";
+
+.text-field {
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 320px;
+  height: 44px;
+  padding-left: 15px;
+  transition: all 0.2s linear;
+
+  &::placeholder {
+    font-family: $Montserrat;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkShade25;
+    transition: all 0.2s linear;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    &::placeholder {
+      color: $darkShade100;
+    }
+  }
+}
+
+.input-description {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  margin-bottom: 5px;
+
+  &__name {
+    font-family: $Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $darkShade100;
+  }
+
+  &__state {
+    font-family: $Montserrat;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $darkShade50;
+  }
+}

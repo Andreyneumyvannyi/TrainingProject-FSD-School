@@ -1,0 +1,7 @@
+//- colors_type
+mixin palette(name, hash, mod)
+	.palette
+		div(class=`palette__color palette__color--${mod}`)
+		.palette__description
+			.palette__name=name
+			.palette__hash=hash
