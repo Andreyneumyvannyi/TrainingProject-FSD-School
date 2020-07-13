@@ -1,7 +1,32 @@
-//- colors_type
-mixin palette(name, hash, mod)
-	.palette
-		div(class=`palette__color palette__color--${mod}`)
-		.palette__description
-			.palette__name=name
-			.palette__hash=hash
+//- Colors_type
+		===========
+
+mixin color-palette(mod)
+	div(class=`color-palette__color color-palette__color--${mod}`)
+
+mixin color-palette__description(name, hash)
+	.color-palette__description
+		.color-palette__name=name
+		.color-palette__hash=hash
+
+mixin color-text(mod, name, description)
+	div(class=`color-text__name color-text__name_${mod}`)=name
+	div(class=`color-text__description color-text__description_${mod}`)=description
+
+
+
+//- Form-elements
+		=============
+mixin form-text-field(placeholder, mod)
+	if mod
+		input(class=`form-text-field form-text-field_${mod}` placeholder= placeholder)
+	else
+		input.form-text-field(placeholder= placeholder)
+
+mixin form-description(name, state)
+	.form-description
+		.form-description__name=name
+		.form-description__state=state
+	
+
+

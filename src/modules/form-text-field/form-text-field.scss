@@ -1,0 +1,25 @@
+.form-text-field {
+  background: #ffffff;
+  border: 1px solid $darkShade25;
+  border-radius: 4px;
+  padding: 13px 15px;
+  width: 320px;
+  height: 44px;
+  transition: all 0.2s linear;
+
+  &::placeholder {
+    font-family: $Montserrat;
+    font-size: 14px;
+    color: $darkShade25;
+    transition: all 0.2s linear;
+    line-height: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $darkShade50;
+    &::placeholder {
+      color: $darkShade75;
+    }
+  }
+}

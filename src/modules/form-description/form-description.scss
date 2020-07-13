@@ -1,0 +1,17 @@
+.form-description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-family: $Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  &__name {
+    font-weight: bold;
+    color: $darkShade100;
+  }
+
+  &__state {
+    color: $darkShade50;
+  }
+}

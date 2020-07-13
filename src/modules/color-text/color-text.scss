@@ -1,0 +1,73 @@
+.color-text {
+  width: 434px;
+
+  &__name {
+    font-family: $Montserrat;
+    color: $darkShade25;
+    width: 37px;
+    text-align: right;
+    margin-right: 30px;
+
+    &_h1 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &_h2 {
+      font-size: 19px;
+      line-height: 23px;
+    }
+
+    &_h3 {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &_body {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__description {
+    font-family: $Quicksand;
+
+    &_h1 {
+      width: 336px;
+      height: 60px;
+      color: $darkShade100;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &_h2 {
+      width: 282px;
+      height: 48px;
+      color: $darkShade100;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+    }
+
+    &_h3 {
+      width: 186px;
+      height: 15px;
+      font-family: $Montserrat;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+    }
+
+    &_body {
+      width: 301px;
+      height: 48px;
+      font-family: $Montserrat;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: $darkShade75;
+    }
+  }
+}

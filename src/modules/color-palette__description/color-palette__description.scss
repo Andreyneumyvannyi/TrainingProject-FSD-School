@@ -1,0 +1,23 @@
+.color-palette {
+  &__description {
+    display: flex;
+    flex-direction: column;
+    width: 159px;
+    height: 58px;
+  }
+
+  &__name {
+    font-family: $Quicksand;
+    font-weight: 700;
+    color: $darkShade100;
+    font-size: 19px;
+    line-height: 29px;
+  }
+
+  &__hash {
+    font-family: $Quicksand;
+    font-size: 19px;
+    line-height: 29px;
+    color: $darkShade100;
+  }
+}

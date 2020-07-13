@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+	head
+		title FormElements
+	body
+		include ../../modules/ui-logo/ui-logo
+		include ../../modules/utils/pug/mixins
+
+		.container
+			.wrapper-input
+				+form-description("Text Field", "Default")
+				+form-text-field("Email")
+			.wrapper-input
+				+form-description("Text Field", "Hover/ Focus")
+				+form-text-field("This is pretty awesome", "hover")
+			.wrapper-input
+				+form-description("Dropdown", "Default")
+				include ../../modules/form-dropdown/form-dropdown
