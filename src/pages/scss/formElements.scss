@@ -1,10 +1,25 @@
-@import "./src/modules/ui-logo/ui-logo";
-@import "./src/modules/form-description/form-description";
-@import "./src/modules/form-text-field/form-text-field";
-@import "./src/modules/form-text-field/form-text-field_hover";
-@import "./src/modules/form-dropdown/form-dropdown";
+@import "./src/modules/uiKit/ui-logo/ui-logo";
+@import "./src/modules/uiKit/form-description/form-description";
+@import "./src/modules/uiKit/form-text-field/form-text-field";
+@import "./src/modules/uiKit/form-text-field/form-text-field_hover";
+@import "./src/modules/uiKit/form-dropdown/form-dropdown";
+@import "./src/modules/uiKit/form-date-dropdown/form-date-dropdown";
+@import "./src/modules/uiKit/form-filter-date-dropdown/form-filter-date-dropdown";
+@import "./src/modules/uiKit/form-subscription-text-field/form-subscription-text-field";
 
-.wrapper-input {
+.wrapper-text-field,
+.wrapper-dropbox {
   width: 320px;
   margin-bottom: 20px;
+}
+
+.wrapper-date-dropdown {
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.wrapper-filter-date-dropdown {
+  margin-top: 40px;
 }

@@ -1,0 +1,40 @@
+.form-dropdown {
+  width: 320px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid $darkShade25;
+  border-radius: 4px;
+  padding: 8px 15px;
+  color: $darkShade25;
+
+  &__text {
+    width: 100%;
+    color: $darkShade75;
+    font-family: $Montserrat;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__arrow {
+    position: relative;
+    top: -2px;
+    padding: 10px;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    &_down {
+      width: 5px;
+      height: 5px;
+      border: solid $darkShade50;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+    }
+  }
+}

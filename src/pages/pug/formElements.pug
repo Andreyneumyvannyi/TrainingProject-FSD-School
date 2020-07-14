@@ -1,18 +1,33 @@
-doctype html
-html(lang='en')
-	head
-		title FormElements
-	body
-		include ../../modules/ui-logo/ui-logo
-		include ../../modules/utils/pug/mixins
+extends ../layout/main
 
-		.container
-			.wrapper-input
-				+form-description("Text Field", "Default")
-				+form-text-field("Email")
-			.wrapper-input
-				+form-description("Text Field", "Hover/ Focus")
-				+form-text-field("This is pretty awesome", "hover")
-			.wrapper-input
-				+form-description("Dropdown", "Default")
-				include ../../modules/form-dropdown/form-dropdown
+block title
+	| FormElements
+
+block content 	
+	.container
+		.wrapper-text-field
+			+form-description("Text Field", "Default")
+			include ../../modules/uiKit/form-text-field/form-text-field
+		.wrapper-text-field
+			+form-description("Text Field", "Hover/ Focus")
+			+form-text-field("This is pretty awesome", "hover")
+		.wrapper-dropbox
+			+form-description("Dropdown", "Default")
+			include ../../modules/uiKit/form-dropdown/form-dropdown
+		.wrapper-text-field
+			+form-description("masked text field", "Default")
+			+form-text-field("ДД.ММ.ГГГГ")
+		.wrapper-date-dropdown
+			.wrapper-date-dropdown__inner
+				+form-description("date Dropdown")
+				+form-date-dropdown("ДД.ММ.ГГГГ")
+			.wrapper-date-dropdown__inner
+				+form-description("date Dropdown")
+				+form-date-dropdown("19.08.2019")
+		.wrapper-filter-date-dropdown
+			+form-description("filter date dropdown")
+			include ../../modules/uiKit/form-filter-date-dropdown/form-filter-date-dropdown
+		.wrapper-filter-date-dropdown
+			+form-description("subscription text field")
+			include ../../modules/uiKit/form-subscription-text-field/form-subscription-text-field
+			

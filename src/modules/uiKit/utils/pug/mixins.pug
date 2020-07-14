@@ -19,14 +19,20 @@ mixin color-text(mod, name, description)
 		=============
 mixin form-text-field(placeholder, mod)
 	if mod
-		input(class=`form-text-field form-text-field_${mod}` placeholder= placeholder)
+		input(class=`form-text-field form-text-field_${mod}` type="email" placeholder= placeholder)
 	else
 		input.form-text-field(placeholder= placeholder)
 
 mixin form-description(name, state)
 	.form-description
-		.form-description__name=name
-		.form-description__state=state
+		if state
+			.form-description__name=name
+			.form-description__state=state
+		else
+			.form-description__name=name
 	
-
+mixin form-date-dropdown(text)
+	.form-date-dropdown
+		.form-date-dropdown__text=text
+		button.form-date-dropdown__arrow.form-date-dropdown__arrow_down
 

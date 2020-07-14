@@ -1,41 +1,39 @@
-doctype html
-html(lang='en')
-	head
-		title ColorsType
-	body
-		include ../../modules/ui-logo/ui-logo
-		include ../../modules/utils/pug/mixins
+extends ../layout/main
 
-		.container
-			.colors-type-wrapper
-				.color-palette
-					.color-palette-wrapper
-						+color-palette('100')
-						+color-palette__description('Dark Shade 100%', '#1F2041')
-					.color-palette-wrapper
-						+color-palette('75')
-						+color-palette__description('Dark Shade 75%', '#1F2041')
-					.color-palette-wrapper
-						+color-palette('50')
-						+color-palette__description('Dark Shade 50%', '#1F2041')
-					.color-palette-wrapper
-						+color-palette('25')
-						+color-palette__description('Dark Shade 25%', '#1F2041')
-					.color-palette-wrapper
-						+color-palette('5')
-						+color-palette__description('Dark Shade 5%', '#1F2041')
-					.color-palette-wrapper
-						+color-palette('purple')
-						+color-palette__description('Purple', '#BC9CFF')
-					.color-palette-wrapper
-						+color-palette('green')
-						+color-palette__description('Green', '#6FCF97')
-				.color-text
-					.color-text-wrapper
-						+color-text("h1","H1", "This one is the sub-section or widget title")
-					.color-text-wrapper
-						+color-text("h2", "H2", "Next one is the item title inside widgets")
-					.color-text-wrapper
-						+color-text("h3", "H3", "This is a label or CTA text")
-					.color-text-wrapper
-						+color-text("body", "Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+block title
+	| colorsType
+
+block content
+	.container
+		.colors-type-wrapper
+			.color-palette
+				.color-palette-wrapper
+					+color-palette('100')
+					+color-palette__description('Dark Shade 100%', '#1F2041')
+				.color-palette-wrapper
+					+color-palette('75')
+					+color-palette__description('Dark Shade 75%', '#1F2041')
+				.color-palette-wrapper
+					+color-palette('50')
+					+color-palette__description('Dark Shade 50%', '#1F2041')
+				.color-palette-wrapper
+					+color-palette('25')
+					+color-palette__description('Dark Shade 25%', '#1F2041')
+				.color-palette-wrapper
+					+color-palette('5')
+					+color-palette__description('Dark Shade 5%', '#1F2041')
+				.color-palette-wrapper
+					+color-palette('purple')
+					+color-palette__description('Purple', '#BC9CFF')
+				.color-palette-wrapper
+					+color-palette('green')
+					+color-palette__description('Green', '#6FCF97')
+			.color-text
+				.color-text-wrapper
+					+color-text("h1","H1", "This one is the sub-section or widget title")
+				.color-text-wrapper
+					+color-text("h2", "H2", "Next one is the item title inside widgets")
+				.color-text-wrapper
+					+color-text("h3", "H3", "This is a label or CTA text")
+				.color-text-wrapper
+					+color-text("body", "Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")

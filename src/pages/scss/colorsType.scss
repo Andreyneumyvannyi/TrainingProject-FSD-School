@@ -1,7 +1,7 @@
-@import "./src/modules/ui-logo/ui-logo";
-@import "./src/modules/color-palette/color-palette";
-@import "./src/modules/color-palette__description/color-palette__description";
-@import "./src/modules/color-text/color-text";
+@import "./src/modules/uiKit/ui-logo/ui-logo";
+@import "./src/modules/uiKit/color-palette/color-palette";
+@import "./src/modules/uiKit/color-palette__description/color-palette__description";
+@import "./src/modules/uiKit/color-text/color-text";
 
 .colors-type-wrapper {
   display: flex;
