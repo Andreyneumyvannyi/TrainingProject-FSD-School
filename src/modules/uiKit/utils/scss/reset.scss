@@ -167,6 +167,12 @@ button,
 input {
   line-height: normal;
 }
+button {
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 // Table
 table {

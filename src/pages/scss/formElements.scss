@@ -6,9 +6,13 @@
 @import "./src/modules/uiKit/form-date-dropdown/form-date-dropdown";
 @import "./src/modules/uiKit/form-filter-date-dropdown/form-filter-date-dropdown";
 @import "./src/modules/uiKit/form-subscription-text-field/form-subscription-text-field";
+@import "./src/modules/uiKit/form-room-amenities-dropdown/form-room-amenities-dropdown-default";
+@import "./src/modules/uiKit/form-room-amenities-dropdown/form-room-amenities-dropdown-expanded";
+@import "./src/modules/uiKit/form-expandable-checkbox-list/form-expandable-checkbox-list-default";
+@import "./src/modules/uiKit/form-expandable-checkbox-list/form-expandable-checkbox-list-expanded";
 
 .wrapper-text-field,
-.wrapper-dropbox {
+.wrapper-dropdown {
   width: 320px;
   margin-bottom: 20px;
 }
@@ -21,5 +25,24 @@
 }
 
 .wrapper-filter-date-dropdown {
+  width: 320px;
   margin-top: 40px;
+}
+
+.wrapper-form-room-amenities-dropdown-default {
+  width: 266px;
+  margin-top: 100px;
+}
+
+.wrapper-form-room-amenities-dropdown-expanded {
+  width: 266px;
+  margin-top: 20px;
+}
+
+.wrapper-form-expandable-checkbox-list-default {
+  margin-top: 40px;
+}
+
+.wrapper-form-expandable-checkbox-list-expanded {
+  margin-top: 52px;
 }

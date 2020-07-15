@@ -5,19 +5,13 @@
   border: 1px solid $darkShade25;
   border-radius: 4px;
   padding: 10px 15px;
-  transition: all 0.2s linear;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s linear;
 
   &__arrow {
-    position: relative;
     padding: 0px;
-    border: none;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
   }
 
   &__text {

@@ -1,0 +1,148 @@
+.form-room-amenities-dropdown-expanded {
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  &__enter {
+    width: 266px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid $darkShade50;
+    border-radius: 4px 4px 0 0;
+    padding: 8px 15px;
+    color: $darkShade25;
+  }
+
+  &__text {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: center;
+    color: $darkShade75;
+    font-family: $Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__arrow {
+    position: relative;
+    top: -2px;
+    padding: 10px;
+    cursor: pointer;
+
+    &_down {
+      align-self: center;
+      width: 5px;
+      height: 5px;
+      border: solid $darkShade50;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+      transform: rotate(45deg);
+    }
+
+    &_gray {
+      border: 1px solid $darkShade75;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  &__choice {
+    &_activated {
+      display: block;
+    }
+
+    display: none;
+    width: 266px;
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid $darkShade50;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 7px 7px 7px 15px;
+  }
+
+  &__criterion {
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-name {
+      font-family: $Montserrat;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $darkShade100;
+    }
+
+    &-quantity {
+      display: flex;
+      align-items: center;
+
+      &-result {
+        margin-right: 5px;
+        margin-left: 5px;
+        font-family: $Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $darkShade100;
+      }
+
+      &-minus {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $darkShade25;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          content: "-";
+          position: absolute;
+          display: inline-block;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: $Montserrat;
+          font-size: 18px;
+          line-height: 22px;
+          color: $darkShade25;
+        }
+
+        &_deactivated {
+          opacity: 0.38;
+        }
+      }
+      &-plus {
+        border-radius: 50%;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $darkShade25;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          content: "+";
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: $Montserrat;
+          font-size: 18px;
+          line-height: 22px;
+          color: $darkShade25;
+        }
+      }
+    }
+  }
+}

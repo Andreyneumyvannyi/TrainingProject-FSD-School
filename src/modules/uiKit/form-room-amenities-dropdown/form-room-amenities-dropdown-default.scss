@@ -1,16 +1,20 @@
-.form-filter-date-dropdown {
-  width: 320px;
+.form-room-amenities-dropdown-default {
+  width: 266px;
   height: 44px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
   border: 1px solid $darkShade25;
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
   padding: 8px 15px;
   color: $darkShade25;
 
   &__text {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     align-self: center;
     color: $darkShade75;
     font-family: $Montserrat;
@@ -21,6 +25,7 @@
   &__arrow {
     position: relative;
     top: -2px;
+    padding: 10px;
 
     &_down {
       align-self: center;
@@ -30,6 +35,11 @@
       border-width: 0 2px 2px 0;
       padding: 3px;
       transform: rotate(45deg);
+    }
+
+    &_gray {
+      border: solid $darkShade75;
+      border-width: 0 2px 2px 0;
     }
   }
 }
