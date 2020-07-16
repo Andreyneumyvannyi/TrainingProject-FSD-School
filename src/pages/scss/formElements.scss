@@ -10,7 +10,16 @@
 @import "./src/modules/uiKit/form-room-amenities-dropdown/form-room-amenities-dropdown-expanded";
 @import "./src/modules/uiKit/form-expandable-checkbox-list/form-expandable-checkbox-list-default";
 @import "./src/modules/uiKit/form-expandable-checkbox-list/form-expandable-checkbox-list-expanded";
+@import "./src/modules/uiKit/dignity/dignity";
+@import "./src/modules/uiKit/form-checkbox-buttons/form-checkbox-buttons";
+@import "./src/modules/uiKit/form-radio-buttons/form-radio-buttons";
+@import "./src/modules/uiKit/form-toggle/form-toggle";
+@import "./src/modules/uiKit/form-like-button/form-like-button";
 
+.wrapper-form {
+  display: flex;
+  justify-content: space-between;
+}
 .wrapper-text-field,
 .wrapper-dropdown {
   width: 320px;
@@ -45,4 +54,20 @@
 
 .wrapper-form-expandable-checkbox-list-expanded {
   margin-top: 52px;
+}
+
+.wrapper-dignity-comfort {
+  margin-top: 100px;
+}
+
+.wrapper-dignity-convenience {
+  margin-top: 20px;
+}
+
+.wrapper-form-radio-buttons {
+  margin-top: 20px;
+}
+
+.wrapper-form-toggle {
+  margin-top: 37px;
 }

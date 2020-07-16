@@ -1,0 +1,28 @@
+.dignity {
+  display: flex;
+  width: 280px;
+  align-items: center;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  padding: 5px 5px 17px 5px;
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__description {
+    &-title {
+      font-family: $Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 20px;
+      color: $darkShade75;
+    }
+
+    &-text {
+      font-family: $Montserrat;
+      font-size: 14px;
+      line-height: 20px;
+      color: $darkShade75;
+    }
+  }
+}

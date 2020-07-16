@@ -36,3 +36,10 @@ mixin form-date-dropdown(text)
 		.form-date-dropdown__text=text
 		button.form-date-dropdown__arrow.form-date-dropdown__arrow_down
 
+mixin dignity(imgPath, title, text)
+	.dignity
+		.dignity__icon
+			img(src=`${imgPath}`, alt="icon")
+		.dignity__description
+			.dignity__description-title=title
+			.dignity__description-text=text

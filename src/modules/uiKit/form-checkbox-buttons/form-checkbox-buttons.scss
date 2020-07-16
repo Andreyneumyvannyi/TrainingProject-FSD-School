@@ -1,6 +1,6 @@
-.form-expandable-checkbox-list-expanded {
+.form-checkbox-buttons {
   &__enter {
-    width: 248px;
+    width: 225px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -13,36 +13,15 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-
     text-transform: uppercase;
     color: $darkShade100;
   }
 
-  &__arrow {
-    position: relative;
-    top: 2px;
-
-    &_up {
-      align-self: center;
-      width: 5px;
-      height: 5px;
-      border: solid $darkShade50;
-      border-width: 0 2px 2px 0;
-      padding: 3px;
-      transform: rotate(-135deg);
-    }
-  }
-
   &__choice {
-    width: 248px;
-    opacity: 0;
+    width: 200px;
     display: flex;
     flex-direction: column;
     margin-top: 18px;
-
-    &_activated {
-      opacity: 1;
-    }
 
     &-label {
       display: flex;
