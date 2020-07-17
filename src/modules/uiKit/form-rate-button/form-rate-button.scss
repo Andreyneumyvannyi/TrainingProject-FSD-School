@@ -1,0 +1,15 @@
+.form-rate-button-wrapper {
+  display: flex;
+}
+
+.form-rate-button {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  &__star {
+    cursor: pointer;
+  }
+  &__star:not(:last-child) {
+    margin-right: 5px;
+  }
+}

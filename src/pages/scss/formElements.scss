@@ -15,6 +15,9 @@
 @import "./src/modules/uiKit/form-radio-buttons/form-radio-buttons";
 @import "./src/modules/uiKit/form-toggle/form-toggle";
 @import "./src/modules/uiKit/form-like-button/form-like-button";
+@import "./src/modules/uiKit/form-rate-button/form-rate-button";
+@import "./src/modules/uiKit/form-dropdown-expanded-apply/form-dropdown-expanded-apply";
+@import "./src/modules/uiKit/form-rich-checkbox-buttons/form-rich-checkbox-buttons";
 
 .wrapper-form {
   display: flex;
@@ -70,4 +73,20 @@
 
 .wrapper-form-toggle {
   margin-top: 37px;
+}
+
+.wrapper-form-like-button {
+  margin-top: 41px;
+}
+
+.wrapper-form-rate-button {
+  margin-top: 40px;
+}
+
+.wrapper-form-dropdown-expanded-apply {
+  margin-top: 225px;
+}
+
+.wrapper-form-rich-checkbox-buttons {
+  margin-top: 90px;
 }
