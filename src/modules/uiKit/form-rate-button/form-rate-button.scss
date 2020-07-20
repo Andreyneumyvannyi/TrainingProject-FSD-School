@@ -1,15 +1,28 @@
-.form-rate-button-wrapper {
+.rating-wrapper {
   display: flex;
 }
+.rating {
+  &__stars {
+    display: flex;
+    margin-right: 10px;
+    &-icon {
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+      background-image: url("/assets/img/uiKit/star.svg");
+      background-repeat: no-repeat;
+      transition: all 0.2s linear;
+      &_active {
+        background-image: url("/assets/img/uiKit/star_active.svg");
+      }
+    }
 
-.form-rate-button {
-  display: flex;
-  align-items: center;
-  margin-right: 15px;
-  &__star {
-    cursor: pointer;
-  }
-  &__star:not(:last-child) {
-    margin-right: 5px;
+    &-icon:hover {
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+      background-image: url("/assets/img/uiKit/star_active.svg");
+      background-repeat: no-repeat;
+    }
   }
 }

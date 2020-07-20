@@ -3,6 +3,7 @@ const fs = require("fs");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 const PATHS = {
   src: path.join(__dirname, "../src"),
@@ -92,10 +93,33 @@ module.exports = {
           },
         ],
       },
+      {
+        // css
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: { sourceMap: true },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              config: { path: `./postcss.config.js` },
+            },
+          },
+        ],
+      },
     ],
   },
 
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
