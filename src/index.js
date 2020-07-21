@@ -1,8 +1,10 @@
-// JS
-//import "./form-range-slider.js"
-import $ from "jquery";
+//import "./"
 
-$(".js-range-slider").ionRangeSlider();
+// JS
+import "./modules/uiKit/form-range-slider/form-range-slider.js";
+
 // SCSS
-import "ion-rangeslider/css/ion.rangeSlider.min.css";
 import "./style.scss";
+
+//CSS
+import "nouislider/distribute/nouislider.min.css";

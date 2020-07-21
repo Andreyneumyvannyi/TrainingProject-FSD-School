@@ -30,6 +30,12 @@ module.exports = {
     path: PATHS.dist,
     publicPath: "/",
   },
+  resolve: {
+    alias: {
+      jquery: "jquery/src/jquery",
+    },
+  },
+
   optimization: {
     splitChunks: {
       cacheGroups: {

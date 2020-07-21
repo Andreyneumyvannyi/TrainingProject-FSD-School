@@ -19,15 +19,30 @@
 @import "./src/modules/uiKit/form-dropdown-expanded-apply/form-dropdown-expanded-apply";
 @import "./src/modules/uiKit/form-rich-checkbox-buttons/form-rich-checkbox-buttons";
 @import "./src/modules/uiKit/form-range-slider/form-range-slider";
+@import "./src/modules/uiKit/form-button/form-button";
+@import "./src/modules/uiKit/form-pagination/form-pagination";
+@import "./src/modules/uiKit/form-dropdown-expanded-clear/form-dropdown-expanded-clear";
 
 .wrapper-form {
   display: flex;
-  justify-content: space-between;
 }
+
 .wrapper-text-field,
 .wrapper-dropdown {
-  width: 320px;
+  width: 325px;
   margin-bottom: 20px;
+}
+
+.wrapper-form-column-one {
+  max-width: 320px;
+  margin-right: 126px;
+}
+.wrapper-form-column-two {
+  max-width: 320px;
+  margin-right: 76px;
+}
+.wrapper-form-column-three {
+  max-width: 320px;
 }
 
 .wrapper-date-dropdown {
@@ -90,4 +105,19 @@
 
 .wrapper-form-rich-checkbox-buttons {
   margin-top: 90px;
+}
+
+.wrapper-form-range-slider {
+  width: 300px;
+}
+.wrapper-form-button {
+  margin-top: 41px;
+}
+
+.wrapper-form-pagination {
+  margin-top: 40px;
+}
+
+.wrapper-form-dropdown-expanded-clear {
+  margin-top: 230px;
 }
