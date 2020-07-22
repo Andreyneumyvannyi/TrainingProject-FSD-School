@@ -1,9 +1,0 @@
-.form-text-field {
-  &_hover {
-    border: 1px solid $darkShade50;
-    &::placeholder {
-      color: $darkShade75;
-      line-height: 24px;
-    }
-  }
-}

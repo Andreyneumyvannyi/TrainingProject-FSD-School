@@ -17,11 +17,7 @@ mixin color-text(mod, name, description)
 
 //- Form-elements
 		=============
-mixin form-text-field(placeholder, mod)
-	if mod
-		input(class=`form-text-field form-text-field_${mod}` type="email" placeholder= placeholder)
-	else
-		input.form-text-field(placeholder= placeholder)
+
 
 mixin form-description(name, state)
 	.form-description

@@ -1,84 +1,21 @@
-extends ../layout/main
+extends ../layout/layout-form-elements
 
 block title
-	| FormElements
+  | FormElements
 
-block content 	
-	.container
-		.wrapper-form
-			
-			//- One Column
-					===============
-			.wrapper-form-column-one
-				.wrapper-text-field
-					+form-description("Text Field", "Default")
-					include ../../modules/uiKit/form-text-field/form-text-field
-				.wrapper-text-field
-					+form-description("Text Field", "Hover/ Focus")
-					+form-text-field("This is pretty awesome", "hover")
-				.wrapper-dropdown
-					+form-description("Dropdown", "Default")
-					include ../../modules/uiKit/form-dropdown/form-dropdown
-				.wrapper-text-field
-					+form-description("masked text field", "Default")
-					+form-text-field("ДД.ММ.ГГГГ")
-				.wrapper-date-dropdown
-					.wrapper-date-dropdown__inner
-						+form-description("date Dropdown")
-						+form-date-dropdown("ДД.ММ.ГГГГ")
-					.wrapper-date-dropdown__inner
-						+form-description("date Dropdown")
-						+form-date-dropdown("19.08.2019")
-				.wrapper-filter-date-dropdown
-					+form-description("filter date dropdown")
-					include ../../modules/uiKit/form-filter-date-dropdown/form-filter-date-dropdown
-				.wrapper-filter-date-dropdown
-					+form-description("subscription text field")
-					include ../../modules/uiKit/form-subscription-text-field/form-subscription-text-field
-				.wrapper-form-room-amenities-dropdown-default
-					+form-description("dropdown", "Default")
-					include ../../modules/uiKit/form-room-amenities-dropdown/form-room-amenities-dropdown-default
-				.wrapper-form-room-amenities-dropdown-expanded
-					+form-description("dropdown", "expanded")
-					include ../../modules/uiKit/form-room-amenities-dropdown/form-room-amenities-dropdown-expanded
-				.wrapper-form-expandable-checkbox-list-default
-					include ../../modules/uiKit/form-expandable-checkbox-list/form-expandable-checkbox-list-default
-				.wrapper-form-expandable-checkbox-list-expanded
-					include ../../modules/uiKit/form-expandable-checkbox-list/form-expandable-checkbox-list-expanded
-				.wrapper-dignity-comfort
-					+dignity("assets/img/uiKit/dignity_emoticon.svg", "Комфорт", "Шумопоглощающие стены")
-				.wrapper-dignity-convenience
-					+dignity("assets/img/uiKit/dignity_city.svg", "Удобство", "Окно в каждой из спален")
-			
-			//- Two Column
-					===============
-			.wrapper-form-column-two
-				.wrapper-form-checkbox-buttons
-					include ../../modules/uiKit/form-checkbox-buttons/form-checkbox-buttons
-				.wrapper-form-radio-buttons
-					include ../../modules/uiKit/form-radio-buttons/form-radio-buttons
-				.wrapper-form-toggle
-					include ../../modules/uiKit/form-toggle/form-toggle
-				.wrapper-form-like-button
-					include ../../modules/uiKit/form-like-button/form-like-button
-				.wrapper-form-rate-button
-					include ../../modules/uiKit/form-rate-button/form-rate-button
-				.wrapper-form-dropdown-expanded-apply
-					+form-description("dropdown")
-					include ../../modules/uiKit/form-dropdown-expanded-apply/form-dropdown-expanded-apply
-				.wrapper-form-rich-checkbox-buttons
-					include ../../modules/uiKit/form-rich-checkbox-buttons/form-rich-checkbox-buttons
-
-
-			//- Three Column
-					===============
-			.wrapper-form-column-three
-				.wrapper-form-range-slider
-					include ../../modules/uiKit/form-range-slider/form-range-slider
-				.wrapper-form-button
-					include ../../modules/uiKit/form-button/form-button
-				.wrapper-form-pagination
-					include ../../modules/uiKit/form-pagination/form-pagination
-				.wrapper-form-dropdown-expanded-clear
-					+form-description("dropdown")
-					include ../../modules/uiKit/form-dropdown-expanded-clear/form-dropdown-expanded-clear
+block content
+  .wrapper-logo-gray
+    include ../../components/logo/logo-gray
+  .container-form-elements
+    .wrapper-form-elements
+      .wrapper-form-elements__column
+        .wrapper-text-field-email
+          include ../../components/text-field/text-field-email
+        .wrapper-text-field-hover
+          include ../../components/text-field/text-field-hover
+        .wrapper-text-field-masked
+          include ../../components/text-field/text-field-masked
+        .wrapper-text-field-subscription
+          include ../../components/text-field/text-field-subscription
+      .wrapper-form-elements__column
+      .wrapper-form-elements__column

@@ -1,123 +1,21 @@
-@import "./src/modules/uiKit/ui-logo/ui-logo";
-@import "./src/modules/uiKit/form-description/form-description";
-@import "./src/modules/uiKit/form-text-field/form-text-field";
-@import "./src/modules/uiKit/form-text-field/form-text-field_hover";
-@import "./src/modules/uiKit/form-dropdown/form-dropdown";
-@import "./src/modules/uiKit/form-date-dropdown/form-date-dropdown";
-@import "./src/modules/uiKit/form-filter-date-dropdown/form-filter-date-dropdown";
-@import "./src/modules/uiKit/form-subscription-text-field/form-subscription-text-field";
-@import "./src/modules/uiKit/form-room-amenities-dropdown/form-room-amenities-dropdown-default";
-@import "./src/modules/uiKit/form-room-amenities-dropdown/form-room-amenities-dropdown-expanded";
-@import "./src/modules/uiKit/form-expandable-checkbox-list/form-expandable-checkbox-list-default";
-@import "./src/modules/uiKit/form-expandable-checkbox-list/form-expandable-checkbox-list-expanded";
-@import "./src/modules/uiKit/dignity/dignity";
-@import "./src/modules/uiKit/form-checkbox-buttons/form-checkbox-buttons";
-@import "./src/modules/uiKit/form-radio-buttons/form-radio-buttons";
-@import "./src/modules/uiKit/form-toggle/form-toggle";
-@import "./src/modules/uiKit/form-like-button/form-like-button";
-@import "./src/modules/uiKit/form-rate-button/form-rate-button";
-@import "./src/modules/uiKit/form-dropdown-expanded-apply/form-dropdown-expanded-apply";
-@import "./src/modules/uiKit/form-rich-checkbox-buttons/form-rich-checkbox-buttons";
-@import "./src/modules/uiKit/form-range-slider/form-range-slider";
-@import "./src/modules/uiKit/form-button/form-button";
-@import "./src/modules/uiKit/form-pagination/form-pagination";
-@import "./src/modules/uiKit/form-dropdown-expanded-clear/form-dropdown-expanded-clear";
-
-.wrapper-form {
-  display: flex;
+.container-form-elements {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 140px 140px 0 140px;
 }
 
-.wrapper-text-field,
-.wrapper-dropdown {
-  width: 325px;
-  margin-bottom: 20px;
+@import "./src/components/logo/logo-gray";
+
+.wrapper-logo-gray {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
-.wrapper-form-column-one {
-  max-width: 320px;
-  margin-right: 126px;
-}
-.wrapper-form-column-two {
-  max-width: 320px;
-  margin-right: 76px;
-}
-.wrapper-form-column-three {
-  max-width: 320px;
-}
+@import "./src/components/text-field/text-field-email";
 
-.wrapper-date-dropdown {
-  display: flex;
-  width: 320px;
-  justify-content: space-between;
-  margin-top: 40px;
-}
+@import "./src/components/text-field/text-field-hover";
 
-.wrapper-filter-date-dropdown {
-  width: 320px;
-  margin-top: 40px;
-}
+@import "./src/components/text-field/text-field-masked";
 
-.wrapper-form-room-amenities-dropdown-default {
-  width: 266px;
-  margin-top: 100px;
-}
-
-.wrapper-form-room-amenities-dropdown-expanded {
-  width: 266px;
-  margin-top: 20px;
-}
-
-.wrapper-form-expandable-checkbox-list-default {
-  margin-top: 40px;
-}
-
-.wrapper-form-expandable-checkbox-list-expanded {
-  margin-top: 52px;
-}
-
-.wrapper-dignity-comfort {
-  margin-top: 100px;
-}
-
-.wrapper-dignity-convenience {
-  margin-top: 20px;
-}
-
-.wrapper-form-radio-buttons {
-  margin-top: 20px;
-}
-
-.wrapper-form-toggle {
-  margin-top: 37px;
-}
-
-.wrapper-form-like-button {
-  margin-top: 41px;
-}
-
-.wrapper-form-rate-button {
-  margin-top: 40px;
-}
-
-.wrapper-form-dropdown-expanded-apply {
-  margin-top: 225px;
-}
-
-.wrapper-form-rich-checkbox-buttons {
-  margin-top: 90px;
-}
-
-.wrapper-form-range-slider {
-  width: 300px;
-}
-.wrapper-form-button {
-  margin-top: 41px;
-}
-
-.wrapper-form-pagination {
-  margin-top: 40px;
-}
-
-.wrapper-form-dropdown-expanded-clear {
-  margin-top: 230px;
-}
+@import "./src/components/text-field/text-field-subscription";
