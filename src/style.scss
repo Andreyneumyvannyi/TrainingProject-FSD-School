@@ -1,16 +1,15 @@
 /* Utils
 ========================================== */
-@import "../src/modules/uiKit/utils/scss/fonts.scss";
-@import "../src/modules/uiKit/utils/scss/vars.scss";
-@import "../src/modules/uiKit/utils/scss/mixins.scss";
-@import "../src/modules/uiKit/utils/scss/reset.scss";
+@import "../src/components/utils/scss/fonts.scss";
+@import "../src/components/utils/scss/vars.scss";
+@import "../src/components/utils/scss/mixins.scss";
+@import "../src/components/utils/scss/reset.scss";
 
 /* Modules
 ========================================== */
 @import "../src/pages/scss/colorsType.scss";
-@import "../src/pages/scss/cards.scss";
 @import "../src/pages/scss/formElements.scss";
-// @import "../src/pages/scss/formElements_double.scss";
+@import "../src/pages/scss/cards.scss";
 @import "../src/pages/scss/headerFooter.scss";
 @import "../src/pages/scss/landingPage.scss";
 @import "../src/pages/scss/registration.scss";

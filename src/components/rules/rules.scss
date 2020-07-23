@@ -1,0 +1,26 @@
+.rules {
+  &__description {
+    @include text(bold, 12px, 15px, $darkShade100, uppercase);
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    @include text(normal, 14px, 24px, $darkShade75, none);
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    max-width: 235px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $darkShade25;
+    }
+  }
+}

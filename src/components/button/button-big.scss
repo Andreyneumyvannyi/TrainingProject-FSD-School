@@ -1,0 +1,18 @@
+.button-big {
+  @include text(bold, 12px, 15px, #ffffff, uppercase);
+  text-align: center;
+  width: 320px;
+  height: 44px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  position: relative;
+  transition: all 0.2s linear;
+  &__arrow {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}

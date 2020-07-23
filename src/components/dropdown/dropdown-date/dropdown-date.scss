@@ -1,0 +1,32 @@
+.dropdown-date {
+  width: 150px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid $darkShade25;
+  border-radius: 4px;
+  padding: 8px 15px;
+  color: $darkShade25;
+
+  &__text {
+    align-self: center;
+    @include text(normal, 14px, 18px, $darkShade75, none);
+  }
+
+  &__arrow {
+    position: relative;
+    top: -2px;
+
+    &_down {
+      align-self: center;
+      width: 5px;
+      height: 5px;
+      border: solid $darkShade50;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+      transform: rotate(45deg);
+    }
+  }
+}

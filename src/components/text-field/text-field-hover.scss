@@ -1,18 +1,8 @@
 .text-field-hover {
-  background: #ffffff;
+  @include text-field(320px);
   border: 1px solid $darkShade50;
-  border-radius: 4px;
-  padding: 13px 15px;
-  width: 320px;
-  height: 44px;
-  transition: all 0.2s linear;
-  font-size: 14px;
 
   &::placeholder {
-    font-family: $Montserrat;
-    font-size: 14px;
-    color: $darkShade75;
-    transition: all 0.2s linear;
-    line-height: 18px;
+    @include text-field-placeholder($darkShade75);
   }
 }

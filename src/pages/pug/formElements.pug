@@ -4,18 +4,163 @@ block title
   | FormElements
 
 block content
+  include ../../components/form-name/form-name
+    // Logo
   .wrapper-logo-gray
     include ../../components/logo/logo-gray
+
+  // Container
   .container-form-elements
+    
+    // Columns
     .wrapper-form-elements
+
+      // Column 1
+
       .wrapper-form-elements__column
         .wrapper-text-field-email
+          .wrapper-form-name
+            +form-name("Text Field", "Default")
           include ../../components/text-field/text-field-email
         .wrapper-text-field-hover
+          .wrapper-form-name
+            +form-name("Text Field", "Hover / Focus")
           include ../../components/text-field/text-field-hover
+        .wrapper-dropdown-guests-default
+          .wrapper-form-name
+            +form-name("Dropdown", "Default")
+          include ../../components/dropdown/dropdown-guests/dropdown-guests_default
         .wrapper-text-field-masked
+          .wrapper-form-name
+            +form-name("masked text field", "Default")
           include ../../components/text-field/text-field-masked
+        .wrapper-dropdown-date
+          .wrapper-dropdown-date-default
+            .wrapper-form-name
+              +form-name("date Dropdown")
+            include ../../components/dropdown/dropdown-date/dropdown-date
+          .wrapper-dropdown-date-selected
+            .wrapper-form-name
+              +form-name("date Dropdown")
+            include ../../components/dropdown/dropdown-date/dropdown-date_selected
+        .wrapper-dropdown-date-filter
+          .wrapper-form-name
+            +form-name("filter date dropdown")
+          include ../../components/dropdown/dropdown-date/dropdown-date-filter
         .wrapper-text-field-subscription
+          .wrapper-form-name
+            +form-name("subscription text field")
           include ../../components/text-field/text-field-subscription
+        .wrapper-dropdown-facilities-default
+          .wrapper-form-name
+            +form-name("dropdown", "Default")
+          include ../../components/dropdown/dropdown-facilities/dropdown-facilities_default
+        .wrapper-dropdown-facilities
+          .wrapper-form-name
+            +form-name("dropdown", "expanded")
+          include ../../components/dropdown/dropdown-facilities/dropdown-facilities
+        .wrapper-checkbox-list-default
+          include ../../components/checkbox/checkbox-list_default
+          +checkbox-list_default("expandable checkbox list")
+        .wrapper-checkbox-list
+          include ../../components/checkbox/checkbox-list
+          +checkbox-list("expandable checkbox list")
+
+      // Column 2
       .wrapper-form-elements__column
+        .wrapper-checkbox-buttons
+          include ../../components/checkbox/checkbox-buttons
+          +checkbox-buttons("checkbox-buttons")
+        .wrapper-button-radio
+          .wrapper-form-name-button
+            +form-name("Radio Buttons")
+          .wrapper-button-radio-form
+            include ../../components/button/button-radio
+            .wrapper-button-radio-btn
+              +button-radio("Мужчина")
+            .wrapper-button-radio-btn
+              +button-radio("Женщина")
+        .wrapper-button-togle
+          .wrapper-form-name-button
+            +form-name("Toggle")
+          .wrapper-button-togle-btn
+            include ../../components/button/button-togle
+          .wrapper-button-togle-btn
+            include ../../components/button/button-togle
+        .wrapper-button-like
+          .wrapper-form-name-button
+            +form-name("like button")
+          .wrapper-button-like-form
+            .wrapper-button-like-btn
+              include ../../components/button/button-like
+            .wrapper-button-like-btn
+                include ../../components/button/button-like_active
+        .wrapper-button-rate
+          .wrapper-form-name-button
+            +form-name("rate button")
+          .wrapper-button-rate-form
+            .wrapper-button-rate-btn
+              include ../../components/button/button-rate
+            .wrapper-button-rate-btn
+              include ../../components/button/button-rate_active
+        .wrapper-dropdown-guests_clear
+          .wrapper-form-name
+            +form-name("Dropdown")
+          include ../../components/dropdown/dropdown-guests/dropdown-guests_clear
+        .wrapper-checkbox-availability
+          include ../../components/checkbox/checkbox-availability
+          +checkbox-availability("rich Checkbox Buttons")
+
+
+
+      // Column 3
       .wrapper-form-elements__column
+        .wrapper-range-slider
+          include ../../components/range-slider/range-slider
+          +range-slider("range-slider")
+        .wrapper-buttons
+          .wrapper-form-name-button
+            +form-name("buttons")
+          .wrapper-button-bg
+            .wrapper-button-bg-btn
+              include ../../components/button/button-bg
+            .wrapper-button-bg-btn
+              include ../../components/button/button-bg
+          .wrapper-button-border
+            .wrapper-button-border-btn
+              include ../../components/button/button-border
+            .wrapper-button-border-btn
+              include ../../components/button/button-border
+          .wrapper-button-click
+            .wrapper-button-click-btn
+              include ../../components/button/button-click
+            .wrapper-button-click-btn
+              include ../../components/button/button-click
+          .wrapper-button-big
+            .wrapper-button-big-btn
+              include ../../components/button/button-big
+        .wrapper-pagination
+          .wrapper-form-name-button
+            +form-name("pagination")
+          include ../../components/pagination/pagination
+        .wrapper-dropdown-guests
+          .wrapper-form-name
+            +form-name("Dropdown")
+          include ../../components/dropdown/dropdown-guests/dropdown-guests
+        .wrapper-rules
+          include ../../components/rules/rules
+          +rules('bullet list')
+
+
+    // Column bottom
+    .wrapper-form-elements__column-bottom
+      .wrapper-dignity
+        include ../../components/dignity/dignity
+        .wrapper-dignity-item
+          +dignity("dignity_emoticon.svg", "Комфорт","Шумопоглощающие стены")
+        .wrapper-dignity-item
+          +dignity("dignity_city.svg", "Удобство","Окно в каждой из спален")
+      .wrapper-review
+        include ../../components/review/review
+
+

@@ -1,7 +1,7 @@
 //import "./"
 
 // JS
-import "./modules/uiKit/form-range-slider/form-range-slider.js";
+import "./components/range-slider/range-slider.js";
 
 // SCSS
 import "./style.scss";

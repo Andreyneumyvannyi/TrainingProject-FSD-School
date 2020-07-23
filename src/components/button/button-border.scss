@@ -1,0 +1,26 @@
+.button-border {
+  @include text(bold, 12px, 15px, #bc9cff, uppercase);
+  border-radius: 22px;
+  text-align: center;
+  background-clip: padding-box;
+  width: 99px;
+  height: 40px;
+  position: relative;
+  background: #ffffff;
+  &::before {
+    content: "";
+    transition: all 0.2s linear;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  }
+  &:hover:before {
+    opacity: 0.5;
+  }
+}

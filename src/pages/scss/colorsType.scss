@@ -1,17 +1,17 @@
-@import "./src/modules/uiKit/color-palette/color-palette";
-@import "./src/modules/uiKit/color-palette__description/color-palette__description";
-@import "./src/modules/uiKit/color-text/color-text";
+@import "./src/components/palette/palette-color";
+@import "./src/components/palette/palette-description";
+@import "./src/components/type/type";
 
 .colors-type-wrapper {
   display: flex;
   justify-content: space-between;
 }
-.color-palette-wrapper {
+.palette-color-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-.color-text-wrapper {
+.type-wrapper {
   display: flex;
   align-items: top;
   margin-bottom: 50px;

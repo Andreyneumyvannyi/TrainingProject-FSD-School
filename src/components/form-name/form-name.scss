@@ -1,0 +1,10 @@
+.form-name {
+  @include text(bold, 12px, 15px, $darkShade100, uppercase);
+  display: flex;
+  justify-content: space-between;
+
+  &__state {
+    color: $darkShade50;
+    font-weight: normal;
+  }
+}

@@ -1,9 +1,28 @@
 .container-form-elements {
   margin: 0 auto;
   width: 1200px;
-  padding: 140px 140px 0 140px;
+}
+.wrapper-form-elements {
+  display: flex;
+  margin-top: 140px;
+  &__column {
+    width: 320px;
+    &:not(:last-child) {
+      margin-right: 126px;
+    }
+  }
 }
 
+@import "./src/components/form-name/form-name";
+.wrapper-form-name {
+  margin-bottom: 5px;
+}
+.wrapper-form-name-button {
+  margin-bottom: 16px;
+}
+
+/* Logo
+=================*/
 @import "./src/components/logo/logo-gray";
 
 .wrapper-logo-gray {
@@ -12,10 +31,205 @@
   left: 30px;
 }
 
+/* Column 1
+=================*/
 @import "./src/components/text-field/text-field-email";
+.wrapper-text-field-email {
+  margin-bottom: 20px;
+}
 
 @import "./src/components/text-field/text-field-hover";
+.wrapper-text-field-hover {
+  margin-bottom: 20px;
+}
+
+@import "./src/components/dropdown/dropdown-guests/dropdown-guests";
+.wrapper-dropdown-guests-default {
+  margin-bottom: 20px;
+}
+.wrapper-dropdown-guests_clear {
+  margin-bottom: 99px;
+}
+.wrapper-dropdown-guests {
+  margin-bottom: 99px;
+}
 
 @import "./src/components/text-field/text-field-masked";
+.wrapper-text-field-masked {
+  margin-bottom: 40px;
+}
+
+@import "./src/components/dropdown/dropdown-date/dropdown-date";
+.wrapper-dropdown-date {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+@import "./src/components/dropdown/dropdown-date/dropdown-date-filter";
+.wrapper-dropdown-date-filter {
+  width: 266px;
+  margin-bottom: 40px;
+}
 
 @import "./src/components/text-field/text-field-subscription";
+.wrapper-text-field-subscription {
+  margin-bottom: 100px;
+}
+
+@import "./src/components/dropdown/dropdown-facilities/dropdown-facilities";
+.wrapper-dropdown-facilities-default {
+  width: 266px;
+  margin-bottom: 20px;
+}
+.wrapper-dropdown-facilities {
+  width: 266px;
+  margin-bottom: 50px;
+}
+
+@import "./src/components/checkbox/checkbox-list";
+.wrapper-checkbox-list-default {
+  margin-bottom: 45px;
+}
+.wrapper-checkbox-list {
+  margin-bottom: 100px;
+}
+
+/* Column 2
+=================*/
+@import "./src/components/checkbox/checkbox-buttons";
+.wrapper-checkbox-buttons {
+  margin-bottom: 41px;
+}
+
+@import "./src/components/button/button-radio";
+.wrapper-button-radio {
+  margin-bottom: 38px;
+}
+.wrapper-button-radio-form {
+  display: flex;
+}
+.wrapper-button-radio-btn {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@import "./src/components/button/button-togle";
+.wrapper-button-togle {
+  margin-bottom: 40px;
+}
+
+.wrapper-button-togle-btn {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@import "./src/components/button/button-like";
+.wrapper-button-like-form {
+  display: flex;
+}
+
+.wrapper-button-like-btn {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.wrapper-button-like {
+  margin-bottom: 40px;
+}
+
+@import "./src/components/button/button-rate";
+.wrapper-button-rate {
+  margin-bottom: 196px;
+}
+.wrapper-button-rate-form {
+  display: flex;
+}
+.wrapper-button-rate-btn {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@import "./src/components/checkbox/checkbox-availability";
+
+/* Column 3 
+=================*/
+@import "./src/components/range-slider/range-slider";
+.wrapper-range-slider {
+  margin-bottom: 40px;
+}
+
+@import "./src/components/button/button-bg";
+.wrapper-button-bg {
+  display: flex;
+  margin-bottom: 30px;
+}
+.wrapper-button-bg-btn {
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
+}
+
+@import "./src/components/button/button-border";
+.wrapper-button-border {
+  display: flex;
+}
+.wrapper-button-border {
+  margin-bottom: 31px;
+}
+
+.wrapper-button-border-btn {
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
+}
+
+@import "./src/components/button/button-click";
+.wrapper-button-click {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.wrapper-button-click-btn {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@import "./src/components/button/button-big";
+.wrapper-button-big {
+  margin-bottom: 40px;
+}
+
+@import "./src/components/pagination/pagination";
+.wrapper-pagination {
+  margin-bottom: 230px;
+}
+
+@import "./src/components/rules/rules";
+
+/* Column bottom
+=================*/
+@import "./src/components/dignity/dignity";
+.wrapper-dignity {
+  &-item {
+    width: 285px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@import "./src/components/review/review";
+.wrapper-form-elements__column-bottom {
+  display: flex;
+  margin-bottom: 140px;
+}
+
+.wrapper-dignity {
+  margin-right: 165px;
+}

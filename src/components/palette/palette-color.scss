@@ -1,0 +1,30 @@
+.palette-color {
+  &__color {
+    width: 70px;
+    height: 70px;
+    margin-right: 40px;
+    border-radius: 6px;
+
+    &--100 {
+      background: $darkShade100;
+    }
+    &--75 {
+      background: $darkShade75;
+    }
+    &--50 {
+      background: $darkShade50;
+    }
+    &--25 {
+      background: $darkShade25;
+    }
+    &--5 {
+      background: $darkShade5;
+    }
+    &--purple {
+      background: $purple;
+    }
+    &--green {
+      background: $green;
+    }
+  }
+}

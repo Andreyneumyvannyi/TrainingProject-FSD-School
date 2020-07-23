@@ -1,0 +1,16 @@
+mixin checkbox-buttons(name)
+  .checkbox-buttons
+    .checkbox-buttons__name=name
+    .checkbox-buttons__choice
+      label.checkbox-buttons__choice-label
+        input.checkbox-buttons__choice-checkbox(type="checkbox")
+        span.checkbox-buttons__choice-checkbox-castom
+        .checkbox-buttons__choice-checkbox-text Можно курить
+      label.checkbox-buttons__choice-label
+        input.checkbox-buttons__choice-checkbox(type="checkbox" checked)
+        span.checkbox-buttons__choice-checkbox-castom
+        .checkbox-buttons__choice-checkbox-text Можно с питомцами
+      label.checkbox-buttons__choice-label
+        input.checkbox-buttons__choice-checkbox(type="checkbox" checked)
+        span.checkbox-buttons__choice-checkbox-castom
+        .checkbox-buttons__choice-checkbox-text Можно пригласить гостей (до 10 человек)

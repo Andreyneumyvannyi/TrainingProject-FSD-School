@@ -1,0 +1,38 @@
+.button-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid $darkShade25;
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0 9px 0 5px;
+  &__heart {
+    position: relative;
+    display: block;
+    width: 11px;
+    fill: transparent;
+    stroke: $darkShade25;
+    stroke-width: 60px;
+    transition: fill 0.3s;
+  }
+  &__count {
+    @include text(normal, 10px, 15px, $darkShade25, none);
+    text-align: center;
+  }
+
+  &_active {
+    border: 1px solid $purple;
+  }
+  &_active > &__count {
+    color: $purple;
+  }
+
+  &_active > &__heart {
+    fill: $purple;
+    stroke-width: 0;
+  }
+}

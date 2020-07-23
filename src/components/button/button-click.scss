@@ -1,0 +1,9 @@
+.button-click {
+  @include text(bold, 12px, 15px, #bc9cff, uppercase);
+  padding: 0;
+  text-align: center;
+  transition: all 0.2s linear;
+  &:hover {
+    color: $darkShade50;
+  }
+}

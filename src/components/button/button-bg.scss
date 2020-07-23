@@ -1,0 +1,12 @@
+.button-bg {
+  @include text(bold, 12px, 15px, #ffffff, uppercase);
+  width: 99px;
+  height: 44px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  opacity: 1;
+  transition: all 0.2s linear;
+  &:hover {
+    opacity: 0.5;
+  }
+}

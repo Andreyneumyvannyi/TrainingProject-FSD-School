@@ -1,0 +1,41 @@
+.pagination {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    &-arrow {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+  }
+
+  &__link {
+    @include text(normal, 12px, 15px, $darkShade50, none);
+    width: 41px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_active {
+      color: #fff;
+      font-weight: bold;
+      width: 41px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+  }
+  &__description {
+    @include text(normal, 14px, 25px, $darkShade75, none);
+    margin-left: 5px;
+  }
+}

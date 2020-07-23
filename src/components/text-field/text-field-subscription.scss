@@ -1,14 +1,8 @@
 .text-field-subscription {
-  width: 267px;
-  height: 44px;
-  background: #ffffff;
-  border: 1px solid $darkShade25;
-  border-radius: 4px;
-  padding: 10px 15px;
+  @include text-field(267px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.2s linear;
 
   &__arrow {
     padding: 0px;
@@ -20,11 +14,7 @@
     font-size: 14px;
 
     &::placeholder {
-      color: $darkShade25;
-      font-family: $Montserrat;
-      font-size: 14px;
-      line-height: 18px;
-      transition: all 0.2s linear;
+      @include text-field-placeholder($darkShade25);
     }
     &:hover,
     &:focus {

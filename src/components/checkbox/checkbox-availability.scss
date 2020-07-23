@@ -1,0 +1,71 @@
+.checkbox-availability {
+  &__name {
+    @include text(bold, 12px, 15px, $darkShade100, uppercase);
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    width: 248px;
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &-description {
+      margin-left: 10px;
+      &-title {
+        @include text(bold, 14px, 18px, $darkShade75, none);
+        margin-bottom: 5px;
+      }
+
+      &-text {
+        width: 203px;
+        @include text(normal, 12px, 18px, $darkShade50, none);
+      }
+    }
+
+    &-checkbox {
+      display: none;
+
+      &-castom {
+        display: inline-block;
+        cursor: pointer;
+        height: 20px;
+        min-width: 20px;
+        background: #ffffff;
+        border: 1px solid $darkShade25;
+        border-radius: 4px;
+        position: relative;
+        transition: all 0.2s linear;
+
+        &::before {
+          content: "";
+          position: absolute;
+          cursor: pointer;
+          top: 4px;
+          left: 6px;
+          width: 6px;
+          height: 8px;
+          margin: auto;
+          background: transparent;
+          border: solid transparent;
+          border-width: 0 2px 2px 0;
+          border-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+          border-image-slice: 1;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: all 0.2s linear;
+        }
+      }
+
+      &:checked + &-castom::before {
+        opacity: 1;
+      }
+
+      &:checked + &-castom {
+        border: 1px solid $purple;
+      }
+    }
+  }
+}

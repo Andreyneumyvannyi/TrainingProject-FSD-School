@@ -1,0 +1,19 @@
+.dignity {
+  display: flex;
+  width: 280px;
+  align-items: center;
+  padding: 5px 5px 17px 5px;
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__description {
+    &-title {
+      @include text(bold, 14px, 20px, $darkShade75, none);
+    }
+
+    &-text {
+      @include text(normal, 14px, 20px, $darkShade75, none);
+    }
+  }
+}

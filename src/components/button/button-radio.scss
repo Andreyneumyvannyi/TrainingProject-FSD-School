@@ -1,0 +1,51 @@
+.button-radio {
+  display: flex;
+
+  &__text {
+    @include text(normal, 14px, 18px, $darkShade50, none);
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+    transition: all 0.2s linear;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &-castom {
+      display: inline-block;
+      cursor: pointer;
+      height: 20px;
+      min-width: 20px;
+      background: #ffffff;
+      border: 1px solid $darkShade25;
+      border-radius: 50%;
+      position: relative;
+      transition: all 0.2s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        transition: all 0.2s linear;
+        opacity: 0;
+      }
+    }
+
+    &:checked + &-castom::before {
+      opacity: 1;
+    }
+
+    &:checked + &-castom {
+      border: 1px solid $purple;
+    }
+  }
+}

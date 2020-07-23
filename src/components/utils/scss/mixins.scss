@@ -1,0 +1,26 @@
+@mixin text-field($width) {
+  width: $width;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid $darkShade25;
+  border-radius: 4px;
+  padding: 10px 15px;
+  transition: all 0.2s linear;
+}
+
+@mixin text-field-placeholder($color) {
+  font-family: $Montserrat;
+  font-size: 14px;
+  color: $color;
+  transition: all 0.2s linear;
+  line-height: 18px;
+}
+@mixin text($weight, $size, $height, $color, $textT) {
+  font-family: $Montserrat;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+  text-transform: $textT;
+}
