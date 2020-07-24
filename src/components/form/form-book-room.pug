@@ -1,0 +1,44 @@
+form.book-room
+  .book-room__description
+    .book-room__number
+      span.book-room__num №
+      span.book-room__figures 888
+      span.book-room__type люкс
+    .book-room__price
+      span.book-room__price 9 990₽
+      span.book-room__price-day в сутки
+  .book-room__find-date
+    .book-room__date-arrival
+      .book-room__form-name
+        +form-name("прибытие")
+      include ../dropdown/dropdown-date/dropdown-date
+    .book-room__date-departure
+      .book-room__form-name
+        +form-name("выезд")
+      include ../dropdown/dropdown-date/dropdown-date
+  .book-room__find-guests
+    .book-room__form-name
+      +form-name("гости")
+    include ../dropdown/dropdown-guests/dropdown-guests_default
+    +dropdown-guests_default("Сколько гостей")
+  .book-room__calculate
+    .book-room__calculate-item
+      span.book-room__calculate-text 9 990₽ х 4 суток
+      span.book-room__calculate-price 39 960₽
+    .book-room__calculate-item
+      .book-room__calculate-info
+        span.book-room__calculate-text Сбор за услуги: скидка 2 179₽
+        img.book-room__calculate-icon(src="assets/img/calculate-info.svg", alt="calculate-info")
+      span.book-room__calculate-price 0₽
+    .book-room__calculate-item
+      .book-room__calculate-info
+        span.book-room__calculate-text Сбор за дополнительные услуги
+        img.book-room__calculate-icon(src="assets/img/calculate-info.svg", alt="calculate-info")
+      span.book-room__calculate-price 300₽
+  .book-room__total
+    .book-room__total-text Итого
+    .book-room__total-border
+    .book-room__total-price 38 081₽
+    
+  .find-room__button-big
+    +button-big("забронировать")

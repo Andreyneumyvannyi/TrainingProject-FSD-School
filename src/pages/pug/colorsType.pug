@@ -1,9 +1,13 @@
-extends ../layout/layout-colors-type
+extends ../layout/main
 
 block title
 	| colorsType
 
 block content
+	include ../../components/palette/palette-color
+	include ../../components/palette/palette-description
+	include ../../components/type/type
+	
 	// Logo
 	.wrapper-logo-gray
 		include ../../components/logo/logo-gray

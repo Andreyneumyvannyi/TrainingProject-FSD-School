@@ -1,6 +1,7 @@
 .container-form-elements {
   margin: 0 auto;
   width: 1200px;
+  padding: 0 30px;
 }
 .wrapper-form-elements {
   display: flex;
@@ -33,8 +34,8 @@
 
 /* Column 1
 =================*/
-@import "./src/components/text-field/text-field-email";
-.wrapper-text-field-email {
+@import "./src/components/text-field/text-field";
+.wrapper-text-field {
   margin-bottom: 20px;
 }
 

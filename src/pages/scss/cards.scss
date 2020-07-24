@@ -1,0 +1,30 @@
+.body_gray {
+  background: #e5e5e5;
+}
+
+.container-cards {
+  margin: 0 auto;
+  width: 1160px;
+  padding: 0 30px;
+}
+.wrapper-cards-column {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.wrapper-cards {
+  margin-top: 150px;
+  display: flex;
+  margin-bottom: 140px;
+}
+
+@import "./src/components/form/form-find-room";
+.wrapper-form-find-room {
+  margin-bottom: 40px;
+}
+@import "./src/components/form/form-registration";
+@import "./src/components/form/form-book-room";
+@import "./src/components/form/form-login";
+@import "./src/components/calendar/calendar";
+@import "./src/components/calendar/calendar";

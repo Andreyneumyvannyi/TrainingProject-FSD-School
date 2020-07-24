@@ -1,0 +1,55 @@
+.registration {
+  @include form;
+  &__title {
+    @include text(bold, 24px, 30px, $darkShade100, none);
+    font-family: $Quicksand;
+    margin-bottom: 20px;
+  }
+  &__name,
+  &__surname {
+    margin-bottom: 10px;
+  }
+
+  &__form-name {
+    margin-bottom: 6px;
+  }
+
+  &__find-gender {
+    margin-bottom: 20px;
+  }
+  &__find-gender {
+    display: flex;
+  }
+  &__button-radio {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__birth {
+    margin-bottom: 20px;
+  }
+  &__login {
+    &-email {
+      margin-bottom: 10px;
+    }
+    &-password {
+      margin-bottom: 10px;
+    }
+  }
+  &__button-togle {
+    margin-bottom: 20px;
+  }
+
+  &__button-big {
+    margin-bottom: 30px;
+  }
+
+  &__footer {
+    &-text {
+      @include text(normal, 14px, 18px, $darkShade100, none);
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

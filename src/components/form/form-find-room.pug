@@ -1,0 +1,22 @@
+include ../form-name/form-name
+include ../button/button-big
+
+// Form find room
+form.find-room
+  .find-room__title Найдём номера под ваши пожелания
+  .find-room__find-date
+    .find-room__date-arrival
+      .find-room__form-name
+        +form-name("прибытие")
+      include ../dropdown/dropdown-date/dropdown-date
+    .find-room__date-departure
+      .find-room__form-name
+        +form-name("выезд")
+      include ../dropdown/dropdown-date/dropdown-date
+  .find-room__find-guests
+    .find-room__form-name
+      +form-name("гости")
+    include ../dropdown/dropdown-guests/dropdown-guests_default
+    +dropdown-guests_default("Сколько гостей")
+  .find-room__button-big
+    +button-big("подобрать номер")

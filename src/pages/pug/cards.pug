@@ -1,0 +1,39 @@
+extends ../layout/main-cards
+
+block title
+  | Cards
+
+block content
+  // Logo
+
+  .wrapper-logo-gray
+    include ../../components/logo/logo-gray
+  
+  // Container
+  .container-cards
+
+    // Cards
+    .wrapper-cards
+
+      // Column 1
+      .wrapper-cards-column
+        .wrapper-form-find-room
+          include ../../components/form/form-find-room
+        .wrapper-form-registration
+          include ../../components/form/form-registration
+      
+      // Column 2
+      .wrapper-card-column
+        .wrapper-form-book-room
+          include ../../components/form/form-book-room
+        .wrapper-form-login
+          include ../../components/form/form-login
+
+      // Column 3
+      .wrapper-card-column
+        .wrapper-calendar
+          include ../../components/calendar/calendar
+        .wrapper-room-card
+          include ../../components/room-card/room-card
+        .wrapper-room-card
+          include ../../components/room-card/room-card

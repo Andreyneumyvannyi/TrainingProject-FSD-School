@@ -1,0 +1,89 @@
+.book-room {
+  @include form;
+  &__find-date {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form-name {
+    margin-bottom: 6px;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+
+  &__num {
+    @include text(bold, 14px, 17px, $darkShade100, normal);
+    font-family: $Quicksand;
+    margin-right: 5px;
+  }
+  &__figures {
+    @include text(bold, 24px, 30px, $darkShade100, normal);
+    font-family: $Quicksand;
+    margin-right: 5px;
+  }
+
+  &__type {
+    @include text(bold, 12px, 15px, $purple, uppercase);
+  }
+
+  &__price {
+    @include text(bold, 14px, 18px, $darkShade25, normal);
+    &-day {
+      @include text(normal, 12px, 18px, $darkShade25, normal);
+      margin-left: 5px;
+    }
+  }
+
+  &__find-date {
+    margin-bottom: 20px;
+  }
+  &__find-guests {
+    margin-bottom: 21px;
+  }
+
+  &__calculate {
+    margin-bottom: 30px;
+    &-text {
+      @include text(normal, 14px, 22px, $darkShade75, normal);
+      width: 200px;
+    }
+    &-info {
+      display: flex;
+      align-items: flex-start;
+    }
+    &-price {
+      @include text(normal, 14px, 25px, $darkShade75, normal);
+    }
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__total {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &-text,
+    &-price {
+      @include text(bold, 19px, 12px, $darkShade100, normal);
+      font-family: $Quicksand;
+    }
+
+    &-border {
+      width: 182px;
+      height: 1px;
+      border: 1px dashed $darkShade25;
+      margin: 0 5px;
+    }
+  }
+}

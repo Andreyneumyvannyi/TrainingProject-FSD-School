@@ -1,11 +1,12 @@
-extends ../layout/layout-form-elements
+extends ../layout/main
 
 block title
   | FormElements
 
 block content
   include ../../components/form-name/form-name
-    // Logo
+  
+  // Logo
   .wrapper-logo-gray
     include ../../components/logo/logo-gray
 
@@ -18,10 +19,11 @@ block content
       // Column 1
 
       .wrapper-form-elements__column
-        .wrapper-text-field-email
+        .wrapper-text-field
           .wrapper-form-name
             +form-name("Text Field", "Default")
-          include ../../components/text-field/text-field-email
+          include ../../components/text-field/text-field
+          +text-field("email", "Email", "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
         .wrapper-text-field-hover
           .wrapper-form-name
             +form-name("Text Field", "Hover / Focus")
@@ -30,6 +32,7 @@ block content
           .wrapper-form-name
             +form-name("Dropdown", "Default")
           include ../../components/dropdown/dropdown-guests/dropdown-guests_default
+          +dropdown-guests_default("Сколько гостей")
         .wrapper-text-field-masked
           .wrapper-form-name
             +form-name("masked text field", "Default")
@@ -43,6 +46,7 @@ block content
             .wrapper-form-name
               +form-name("date Dropdown")
             include ../../components/dropdown/dropdown-date/dropdown-date_selected
+            +dropdown-date_salected("19.08.2019")
         .wrapper-dropdown-date-filter
           .wrapper-form-name
             +form-name("filter date dropdown")
@@ -129,8 +133,10 @@ block content
           .wrapper-button-border
             .wrapper-button-border-btn
               include ../../components/button/button-border
+              +button-border("click me")
             .wrapper-button-border-btn
               include ../../components/button/button-border
+              +button-border("click me")
           .wrapper-button-click
             .wrapper-button-click-btn
               include ../../components/button/button-click
@@ -139,6 +145,7 @@ block content
           .wrapper-button-big
             .wrapper-button-big-btn
               include ../../components/button/button-big
+              +button-big("перейти к оплате")
         .wrapper-pagination
           .wrapper-form-name-button
             +form-name("pagination")
