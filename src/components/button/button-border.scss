@@ -2,11 +2,10 @@
   @include text(bold, 12px, 15px, $purple, uppercase);
   border-radius: 22px;
   text-align: center;
-  background-clip: padding-box;
   width: 99px;
   height: 44px;
   text-align: center;
-  background: #ffffff;
+  background: transparent;
   transition: all 0.2s linear;
   border: 2px solid $purple;
   opacity: 1;

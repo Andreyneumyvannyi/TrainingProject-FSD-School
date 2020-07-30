@@ -1,0 +1,30 @@
+.login {
+  @include form;
+
+  &__title {
+    @include text(bold, 24px, 30px, $darkShade100, none);
+    font-family: $Quicksand;
+    margin-bottom: 20px;
+  }
+
+  &__email {
+    margin-bottom: 10px;
+  }
+
+  &__password {
+    margin-bottom: 20px;
+  }
+
+  &__button-big {
+    margin-bottom: 30px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      @include text(normal, 14px, 18px, $darkShade100, none);
+    }
+  }
+}

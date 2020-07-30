@@ -56,6 +56,11 @@
       display: flex;
       align-items: flex-start;
     }
+
+    &-icon {
+      cursor: pointer;
+    }
+
     &-price {
       @include text(normal, 14px, 25px, $darkShade75, normal);
     }

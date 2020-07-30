@@ -10,17 +10,13 @@ form.book-room
   .book-room__find-date
     .book-room__date-arrival
       .book-room__form-name
-        +form-name("прибытие")
-      include ../dropdown/dropdown-date/dropdown-date
-    .book-room__date-departure
-      .book-room__form-name
-        +form-name("выезд")
       include ../dropdown/dropdown-date/dropdown-date
   .book-room__find-guests
     .book-room__form-name
       +form-name("гости")
     include ../dropdown/dropdown-guests/dropdown-guests_default
     +dropdown-guests_default("Сколько гостей")
+  
   .book-room__calculate
     .book-room__calculate-item
       span.book-room__calculate-text 9 990₽ х 4 суток
