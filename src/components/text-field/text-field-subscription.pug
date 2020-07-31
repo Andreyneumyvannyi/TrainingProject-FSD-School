@@ -1,4 +1,5 @@
-.text-field-subscription
-  input.text-field-subscription__text(placeholder="Email")
-  button.text-field-subscription__arrow
-    img(src="assets/img/arrow_subscription.svg" alt="arrow_subscription")
+mixin text-field-subscription(placeholder)
+  .text-field-subscription
+    input.text-field-subscription__text(placeholder=placeholder)
+    button.text-field-subscription__arrow
+      img(src="assets/img/arrow_subscription.svg" alt="arrow_subscription")

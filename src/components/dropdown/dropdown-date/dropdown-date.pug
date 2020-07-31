@@ -1,7 +1,13 @@
-.dropdown-range-date
-	.dropdown-range-date__input
-		input(class="fp_range" data-id="rangePlugin" type="text" placeholder="Select Date.." readonly="readonly")
-		button.dropdown-range-date__arrow.dropdown-range-date__arrow_down
-	.dropdown-range-date__input
-		input(class="fp_range" id="secondRangeInput" type="text" placeholder="Select Date.." readonly="readonly")
-		button.dropdown-range-date__arrow.dropdown-range-date__arrow_down
+include ../../form-name/form-name
+mixin dropdown-date(firstName, lastName)
+	.dropdown-date
+		.dropdown-date__arrival
+			.dropdown-date__name
+				+form-name(firstName)
+			.dropdown-date__input
+				input.dropdown-date__range(type="text" placeholder="ДД.ММ.ГГГГ")
+		.dropdown-date__departure
+			.dropdown-date__name
+				+form-name(lastName)
+			.dropdown-date__input
+				input.dropdown-date__range(type="text" placeholder="ДД.ММ.ГГГГ" id="secondRangeInput")

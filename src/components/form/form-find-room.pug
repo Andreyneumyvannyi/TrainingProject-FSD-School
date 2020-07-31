@@ -6,6 +6,7 @@ form.find-room
   .find-room__title Найдём номера под ваши пожелания
   .find-room__find-date
     include ../dropdown/dropdown-date/dropdown-date
+    +dropdown-date("Прибытие", "Выезд")
   .find-room__find-guests
     .find-room__form-name
       +form-name("гости")

@@ -1,11 +1,20 @@
-.fp_range {
-  width: 100%;
-}
-.dropdown-range-date {
+.dropdown-date {
   width: 100%;
   display: flex;
   justify-content: space-between;
 
+  &__arrival,
+  &__departure {
+    display: flex;
+    flex-direction: column;
+  }
+  &__range {
+    width: 100%;
+  }
+
+  &__name {
+    margin-bottom: 6px;
+  }
   &__input {
     display: flex;
     align-items: center;
@@ -17,14 +26,12 @@
     padding: 8px 15px;
     color: $darkShade25;
     @include text(normal, 14px, 18px, $darkShade75, none);
-  }
-
-  &__arrow {
     position: relative;
-    top: -2px;
-
-    &_down {
-      align-self: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 125px;
       width: 5px;
       height: 5px;
       border: solid $darkShade50;

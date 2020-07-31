@@ -39,15 +39,8 @@ block content
             +form-name("masked text field", "Default")
           include ../../components/text-field/text-field-masked
         .wrapper-dropdown-date
-          .wrapper-dropdown-date-default
-            .wrapper-form-name
-              +form-name("date Dropdown")
             include ../../components/dropdown/dropdown-date/dropdown-date
-          .wrapper-dropdown-date-selected
-            .wrapper-form-name
-              +form-name("date Dropdown")
-            include ../../components/dropdown/dropdown-date/dropdown-date_selected
-            +dropdown-date_salected("19.08.2019")
+            +dropdown-date("date Dropdown", "date Dropdown")
         .wrapper-dropdown-date-filter
           .wrapper-form-name
             +form-name("filter date dropdown")
@@ -56,6 +49,7 @@ block content
           .wrapper-form-name
             +form-name("subscription text field")
           include ../../components/text-field/text-field-subscription
+          +text-field-subscription("Email")
         .wrapper-dropdown-facilities-default
           .wrapper-form-name
             +form-name("dropdown", "Default")
@@ -129,8 +123,9 @@ block content
           .wrapper-button-bg
             .wrapper-button-bg-btn
               include ../../components/button/button-bg
+              +button-bg("click me")
             .wrapper-button-bg-btn
-              include ../../components/button/button-bg
+              +button-bg("click me")
           .wrapper-button-border
             .wrapper-button-border-btn
               include ../../components/button/button-border
