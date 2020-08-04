@@ -1,0 +1,161 @@
+.room-card {
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  background-color: #ffffff;
+  width: 270px;
+  height: 251px;
+  overflow: hidden;
+
+  &__slider {
+    overflow: hidden;
+    width: 270px;
+    max-height: 150px;
+    position: relative;
+  }
+
+  &__slider:hover &__nav {
+    opacity: 1;
+  }
+
+  &__nav {
+    opacity: 0;
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.2s linear;
+  }
+
+  &__arrow {
+    cursor: pointer;
+    position: absolute;
+    width: 42px;
+    height: 151px;
+    z-index: 1000;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 99.99%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+      transform: rotate(135deg);
+    }
+
+    &_next {
+      right: 0;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+  }
+
+  &__slide {
+    display: flex;
+    height: 151px;
+  }
+  &__photo {
+    display: flex;
+    img {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    padding: 20px;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  }
+
+  &__num {
+    @include text(bold, 14px, 17px, $darkShade100, normal);
+    font-family: $Quicksand;
+    margin-right: 5px;
+  }
+  &__figures {
+    @include text(bold, 19px, 24px, $darkShade100, normal);
+    font-family: $Quicksand;
+    margin-right: 5px;
+  }
+
+  &__type {
+    @include text(bold, 12px, 15px, $purple, uppercase);
+  }
+
+  &__price {
+    &-money {
+      @include text(bold, 14px, 18px, $darkShade50, normal);
+    }
+
+    &-day {
+      @include text(normal, 12px, 22px, $darkShade50, normal);
+      margin-left: 5px;
+    }
+  }
+
+  &__raiting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  &__count-rewiew {
+    display: flex;
+  }
+
+  &__count {
+    @include text(bold, 14px, 18px, $darkShade50, normal);
+  }
+
+  &__text {
+    @include text(normal, 12px, 20px, $darkShade50, normal);
+    margin-left: 3px;
+  }
+}
+
+.slick-dots {
+  padding: 0 15px;
+  z-index: 1001;
+  position: absolute;
+  top: 85%;
+  right: 0;
+  display: flex;
+  transition: all 0.2s linear;
+  li {
+    button {
+      width: 7.5px;
+      height: 7.49px;
+      color: transparent;
+      padding: 0;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      background: transparent;
+      margin-right: 4px;
+      transition: all 0.2s linear;
+    }
+  }
+
+  li.slick-active {
+    button {
+      background: #ffffff;
+      transition: all 0.2s linear;
+    }
+  }
+}

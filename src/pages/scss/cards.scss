@@ -29,5 +29,9 @@
   margin-bottom: 40px;
 }
 @import "./src/components/form/form-login";
+
+.wrapper-card-column {
+  margin-right: 40px;
+}
 @import "./src/components/calendar/calendar";
-@import "./src/components/calendar/calendar";
+@import "./src/components/room-card/room-card";

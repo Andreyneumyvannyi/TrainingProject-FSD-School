@@ -61,6 +61,8 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "flatpickr": "^4.6.3",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "jquery-bar-rating": "^1.2.2",
+    "slick-carousel": "^1.8.1"
   }
 }

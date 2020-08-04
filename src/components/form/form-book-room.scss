@@ -32,9 +32,12 @@
   }
 
   &__price {
-    @include text(bold, 14px, 18px, $darkShade25, normal);
+    &-money {
+      @include text(bold, 14px, 18px, $darkShade50, normal);
+    }
+
     &-day {
-      @include text(normal, 12px, 18px, $darkShade25, normal);
+      @include text(normal, 12px, 18px, $darkShade50, normal);
       margin-left: 5px;
     }
   }

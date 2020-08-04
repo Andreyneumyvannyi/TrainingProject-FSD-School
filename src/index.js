@@ -2,10 +2,15 @@
 
 // JS
 import "./components/range-slider/range-slider";
+import "slick-carousel/slick/slick";
+import "./components/room-card/room-card";
+import "jquery-bar-rating/dist/jquery.barrating.min";
+import "./components/bar-raiting/bar-raiting";
 
 import flatpickr from "flatpickr";
 const Russian = require("flatpickr/dist/l10n/ru.js").default.ru;
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
+
 flatpickr(".dropdown-date__range", {
   locale: Russian,
   mode: "range",
@@ -18,3 +23,5 @@ import "./style.scss";
 //CSS
 import "flatpickr/dist/flatpickr.min.css";
 import "nouislider/distribute/nouislider.min.css";
+import "slick-carousel/slick/slick.css";
+import "jquery-bar-rating/dist/themes/css-stars.css";
