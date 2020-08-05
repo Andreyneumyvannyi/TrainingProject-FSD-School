@@ -6,7 +6,8 @@ import "slick-carousel/slick/slick";
 import "./components/room-card/room-card";
 import "jquery-bar-rating/dist/jquery.barrating.min";
 import "./components/bar-raiting/bar-raiting";
-
+import "./components/button/button-like/button-like";
+import "./components/dropdown/dropdown-guests/dropdown-guests";
 import flatpickr from "flatpickr";
 const Russian = require("flatpickr/dist/l10n/ru.js").default.ru;
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";

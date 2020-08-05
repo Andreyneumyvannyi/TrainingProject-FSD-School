@@ -13,10 +13,6 @@
     position: relative;
   }
 
-  &__slider:hover &__nav {
-    opacity: 1;
-  }
-
   &__nav {
     opacity: 0;
     width: 100%;
@@ -25,6 +21,10 @@
     display: flex;
     justify-content: space-between;
     transition: all 0.2s linear;
+  }
+
+  &__slider:hover &__nav {
+    opacity: 1;
   }
 
   &__arrow {
@@ -39,20 +39,12 @@
       rgba(0, 0, 0, 0) 99.99%,
       rgba(255, 255, 255, 0) 100%
     );
-
     &::before {
-      content: "";
+      content: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.42188 11.0928L6.01563 12.499L0.0156253 6.49902L6.01563 0.499024L7.42188 1.90527L2.82813 6.49902L7.42188 11.0928Z' fill='white'/%3E%3C/svg%3E");
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 10px;
-      height: 10px;
-      border: solid #ffffff;
-      border-width: 0 2px 2px 0;
-      padding: 3px;
-      transform: rotate(135deg);
     }
-
     &_next {
       right: 0;
       transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -62,13 +54,6 @@
   &__slide {
     display: flex;
     height: 151px;
-  }
-  &__photo {
-    display: flex;
-    img {
-      display: flex;
-      align-items: flex-start;
-    }
   }
 
   &__info {
@@ -93,7 +78,6 @@
     font-family: $Quicksand;
     margin-right: 5px;
   }
-
   &__type {
     @include text(bold, 12px, 15px, $purple, uppercase);
   }

@@ -1,30 +1,32 @@
-.room-card
-  .room-card__slider
-    .room-card__nav
-      .room-card__arrow.room-card__arrow_prev
-      .room-card__arrow.room-card__arrow_next
-    .room-card__slide
-      .room-card__photo
-        img(src="assets/img/slide-room.png", alt="")
-      .room-card__photo
-        img(src="assets/img/slide-room-2.png", alt="")
-      .room-card__photo
-        img(src="assets/img/slide-room.png", alt="")
-      .room-card__photo
-        img(src="assets/img/slide-room.png", alt="")
-  .room-card__info
-    .room-card__description
-      .room-card__number
-        span.room-card__num №
-        span.room-card__figures 888
-        span.room-card__type люкс
-      .room-card__price
-        span.room-card__price-money 9 990₽
-        span.room-card__price-day в сутки
-    .room-card__raiting
-      include ../button/button-rate
-      .room-card__count-rewiew
-        span.room-card__count 145
-        span.room-card__text Отзывов
-  
-  
+mixin room-card(imgSrcOne, imgSrcTwo, imgSrcThree, imgSrcFour, numberRoom, typeNumber, price, raitingId, countReview)
+  .room-card
+    .room-card__slider
+      .room-card__nav
+        div(class=`room-card__arrow room-card__arrow_prev room-card__arrow_prev_${numberRoom}`)
+        div(class=`room-card__arrow room-card__arrow_next room-card__arrow_next_${numberRoom}`)
+      div(class=`room-card__slide room-card__slide_${numberRoom}`)
+        .room-card__photo
+          img(src=`${imgSrcOne}`, alt="roomPhoto")
+        .room-card__photo
+          img(src=`${imgSrcTwo}`, alt="roomPhoto")
+        .room-card__photo
+          img(src=`${imgSrcThree}`, alt="roomPhoto")
+        .room-card__photo
+          img(src=`${imgSrcFour}`, alt="roomPhoto")
+    .room-card__info
+      .room-card__description
+        .room-card__number
+          span.room-card__num №
+          span.room-card__figures= numberRoom
+          span.room-card__type= typeNumber
+        .room-card__price
+          span.room-card__price-money= `${price}₽`
+          span.room-card__price-day в сутки
+      .room-card__raiting
+        include ../bar-raiting/bar-raiting
+        +bar-raiting(`${raitingId}`)
+        .room-card__count-rewiew
+          span.room-card__count= countReview
+          span.room-card__text Отзывов
+    
+    

@@ -1,26 +1,26 @@
-.dropdown-guests
-  .dropdown-guests__enter
-    .dropdown-guests__text 3 гостя
-    button.dropdown-guests__arrow.dropdown-guests__arrow_down.dropdown-guests__arrow_gray
-  .dropdown-guests__choice.dropdown-guests__choice_activated
+.dropdown-guests.dropdown-guests_default
+  .dropdown-guests__enter.dropdown-guests__enter_default
+    .dropdown-guests__text Сколько гостей
+    button#dropdown-guests-button.dropdown-guests__arrow.dropdown-guests__arrow_down.dropdown-guests__arrow_gray
+  .dropdown-guests__choice
     .dropdown-guests__criterion
       .dropdown-guests__criterion-name взрослые
-      .dropdown-guests__criterion-quantity
-        button.dropdown-guests__criterion-quantity-minus
-        .dropdown-guests__criterion-quantity-result 2
-        button.dropdown-guests__criterion-quantity-plus
+      #adult.dropdown-guests__criterion-quantity
+        button#adult-minus.dropdown-guests__criterion-quantity-minus
+        #adult-result.dropdown-guests__criterion-quantity-result 0
+        button#adult-plus.dropdown-guests__criterion-quantity-plus
     .dropdown-guests__criterion
       .dropdown-guests__criterion-name дети
-      .dropdown-guests__criterion-quantity
-        button.dropdown-guests__criterion-quantity-minus
-        .dropdown-guests__criterion-quantity-result 1
-        button.dropdown-guests__criterion-quantity-plus
+      #children.dropdown-guests__criterion-quantity
+        button#children-minus.dropdown-guests__criterion-quantity-minus
+        #children-result.dropdown-guests__criterion-quantity-result 0
+        button#children-plus.dropdown-guests__criterion-quantity-plus
     .dropdown-guests__criterion
       .dropdown-guests__criterion-name младенцы
-      .dropdown-guests__criterion-quantity
-        button.dropdown-guests__criterion-quantity-minus.dropdown-guests__criterion-quantity-minus_deactivated
-        .dropdown-guests__criterion-quantity-result 0
-        button.dropdown-guests__criterion-quantity-plus
+      #baby.dropdown-guests__criterion-quantity
+        button#baby-minus.dropdown-guests__criterion-quantity-minus
+        #baby-result.dropdown-guests__criterion-quantity-result 0
+        button#baby-plus.dropdown-guests__criterion-quantity-plus
     .dropdown-guests__group
-      button.dropdown-guests__clear очистить
-      button.dropdown-guests__apply применить
+      button#clear.dropdown-guests__clear очистить
+      button#apply.dropdown-guests__apply применить

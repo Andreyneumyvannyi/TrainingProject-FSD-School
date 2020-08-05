@@ -32,8 +32,7 @@ block content
         .wrapper-dropdown-guests-default
           .wrapper-form-name
             +form-name("Dropdown", "Default")
-          include ../../components/dropdown/dropdown-guests/dropdown-guests_default
-          +dropdown-guests_default("Сколько гостей")
+            //-include ../../components/dropdown/dropdown-guests/dropdown-guests
         .wrapper-text-field-masked
           .wrapper-form-name
             +form-name("masked text field", "Default")
@@ -91,19 +90,26 @@ block content
             +form-name("like button")
           .wrapper-button-like-form
             .wrapper-button-like-btn
-              include ../../components/button/button-like
+              include ../../components/button/button-like/button-like
+              +button-like("main","2")
             .wrapper-button-like-btn
-                include ../../components/button/button-like_active
+              include ../../components/button/button-like/button-like
+              +button-like("secondary", "12")
+
+
         .wrapper-button-rate
           .wrapper-form-name-button
             +form-name("rate button")
           .wrapper-button-rate-form
             .wrapper-button-rate-btn
               include ../../components/bar-raiting/bar-raiting
+              +bar-raiting("ratefour")
+            .wrapper-button-rate-btn
+              +bar-raiting("ratefive")
         .wrapper-dropdown-guests_clear
           .wrapper-form-name
             +form-name("Dropdown")
-          include ../../components/dropdown/dropdown-guests/dropdown-guests_clear
+          //-include ../../components/dropdown/dropdown-guests/dropdown-guests_clear
         .wrapper-checkbox-availability
           include ../../components/checkbox/checkbox-availability
           +checkbox-availability("rich Checkbox Buttons")

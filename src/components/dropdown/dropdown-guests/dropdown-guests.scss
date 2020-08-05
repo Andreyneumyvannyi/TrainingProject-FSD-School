@@ -15,8 +15,12 @@
   }
 
   &__clear {
+    opacity: 0;
     @include text(bold, 12px, 15px, $darkShade50, uppercase);
     padding: 0;
+    &_active {
+      opacity: 1;
+    }
   }
 
   &__apply {
@@ -25,6 +29,7 @@
     margin-left: auto;
   }
   &__enter {
+    transition: all 0.2s linear;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -71,13 +76,16 @@
   }
 
   &__choice {
+    position: absolute;
+    z-index: 1000;
+    transition: all 0.2s linear;
     &_activated {
-      display: block;
+      opacity: 1;
     }
 
-    display: none;
+    opacity: 0;
     width: 320px;
-    height: 100%;
+    height: auto;
     background: #ffffff;
     border: 1px solid $darkShade50;
     border-top: none;

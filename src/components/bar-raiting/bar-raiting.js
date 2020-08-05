@@ -1,6 +1,13 @@
 $(function() {
-  $("#example").barrating({
+  $("#ratefour").barrating({
     theme: "css-stars",
-    initialRating: 3,
+    initialRating: 4,
+  });
+});
+
+$(function() {
+  $("#ratefive").barrating({
+    theme: "css-stars",
+    initialRating: 5,
   });
 });
