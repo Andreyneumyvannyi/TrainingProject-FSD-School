@@ -8,6 +8,10 @@ import "jquery-bar-rating/dist/jquery.barrating.min";
 import "./components/bar-raiting/bar-raiting";
 import "./components/button/button-like/button-like";
 import "./components/dropdown/dropdown-guests/dropdown-guests";
+import "./components/dropdown/dropdown-facilities/dropdown-facilities";
+import "./components/checkbox/checkbox-list/checkbox-list";
+
+// Calendar
 import flatpickr from "flatpickr";
 const Russian = require("flatpickr/dist/l10n/ru.js").default.ru;
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";

@@ -1,0 +1,30 @@
+mixin checkbox-list(name)
+  .checkbox-list
+    .checkbox-list__enter
+      .checkbox-list__name=name
+      button#checkbox-list-button.checkbox-list__arrow.checkbox-list__arrow_up
+    .checkbox-list__choice.checkbox-list__choice_activated
+      label.checkbox-list__choice-label
+        input.checkbox-list__choice-checkbox(type="checkbox" )
+        span.checkbox-list__choice-checkbox-castom
+        .checkbox-list__choice-checkbox-text Завтрак
+      label.checkbox-list__choice-label
+        input.checkbox-list__choice-checkbox(type="checkbox" checked)
+        span.checkbox-list__choice-checkbox-castom
+        .checkbox-list__choice-checkbox-text Письменный стол
+      label.checkbox-list__choice-label
+        input.checkbox-list__choice-checkbox(type="checkbox" checked)
+        span.checkbox-list__choice-checkbox-castom
+        .checkbox-list__choice-checkbox-text Стул для кормления
+      label.checkbox-list__choice-label
+        input.checkbox-list__choice-checkbox(type="checkbox" checked)
+        span.checkbox-list__choice-checkbox-castom
+        .checkbox-list__choice-checkbox-text Кроватка
+      label.checkbox-list__choice-label
+        input.checkbox-list__choice-checkbox(type="checkbox")
+        span.checkbox-list__choice-checkbox-castom
+        .checkbox-list__choice-checkbox-text Телевизор
+      label.checkbox-list__choice-label
+        input.checkbox-list__choice-checkbox(type="checkbox")
+        span.checkbox-list__choice-checkbox-castom
+        .checkbox-list__choice-checkbox-text Шампунь

@@ -5,6 +5,7 @@
     box-shadow: none;
   }
   &__enter {
+    transition: all 0.2s linear;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -52,18 +53,25 @@
   }
 
   &__choice {
-    &_activated {
-      display: block;
+    &_static {
+      position: static;
     }
 
-    display: none;
+    &_activated {
+      opacity: 1;
+    }
+
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
     width: 266px;
-    height: 100%;
+    height: auto;
     background: #ffffff;
     border: 1px solid $darkShade50;
     border-top: none;
     border-radius: 0 0 4px 4px;
     padding: 7px 7px 7px 15px;
+    transition: all 0.2s linear;
   }
 
   &__criterion {

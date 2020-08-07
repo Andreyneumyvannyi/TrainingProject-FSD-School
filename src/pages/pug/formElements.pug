@@ -56,12 +56,12 @@ block content
         .wrapper-dropdown-facilities
           .wrapper-form-name
             +form-name("dropdown", "expanded")
-          include ../../components/dropdown/dropdown-facilities/dropdown-facilities
+          include ../../components/dropdown/dropdown-facilities/dropdown-facilities_all
         .wrapper-checkbox-list-default
           include ../../components/checkbox/checkbox-list_default
           +checkbox-list_default("expandable checkbox list")
         .wrapper-checkbox-list
-          include ../../components/checkbox/checkbox-list
+          include ../../components/checkbox/checkbox-list/checkbox-list_all
           +checkbox-list("expandable checkbox list")
 
       // Column 2
@@ -95,8 +95,6 @@ block content
             .wrapper-button-like-btn
               include ../../components/button/button-like/button-like
               +button-like("secondary", "12")
-
-
         .wrapper-button-rate
           .wrapper-form-name-button
             +form-name("rate button")

@@ -14,6 +14,7 @@
   &__arrow {
     position: relative;
     top: 2px;
+    transition: all 0.2s linear;
 
     &_up {
       align-self: center;
@@ -38,12 +39,16 @@
   }
 
   &__choice {
+    transition: all 0.2s linear;
+    position: absolute;
     width: 248px;
     opacity: 0;
     display: flex;
     flex-direction: column;
     margin-top: 18px;
-
+    &_static {
+      position: static;
+    }
     &_activated {
       opacity: 1;
     }
