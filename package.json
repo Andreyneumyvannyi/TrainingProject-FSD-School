@@ -64,6 +64,8 @@
     "flatpickr": "^4.6.3",
     "jquery": "^3.5.1",
     "jquery-bar-rating": "^1.2.2",
+    "jquery-date-range-picker": "^1.0.4",
+    "moment": "^2.27.0",
     "slick-carousel": "^1.8.1"
   }
 }

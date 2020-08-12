@@ -10,6 +10,24 @@ import "./components/button/button-like/button-like";
 import "./components/dropdown/dropdown-guests/dropdown-guests";
 import "./components/dropdown/dropdown-facilities/dropdown-facilities";
 import "./components/checkbox/checkbox-list/checkbox-list";
+import "air-datepicker/dist/js/datepicker";
+import "./components/dropdown/dropdown-date/date_dropdown";
+
+/*import "jquery-date-range-picker/dist/jquery.daterangepicker.min";
+$("#dom-id").dateRangePicker({
+  separator: " to ",
+  getValue: function() {
+    if ($("#date-range200").val() && $("#date-range201").val())
+      return $("#date-range200").val() + " to " + $("#date-range201").val();
+    else return "";
+  },
+  setValue: function(s, s1, s2) {
+    $("#date-range200").val(s1);
+    $("#date-range201").val(s2);
+  },
+});
+
+$(dom).dateRangePicker.clear();*/
 
 // Calendar
 /*import flatpickr from "flatpickr";
@@ -23,10 +41,12 @@ flatpickr(".dropdown-date__range", {
 });
 */
 
-import daterangepicker from "daterangepicker";
+/*import daterangepicker from "daterangepicker";
+
 $(".dropdown-date__range").daterangepicker({
   linkedCalendars: false,
   opens: "center",
+  singleDatePicker: true,
   locale: {
     format: "DD.MM.YYYY",
     separator: " - ",
@@ -52,7 +72,7 @@ $(".dropdown-date__range").daterangepicker({
     ],
     firstDay: 1,
   },
-});
+});*/
 
 // SCSS
 import "./style.scss";
@@ -63,3 +83,5 @@ import "nouislider/distribute/nouislider.min.css";
 import "slick-carousel/slick/slick.css";
 import "jquery-bar-rating/dist/themes/css-stars.css";
 import "daterangepicker/daterangepicker.css";
+import "jquery-date-range-picker/dist/daterangepicker.min.css";
+import "air-datepicker/dist/css/datepicker.css";

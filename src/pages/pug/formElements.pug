@@ -38,8 +38,9 @@ block content
             +form-name("masked text field", "Default")
           include ../../components/text-field/text-field-masked
         .wrapper-dropdown-date
-            include ../../components/dropdown/dropdown-date/dropdown-date
-            +dropdown-date("date Dropdown", "date Dropdown")
+          include ../../components/dropdown/dropdown-date/date_dropdown
+          +date-dropdown("Ghbd", "ghbd", "datepicker-from")
+            
         .wrapper-dropdown-date-filter
           .wrapper-form-name
             +form-name("filter date dropdown")
