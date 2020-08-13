@@ -1,13 +1,16 @@
 include ../../form-name/form-name
 mixin dropdown-date(firstName, lastName)
 	.dropdown-date
-		.dropdown-date__arrival
-			.dropdown-date__name
-				+form-name(firstName)
-			.dropdown-date__input
-				input.dropdown-date__range(type="text" placeholder="ДД.ММ.ГГГГ")
-		// .dropdown-date__departure
+		.dropdown-date__wrapper
+			.dropdown-date__arrival
 				.dropdown-date__name
-					+form-name(lastName)
-				.dropdown-date__input
-					input.dropdown-date__range(type="text" placeholder="ДД.ММ.ГГГГ" id="secondRangeInput")
+					+form-name(firstName)
+				form(action="#").dropdown-date__form
+					input.dropdown-date__range.dropdown-date__range_from(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
+					span.dropdown-date__arrow.dropdown-date__arrow_down
+			.dropdown-date__departure
+				.dropdown-date__name
+						+form-name(lastName)
+				form(action="#").dropdown-date__form
+						input.dropdown-date__range.dropdown-date__range_to(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
+						span.dropdown-date__arrow.dropdown-date__arrow_down

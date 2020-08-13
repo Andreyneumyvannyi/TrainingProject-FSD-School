@@ -11,7 +11,7 @@ import "./components/dropdown/dropdown-guests/dropdown-guests";
 import "./components/dropdown/dropdown-facilities/dropdown-facilities";
 import "./components/checkbox/checkbox-list/checkbox-list";
 import "air-datepicker/dist/js/datepicker";
-import "./components/dropdown/dropdown-date/date_dropdown";
+import "./components/dropdown/dropdown-date/dropdown-date";
 
 /*import "jquery-date-range-picker/dist/jquery.daterangepicker.min";
 $("#dom-id").dateRangePicker({

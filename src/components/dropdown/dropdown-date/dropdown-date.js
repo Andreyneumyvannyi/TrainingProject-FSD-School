@@ -1,15 +1,12 @@
-import "./date_dropdown.scss";
 $(function() {
-  $(".datepicker-from").datepicker({
+  $(".dropdown-date__range_from").datepicker({
     minDate: new Date(),
     range: true,
     multipleDatesSeparator: "-",
-    classes: "date-dropdown",
+    classes: "dropdown-date",
     clearButton: true,
-    prevHtml: `<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z" fill="#BC9CFF"/>
-      </svg>`,
-    nextHtml: " ",
+    prevHtml: `<div class="arrow_prew"></div>`,
+    nextHtml: `<div class="arrow_next"></div>`,
     todayButton: true,
     navTitles: {
       days: "<h2>MM yyyy</h2>",
@@ -25,8 +22,8 @@ $(function() {
       }
     },
     onSelect: function(fd, d, picker) {
-      $(".datepicker-from").val(fd.split("-")[0]);
-      $(".datepicker-to").val(fd.split("-")[1]);
+      $(".dropdown-date__range_from").val(fd.split("-")[0]);
+      $(".dropdown-date__range_to").val(fd.split("-")[1]);
     },
   });
   $(".datepicker")
@@ -34,14 +31,14 @@ $(function() {
     .click(function() {
       if (this.dataset.action === "today") {
         $(this)
-          .parents(".date-dropdown")
+          .parents(".dropdown-date")
           .removeClass("active");
       }
     });
-  $(".datepicker-to").click(function() {
+  $(".dropdown-date__range_to").click(function() {
     $(this)
-      .parents(".date-dropdown__container")
-      .find(".datepicker-from")
+      .parents(".dropdown-date")
+      .find(".dropdown-date__range_from")
       .data("datepicker")
       .show();
   });
