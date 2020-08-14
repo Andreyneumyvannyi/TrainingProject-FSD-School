@@ -65,6 +65,7 @@
 }
 
 @import "./src/components/dropdown/dropdown-date/dropdown-date";
+@import "./src/components/calendar/calendar";
 .wrapper-dropdown-date {
   width: 320px;
   display: flex;
@@ -72,7 +73,7 @@
   margin-bottom: 40px;
 }
 
-@import "./src/components/dropdown/dropdown-date/dropdown-date-filter";
+@import "./src/components/dropdown/dropdown-date-filter/dropdown-date-filter";
 .wrapper-dropdown-date-filter {
   width: 266px;
   margin-bottom: 40px;

@@ -1,0 +1,34 @@
+.dropdown-date-filter {
+  position: relative;
+  &__input {
+    width: 266px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid $darkShade25;
+    border-radius: 4px;
+    padding: 8px 15px;
+    color: $darkShade25;
+    @include text(normal, 14px, 24px, $darkShade75, none);
+    &::placeholder {
+      @include text(normal, 14px, 24px, $darkShade75, none);
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    &_down {
+      width: 5px;
+      height: 5px;
+      border: solid $darkShade50;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+      transform: rotate(45deg);
+    }
+  }
+}

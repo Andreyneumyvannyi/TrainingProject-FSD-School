@@ -1,10 +1,12 @@
 $(function() {
-  $(".dropdown-date__range_from").datepicker({
+  $(".dropdown-date-filter__input").datepicker({
     minDate: new Date(),
     range: true,
-    offset: 18,
-    multipleDatesSeparator: "-",
-    classes: "dropdown-date",
+    multipleDatesSeparator: " - ",
+    offset: 9,
+    dateFormat: "d.mm",
+    position: "bottom left",
+    classes: "dropdown-date_filter",
     clearButton: true,
     prevHtml: `<div class="arrow_prew"></div>`,
     nextHtml: `<div class="arrow_next"></div>`,
@@ -22,25 +24,14 @@ $(function() {
         };
       }
     },
-    onSelect: function(fd, d, picker) {
-      $(".dropdown-date__range_from").val(fd.split("-")[0]);
-      $(".dropdown-date__range_to").val(fd.split("-")[1]);
-    },
   });
   $(".datepicker")
     .find(".datepicker--button")
     .click(function() {
       if (this.dataset.action === "today") {
         $(this)
-          .parents(".dropdown-date")
+          .parents(".dropdown-date_filter")
           .removeClass("active");
       }
     });
-  $(".dropdown-date__range_to").click(function() {
-    $(this)
-      .parents(".dropdown-date")
-      .find(".dropdown-date__range_from")
-      .data("datepicker")
-      .show();
-  });
 });

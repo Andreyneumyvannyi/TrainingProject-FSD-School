@@ -5,12 +5,12 @@ mixin dropdown-date(firstName, lastName)
 			.dropdown-date__arrival
 				.dropdown-date__name
 					+form-name(firstName)
-				form(action="#").dropdown-date__form
+				.dropdown-date__form
 					input.dropdown-date__range.dropdown-date__range_from(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
 					span.dropdown-date__arrow.dropdown-date__arrow_down
 			.dropdown-date__departure
 				.dropdown-date__name
 						+form-name(lastName)
-				form(action="#").dropdown-date__form
+				.dropdown-date__form
 						input.dropdown-date__range.dropdown-date__range_to(type="text" placeholder="ДД.ММ.ГГГГ" readonly)
 						span.dropdown-date__arrow.dropdown-date__arrow_down
