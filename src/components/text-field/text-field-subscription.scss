@@ -1,20 +1,23 @@
 .text-field-subscription {
-  @include text-field(267px);
+  @include text-field(266px);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  position: relative;
 
   &__arrow {
-    padding: 0px;
+    position: absolute;
+    right: 6px;
   }
 
   &__text {
     width: 100%;
-    margin-right: 10px;
+    margin-right: 20px;
     font-size: 14px;
 
     &::placeholder {
       @include text-field-placeholder($darkShade25);
+      text-align: justify;
+      letter-spacing: 0.8px;
     }
     &:hover,
     &:focus {

@@ -1,6 +1,7 @@
 .pagination {
   &__list {
     display: flex;
+    margin-bottom: 8px;
   }
   &__item {
     &-arrow {
@@ -16,7 +17,7 @@
 
   &__link {
     @include text(normal, 12px, 15px, $darkShade50, none);
-    width: 41px;
+    width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -25,7 +26,7 @@
     &_active {
       color: #fff;
       font-weight: bold;
-      width: 41px;
+      width: 40px;
       height: 40px;
       display: flex;
       align-items: center;
@@ -36,6 +37,8 @@
   }
   &__description {
     @include text(normal, 14px, 25px, $darkShade75, none);
+
+    letter-spacing: 0.4px;
     margin-left: 5px;
   }
 }

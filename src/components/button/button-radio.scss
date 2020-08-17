@@ -1,5 +1,13 @@
 .button-radio {
+  &-wrapper {
+    display: flex;
+  }
+
   display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 
   &__text {
     @include text(normal, 14px, 18px, $darkShade50, none);
@@ -8,6 +16,9 @@
     display: inline-block;
     margin-left: 10px;
     transition: all 0.2s linear;
+    text-align: justify;
+    letter-spacing: 1.2px;
+    word-spacing: 1px;
   }
 
   &__checkbox {

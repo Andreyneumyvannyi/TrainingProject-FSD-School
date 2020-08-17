@@ -4,15 +4,21 @@
   &__description {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   &__name {
     @include text(bold, 12px, 15px, $darkShade100, uppercase);
+    text-align: justify;
+    letter-spacing: 0.4px;
+    word-spacing: 0.5px;
   }
 
   &__price {
     @include text(bold, 12px, 15px, $darkShade50, uppercase);
+    text-align: justify;
+    letter-spacing: 0.9px;
+    word-spacing: 0.5px;
 
     &-separate {
       margin: 0 5px;
@@ -37,8 +43,8 @@
     content: "";
     display: none;
   }
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border: 2px solid #ffffff;
   border-radius: 50%;
   right: -6px;

@@ -23,8 +23,8 @@ mixin room-card(imgSrcOne, imgSrcTwo, imgSrcThree, imgSrcFour, numberRoom, typeN
           span.room-card__price-money= `${price}₽`
           span.room-card__price-day в сутки
       .room-card__raiting
-        include ../bar-raiting/bar-raiting
-        +bar-raiting(`${raitingId}`)
+        include ../bar-ratting/bar-ratting
+        +bar-ratting(`${raitingId}`)
         .room-card__count-rewiew
           span.room-card__count= countReview
           span.room-card__text Отзывов

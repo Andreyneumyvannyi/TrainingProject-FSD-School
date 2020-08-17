@@ -5,7 +5,7 @@ import "./components/range-slider/range-slider";
 import "slick-carousel/slick/slick";
 import "./components/room-card/room-card";
 import "jquery-bar-rating/dist/jquery.barrating.min";
-import "./components/bar-raiting/bar-raiting";
+import "./components/bar-ratting/bar-ratting";
 import "./components/button/button-like/button-like";
 import "./components/dropdown/dropdown-guests/dropdown-guests";
 import "./components/dropdown/dropdown-facilities/dropdown-facilities";

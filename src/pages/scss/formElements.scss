@@ -1,15 +1,18 @@
 .container-form-elements {
   margin: 0 auto;
-  width: 1200px;
-  padding: 0 30px;
+  width: 1240px;
+  padding: 0 20px;
 }
 .wrapper-form-elements {
   display: flex;
-  margin-top: 140px;
+  margin-top: 144px;
   &__column {
     width: 320px;
-    &:not(:last-child) {
-      margin-right: 126px;
+    &:nth-child(2) {
+      margin-left: 126px;
+    }
+    &:nth-child(3) {
+      margin-left: 72px;
     }
   }
 }
@@ -40,20 +43,20 @@
 =================*/
 @import "./src/components/text-field/text-field";
 .wrapper-text-field {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 @import "./src/components/text-field/text-field-hover";
 .wrapper-text-field-hover {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 @import "./src/components/dropdown/dropdown-guests/dropdown-guests";
 .wrapper-dropdown-guests-default {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 .wrapper-dropdown-guests_clear {
-  margin-bottom: 99px;
+  margin-bottom: 100px;
 }
 .wrapper-dropdown-guests {
   margin-bottom: 99px;
@@ -61,7 +64,7 @@
 
 @import "./src/components/text-field/text-field-masked";
 .wrapper-text-field-masked {
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 @import "./src/components/dropdown/dropdown-date/dropdown-date";
@@ -70,33 +73,33 @@
   width: 320px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 @import "./src/components/dropdown/dropdown-date-filter/dropdown-date-filter";
 .wrapper-dropdown-date-filter {
   width: 266px;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 @import "./src/components/text-field/text-field-subscription";
 .wrapper-text-field-subscription {
-  margin-bottom: 100px;
+  margin-bottom: 101px;
 }
 
 @import "./src/components/dropdown/dropdown-facilities/dropdown-facilities";
 .wrapper-dropdown-facilities-default {
   width: 266px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 .wrapper-dropdown-facilities {
   width: 266px;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
 
 @import "./src/components/checkbox/checkbox-list/checkbox-list";
 .wrapper-checkbox-list-default {
-  margin-bottom: 45px;
+  margin-bottom: 49px;
 }
 .wrapper-checkbox-list {
   margin-bottom: 100px;
@@ -111,7 +114,7 @@
 
 @import "./src/components/button/button-radio";
 .wrapper-button-radio {
-  margin-bottom: 38px;
+  margin-bottom: 42px;
 }
 .wrapper-button-radio-form {
   display: flex;
@@ -124,12 +127,12 @@
 
 @import "./src/components/button/button-togle";
 .wrapper-button-togle {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .wrapper-button-togle-btn {
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 }
 @import "./src/components/button/button-like/button-like";
@@ -143,11 +146,12 @@
   }
 }
 .wrapper-button-like {
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
+@import "./src/components/bar-ratting/bar-ratting";
 .wrapper-button-rate {
-  margin-bottom: 205px;
+  margin-bottom: 197px;
 }
 .wrapper-button-rate-form {
   display: flex;
@@ -164,7 +168,7 @@
 =================*/
 @import "./src/components/range-slider/range-slider";
 .wrapper-range-slider {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 @import "./src/components/button/button-bg";
@@ -183,7 +187,7 @@
   display: flex;
 }
 .wrapper-button-border {
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .wrapper-button-border-btn {
@@ -195,23 +199,23 @@
 @import "./src/components/button/button-click";
 .wrapper-button-click {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .wrapper-button-click-btn {
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 24px;
   }
 }
 
 @import "./src/components/button/button-big";
 .wrapper-button-big {
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 @import "./src/components/pagination/pagination";
 .wrapper-pagination {
-  margin-bottom: 245px;
+  margin-bottom: 233px;
 }
 
 @import "./src/components/rules/rules";
@@ -221,7 +225,7 @@
 @import "./src/components/dignity/dignity";
 .wrapper-dignity {
   &-item {
-    width: 285px;
+    width: 280px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -237,4 +241,8 @@
 
 .wrapper-dignity {
   margin-right: 165px;
+}
+
+.wrapper-review {
+  margin-top: 10px;
 }

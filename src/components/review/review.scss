@@ -1,8 +1,11 @@
 .review {
   max-width: 711px;
+  display: flex;
+  justify-content: flex-start;
 
   &__author {
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -14,31 +17,31 @@
     box-sizing: border-box;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
     border-radius: 32px;
+    margin-bottom: 15px;
   }
 
   &__info {
-    margin-left: 10px;
+    margin-bottom: 10px;
     &-name {
       @include text(bold, 14px, 24px, $darkShade75, none);
+      letter-spacing: 0.9px;
     }
 
     &-day {
       @include text(normal, 14px, 24px, $darkShade75, none);
+      letter-spacing: 0.9px;
     }
   }
 
   &__description {
     display: flex;
-    align-items: top;
-    margin-top: 10px;
-
-    &__like {
-      margin-left: 2px;
-    }
+    flex-direction: column;
+    margin-left: 10px;
   }
 
   &__text {
     @include text(normal, 14px, 24px, $darkShade75, none);
-    margin-left: 16px;
+    letter-spacing: 0.9px;
+    
   }
 }

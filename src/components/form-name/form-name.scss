@@ -1,10 +1,16 @@
 .form-name {
-  @include text(bold, 12px, 15px, $darkShade100, uppercase);
+  @include text(bold, 12px, 14px, $darkShade100, uppercase);
   display: flex;
   justify-content: space-between;
+  text-align: justify;
+  letter-spacing: 0.4px;
+  word-spacing: 0.2px;
 
   &__state {
     color: $darkShade50;
     font-weight: normal;
+    text-align: justify;
+    letter-spacing: 0.2px;
+    word-spacing: 0.2px;
   }
 }

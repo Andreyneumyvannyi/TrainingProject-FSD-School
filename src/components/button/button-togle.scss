@@ -22,7 +22,7 @@
       background: transparent;
       border: 1px solid $purple;
       &::after {
-        transform: translateX(calc(100%+8px));
+        transform: translateX(calc(100%+9px));
         background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
       }
     }
@@ -45,5 +45,8 @@
   &__text {
     @include text(normal, 14px, 20px, $darkShade75, none);
     margin-left: 10px;
+    text-align: justify;
+    letter-spacing: 0.9px;
+    word-spacing: 0.5px;
   }
 }

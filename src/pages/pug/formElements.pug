@@ -59,7 +59,7 @@ block content
             +form-name("dropdown", "expanded")
           include ../../components/dropdown/dropdown-facilities/dropdown-facilities_all
         .wrapper-checkbox-list-default
-          include ../../components/checkbox/checkbox-list_default
+          include ../../components/checkbox/checkbox-list/checkbox-list_default
           +checkbox-list_default("expandable checkbox list")
         .wrapper-checkbox-list
           include ../../components/checkbox/checkbox-list/checkbox-list_all
@@ -75,10 +75,6 @@ block content
             +form-name("Radio Buttons")
           .wrapper-button-radio-form
             include ../../components/button/button-radio
-            .wrapper-button-radio-btn
-              +button-radio("Мужчина")
-            .wrapper-button-radio-btn
-              +button-radio("Женщина")
         .wrapper-button-togle
           .wrapper-form-name-button
             +form-name("Toggle")
@@ -101,10 +97,10 @@ block content
             +form-name("rate button")
           .wrapper-button-rate-form
             .wrapper-button-rate-btn
-              include ../../components/bar-raiting/bar-raiting
-              +bar-raiting("ratefour")
+              include ../../components/bar-ratting/bar-ratting
+              +bar-ratting("ratefour")
             .wrapper-button-rate-btn
-              +bar-raiting("ratefive")
+              +bar-ratting("ratefive")
         .wrapper-dropdown-guests_clear
           .wrapper-form-name
             +form-name("Dropdown")

@@ -8,7 +8,8 @@ form.book-room
       span.book-room__price-money 9 990₽
       span.book-room__price-day в сутки
   .book-room__find-date
-    .book-room__date-arrival
+    include ../dropdown/dropdown-date/dropdown-date
+    +dropdown-date("Прибытие", "Выезд")
   .book-room__find-guests
     .book-room__form-name
       +form-name("гости")

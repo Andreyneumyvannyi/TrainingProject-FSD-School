@@ -1,11 +1,14 @@
 .rules {
   &__description {
     @include text(bold, 12px, 15px, $darkShade100, uppercase);
-    margin-bottom: 16px;
+
+    margin-bottom: 12px;
   }
 
   &__item {
     @include text(normal, 14px, 24px, $darkShade75, none);
+
+    letter-spacing: 0.7px;
     display: flex;
     align-items: center;
     position: relative;

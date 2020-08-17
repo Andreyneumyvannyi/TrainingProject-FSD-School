@@ -1,8 +1,17 @@
 .text-field-hover {
-  @include text-field(320px);
+  width: 320px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid $darkShade25;
+  border-radius: 4px;
+  padding: 10px 16px;
+  transition: all 0.2s linear;
   border: 1px solid $darkShade50;
 
   &::placeholder {
     @include text-field-placeholder($darkShade75);
+    word-spacing: 0.2px;
+    letter-spacing: 0.4px;
+    text-align: justify;
   }
 }

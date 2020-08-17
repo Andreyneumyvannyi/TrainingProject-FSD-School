@@ -14,13 +14,16 @@
     @include text(normal, 14px, 24px, $darkShade75, none);
     &::placeholder {
       @include text(normal, 14px, 24px, $darkShade75, none);
+      text-align: justify;
+      word-spacing: 0.2px;
+      letter-spacing: 0.1px;
     }
   }
 
   &__arrow {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 16.5px;
+    right: 16.5px;
 
     &_down {
       width: 5px;

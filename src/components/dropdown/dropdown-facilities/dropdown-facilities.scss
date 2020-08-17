@@ -5,6 +5,7 @@
     box-shadow: none;
   }
   &__enter {
+    position: relative;
     transition: all 0.2s linear;
     height: 44px;
     display: flex;
@@ -23,16 +24,20 @@
 
   &__text {
     @include text(normal, 14px, 25px, $darkShade75, none);
-    max-width: 150px;
+    max-width: 160px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     align-self: center;
+    text-align: justify;
+    letter-spacing: 0.5px;
+    word-spacing: 0.2px;
   }
 
   &__arrow {
-    position: relative;
-    top: -2px;
+    position: absolute;
+    top: 16px;
+    right: 17.5px;
     padding: 10px;
     cursor: pointer;
 
@@ -76,14 +81,17 @@
 
   &__criterion {
     &:not(:last-child) {
-      margin-bottom: 7px;
+      margin-bottom: 6px;
     }
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     &-name {
-      @include text(bold, 12px, 15px, $darkShade100, uppercase);
+      @include text(bold, 12px, 10px, $darkShade100, uppercase);
+      text-align: justify;
+      letter-spacing: 0.6px;
+      word-spacing: 0.2px;
     }
 
     &-quantity {
@@ -92,7 +100,7 @@
 
       &-result {
         @include text(bold, 12px, 15px, $darkShade100, uppercase);
-        margin: 0 10px;
+        margin: 0 12px;
       }
 
       &-minus {
@@ -107,7 +115,7 @@
           content: "-";
           position: absolute;
           display: inline-block;
-          top: 50%;
+          top: 48%;
           left: 50%;
           transform: translate(-50%, -50%);
           @include text(normal, 18px, 22px, $darkShade25, none);

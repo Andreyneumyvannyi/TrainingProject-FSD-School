@@ -12,7 +12,7 @@
     &-label {
       display: flex;
       &:not(:last-child) {
-        margin-bottom: 11px;
+        margin-bottom: 10px;
       }
     }
 
@@ -22,8 +22,10 @@
         @include text(normal, 14px, 18px, $darkShade50, none);
         user-select: none;
         cursor: pointer;
-        display: inline-block;
         margin-left: 10px;
+        min-width: 195px;
+        letter-spacing: 0.9px;
+        word-spacing: 1.2px;
       }
       &-castom {
         display: inline-block;

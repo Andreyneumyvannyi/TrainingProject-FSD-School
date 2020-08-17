@@ -1,6 +1,5 @@
 include ../form-name/form-name
 include ../button/button-big
-include ../button/button-radio
 include ../button/button-border
 include ../text-field/text-field
 
@@ -13,10 +12,7 @@ form.registration(method="post")
   .registration__surname
     +text-field("text", "Фамилия")
   .registration__find-gender
-    .registration__button-radio
-      +button-radio("Мужчина")
-    .registration__button-radio
-      +button-radio("Женщина")
+    include ../../components/button/button-radio
   .registration__birth
     .registration__form-name
       +form-name("дата рождения")

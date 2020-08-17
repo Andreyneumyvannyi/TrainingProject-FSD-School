@@ -2,18 +2,21 @@
   display: flex;
   width: 280px;
   align-items: center;
-  padding: 5px 5px 17px 5px;
+  padding: 5px 5px 20px 5px;
   &__icon {
     margin-right: 15px;
   }
 
   &__description {
     &-title {
-      @include text(bold, 14px, 20px, $darkShade75, none);
+      @include text(bold, 14px, 18px, $darkShade75, none);
+      margin-bottom: 1px;
+      letter-spacing: 0.2px;
     }
 
     &-text {
-      @include text(normal, 14px, 20px, $darkShade75, none);
+      @include text(normal, 14px, 24px, $darkShade75, none);
+      letter-spacing: 1.2px;
     }
   }
 }

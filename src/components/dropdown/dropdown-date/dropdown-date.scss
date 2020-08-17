@@ -29,12 +29,14 @@
     padding: 12px 15px;
     &::placeholder {
       @include text(normal, 14px, 18px, $darkShade75, none);
+      text-align: justify;
+      letter-spacing: 0.8px;
     }
   }
   &__arrow {
     position: absolute;
     top: 16px;
-    right: 16px;
+    right: 16.5px;
 
     &_down {
       align-self: center;
