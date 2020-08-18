@@ -33,12 +33,13 @@
     font-family: $Quicksand;
 
     &_h1 {
-      width: 336px;
+      width: 350px;
       height: 60px;
       color: $darkShade100;
       font-weight: bold;
       font-size: 24px;
       line-height: 30px;
+      letter-spacing: -0.1px;
     }
 
     &_h2 {
@@ -51,13 +52,14 @@
     }
 
     &_h3 {
-      width: 186px;
-      height: 15px;
+      width: 200px;
       font-family: $Montserrat;
       font-weight: bold;
       font-size: 12px;
       line-height: 15px;
       text-transform: uppercase;
+      letter-spacing: 0.1px;
+      word-spacing: 0.4px;
     }
 
     &_body {
@@ -68,6 +70,9 @@
       font-size: 14px;
       line-height: 24px;
       color: $darkShade75;
+      letter-spacing: 0.5px;
+      text-align: justify;
+      word-spacing: 0.9px;
     }
   }
 }

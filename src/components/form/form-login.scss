@@ -3,8 +3,10 @@
 
   &__title {
     @include text(bold, 24px, 30px, $darkShade100, none);
+    letter-spacing: 1.1px;
+    word-spacing: 1px;
     font-family: $Quicksand;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   &__email {
@@ -25,6 +27,7 @@
 
     &-text {
       @include text(normal, 14px, 18px, $darkShade100, none);
+      letter-spacing: 0.8px;
     }
   }
 }

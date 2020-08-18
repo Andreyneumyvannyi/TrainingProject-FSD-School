@@ -3,13 +3,13 @@
   border-radius: 4px;
   background-color: #ffffff;
   width: 270px;
-  height: 251px;
+  height: 258px;
   overflow: hidden;
 
   &__slider {
     overflow: hidden;
     width: 270px;
-    max-height: 150px;
+    max-height: 151px;
     position: relative;
   }
 
@@ -57,39 +57,47 @@
   }
 
   &__info {
-    padding: 20px;
+    padding: 20px 19px 20px 22px;
   }
 
   &__description {
+    margin-top: 2px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 12px;
+    padding-bottom: 9px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
   }
 
   &__num {
     @include text(bold, 14px, 17px, $darkShade100, normal);
+
     font-family: $Quicksand;
-    margin-right: 5px;
+    margin-right: 6px;
   }
   &__figures {
     @include text(bold, 19px, 24px, $darkShade100, normal);
+    letter-spacing: 0.8px;
     font-family: $Quicksand;
     margin-right: 5px;
   }
   &__type {
     @include text(bold, 12px, 15px, $purple, uppercase);
+    letter-spacing: 0.9px;
   }
 
   &__price {
     &-money {
       @include text(bold, 14px, 18px, $darkShade50, normal);
+      letter-spacing: 0.7px;
+      word-spacing: 1px;
     }
 
     &-day {
       @include text(normal, 12px, 22px, $darkShade50, normal);
-      margin-left: 5px;
+      margin-left: 4px;
+      letter-spacing: 0.7px;
+      word-spacing: 0.5px;
     }
   }
 
@@ -97,6 +105,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 5px;
     margin-top: 8px;
   }
 
@@ -106,11 +115,15 @@
 
   &__count {
     @include text(bold, 14px, 18px, $darkShade50, normal);
+    letter-spacing: 0.7px;
+    word-spacing: 1px;
   }
 
   &__text {
-    @include text(normal, 12px, 20px, $darkShade50, normal);
-    margin-left: 3px;
+    @include text(normal, 14px, 20px, $darkShade50, normal);
+    letter-spacing: 0.7px;
+    word-spacing: 1px;
+    margin-left: 5px;
   }
 }
 
@@ -119,7 +132,7 @@
   z-index: 1001;
   position: absolute;
   top: 85%;
-  right: 0;
+  right: -4px;
   display: flex;
   transition: all 0.2s linear;
   li {

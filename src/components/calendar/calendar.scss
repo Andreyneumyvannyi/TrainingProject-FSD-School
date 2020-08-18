@@ -13,8 +13,8 @@
 }
 
 .datepicker {
-  width: 280px;
-  padding: 20px 18px;
+  width: 281px;
+  padding: 17px 18px 19px 19px;
   background: #ffffff;
   border: 1px solid $darkShade25;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
@@ -30,11 +30,13 @@
     align-items: center;
     padding: 0;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     &-title {
       h2 {
         @include text(bold, 19px, 24px, $darkShade100, none);
+        letter-spacing: 0.2px;
+        word-spacing: 0.8px;
         font-weight: bold;
         font-family: $Quicksand;
       }
@@ -287,6 +289,7 @@
   &--button {
     display: flex;
     @include text(bold, 12px, 15px, $purple, uppercase);
+    letter-spacing: 0.5px;
 
     max-width: 80px;
     height: auto;

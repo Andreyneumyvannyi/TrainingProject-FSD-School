@@ -3,8 +3,6 @@
 
   &::placeholder {
     @include text-field-placeholder($darkShade25);
-    text-align: justify;
-    letter-spacing: 0.5px;
   }
 
   &:hover,

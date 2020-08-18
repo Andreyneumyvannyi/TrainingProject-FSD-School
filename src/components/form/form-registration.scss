@@ -2,8 +2,10 @@
   @include form;
   &__title {
     @include text(bold, 24px, 30px, $darkShade100, none);
+    letter-spacing: 1.1px;
+    word-spacing: 1px;
     font-family: $Quicksand;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   &__name,
   &__surname {
@@ -11,11 +13,11 @@
   }
 
   &__form-name {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   &__find-gender {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   &__find-gender {
     display: flex;
@@ -26,7 +28,7 @@
     }
   }
   &__birth {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
   &__login {
     &-email {
@@ -37,7 +39,7 @@
     }
   }
   &__button-togle {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   &__button-big {
@@ -47,6 +49,7 @@
   &__footer {
     &-text {
       @include text(normal, 14px, 18px, $darkShade100, none);
+      letter-spacing: 0.8px;
     }
     display: flex;
     justify-content: space-between;
