@@ -95,9 +95,9 @@
     z-index: 1000;
     transition: all 0.2s linear;
     &_activated {
-      opacity: 1;
+      display: block;
     }
-    opacity: 0;
+    display: none;
     width: 320px;
     height: auto;
     background: #ffffff;

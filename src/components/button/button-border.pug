@@ -1,2 +1,3 @@
-mixin button-border(text)
-  button.button-border=text
+mixin button-border(text, mod)
+  a(href="#")
+    button(class=`button-border button-border_${mod}`)=text

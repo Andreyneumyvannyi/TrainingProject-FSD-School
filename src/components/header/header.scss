@@ -5,7 +5,7 @@
     width: 1200px;
     margin: 0 auto;
     display: flex;
-    padding: 13px 20px;
+    padding: 15px 20px;
     align-items: center;
   }
 
@@ -15,23 +15,17 @@
     align-items: center;
 
     &-item {
-      position: relative;
-      &:nth-child(3) {
-        &::before {
-          content: "";
-          position: absolute;
-          top: 4px;
-          left: 65px;
-          width: 4px;
-          height: 4px;
-          border: solid $darkShade50;
-          border-width: 0 2px 2px 0;
-          padding: 3px;
-          transform: rotate(45deg);
-        }
-      }
       &:not(:last-child) {
-        margin-right: 32px;
+        margin-right: 30px;
+      }
+    }
+    &-arrow {
+      &::before {
+        cursor: pointer;
+        position: relative;
+        top: -1px;
+        left: 4px;
+        content: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z' fill='%231F2041' fill-opacity='0.5'/%3E%3C/svg%3E%0A");
       }
     }
 
@@ -39,7 +33,7 @@
       cursor: pointer;
       @include text(normal, 14px, 17px, $darkShade50, none);
       word-spacing: 0.4px;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.7px;
       transition: all 0.2s linear;
       &:hover {
         color: $darkShade100;
@@ -54,7 +48,7 @@
   }
 
   &__login {
-    margin-left: 25px;
+    margin-left: 33px;
     display: none;
     &_active {
       display: flex;
@@ -63,11 +57,12 @@
 
   &__button {
     &-login {
-      margin-right: 12px;
+      margin-right: 18px;
     }
   }
 
   &__account {
+    margin-left: 4px;
     display: none;
     &_active {
       display: flex;

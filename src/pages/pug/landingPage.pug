@@ -1,0 +1,31 @@
+extends ../layout/main
+
+block title
+  | landingPage
+
+
+block content
+  // Header
+  .container-header
+    .header-inner
+      include ../../components/header/header
+      - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
+      - let arrowPos = ["Услуги","Соглашения"]
+      +header(arrTextLink, arrowPos, "войти", "зарегистрироваться")
+      .header-inner__wrapper
+        include ../../components/form/form-find-room/form-find-room
+        p.header-inner__text
+          | Лучшие номера для вашей работы, отдыха и просто вдохновения
+  
+  // Footer
+  .container-footer
+    include ../../components/footer/footer
+    - let contentText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+    - let arrLinkNavigation = ["навигация", "О нас", "Новости", "Служба поддержки", "Услуги"]
+    - let arrLinkAbout = ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+    - let arrLinkSupport = ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"]
+    - let subscribeTitle = "Подписка"
+    - let subscribeText = "Получайте специальные предложения и новости сервиса"
+    - let subscribePlaceholder = "Email"
+    - let copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
+    +footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)

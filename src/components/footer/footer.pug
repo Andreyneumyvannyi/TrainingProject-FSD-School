@@ -1,51 +1,48 @@
-footer.footer
-    .footer__border
-      .footer__inner
-        .footer__content
-          .footer__info
-            .footer__logo
-            a(href="#")
-              img(src="assets/img/logo.svg")
-            .footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-          ul.footer__nav
-            li.footer__nav-item
-              .footer__nav-title Navigation
-            li.footer__nav-item
-              a(href="#").footer__nav-link About Us
-            li.footer__nav-item 
-              a(href="#").footer__nav-link News
-            li.footer__nav-item
-              a(href="#").footer__nav-link Support
-            li.footer__nav-item
-              a(href="#").footer__nav-link Products
-          ul.footer__nav
-            li.footer__nav-item
-              .footer__nav-title ABOUT US
-            li.footer__nav-item
-              a(href="#").footer__nav-link Who we are
-            li.footer__nav-item 
-              a(href="#").footer__nav-link Our team
-            li.footer__nav-item
-              a(href="#").footer__nav-link Careers
-            li.footer__nav-item
-              a(href="#").footer__nav-link Investors
-          ul.footer__nav
-            li.footer__nav-item
-              .footer__nav-title Support
-            li.footer__nav-item
-              a(href="#").footer__nav-link Documentation
-            li.footer__nav-item 
-              a(href="#").footer__nav-link Community
-            li.footer__nav-item
-              a(href="#").footer__nav-link Get in Touch
-
-          .footer__subscribe
-            .footer__subscribe-title Subscribe to our newsletter
-            .footer__subscribe-text Receive our latest news and promotions in your inbox!
-            .footer__subscribe-form
-              include ../text-field/text-field-subscription
-              +text-field-subscription("Your email address")
-    .footer__copyright
-      .footer__copyright-content
-        .footer__copyright-text Copyright © 2018 Toxin UI Kit. All rights reserved.
-        include ../social/social
+mixin footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
+  footer.footer
+      .footer__border
+        .footer__inner
+          .footer__content
+            .footer__info
+              .footer__logo
+                a(href="#")
+                  img(src="assets/img/logo.svg")
+              .footer__text= contentText
+            
+            ul.footer__nav
+              each val, index in arrLinkNavigation
+                if index === 0
+                  li.footer__nav-item
+                    .footer__nav-title= arrLinkNavigation[index]
+                else
+                  li.footer__nav-item
+                    a(href="#").footer__nav-link= arrLinkNavigation[index]
+            ul.footer__nav
+              each val, index in arrLinkAbout
+                if index === 0
+                  li.footer__nav-item
+                    .footer__nav-title= arrLinkAbout[index]
+                else
+                  li.footer__nav-item
+                    a(href="#").footer__nav-link= arrLinkAbout[index]
+            ul.footer__nav
+              each val, index in arrLinkSupport
+                if index === 0
+                  li.footer__nav-item
+                    .footer__nav-title= arrLinkSupport[index]
+                else
+                  li.footer__nav-item
+                    a(href="#").footer__nav-link= arrLinkSupport[index]
+            
+            .footer__subscribe
+              .footer__subscribe-title= subscribeTitle
+              .footer__subscribe-text= subscribeText
+              .footer__subscribe-form
+                include ../text-field/text-field-subscription
+                +text-field-subscription(subscribePlaceholder)
+      
+      
+      .footer__copyright
+        .footer__copyright-content
+          .footer__copyright-text= copyright
+          include ../social/social

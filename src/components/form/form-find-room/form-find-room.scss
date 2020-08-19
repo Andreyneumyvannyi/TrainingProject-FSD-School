@@ -1,0 +1,25 @@
+.find-room {
+  @include form;
+  &__title {
+    width: 260px;
+    @include text(bold, 24px, 30px, $darkShade100, none);
+    font-family: $Quicksand;
+    margin-bottom: 20px;
+    letter-spacing: 1.1px;
+    word-spacing: 1px;
+  }
+  &__find {
+    &-date {
+      margin-bottom: 20px;
+    }
+
+    &-guests {
+      margin-bottom: 31px;
+    }
+  }
+  &__form {
+    &-name {
+      margin-bottom: 6px;
+    }
+  }
+}

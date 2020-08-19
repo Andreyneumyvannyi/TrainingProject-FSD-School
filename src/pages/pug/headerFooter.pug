@@ -10,11 +10,31 @@ block content
   .wrapper-logo-gray
     include ../../components/logo/logo-gray
 
+  // Header
   .wrapper-header
     include ../../components/header/header
+    - let arrLink = ["Home", "About Us", "Services", "Careers", "News", "Documentation"]
+    - let arrowPos = ["Services"]
+    +header(arrLink, arrowPos, "Login", "REGISTER")
+
+  // Header-account
   .wrapper-header-account
     include ../../components/header/header_login
+
+  // Footer
   .wrapper-footer
     include ../../components/footer/footer
+    - let contentText = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+    - let arrLinkNavigation = ["Navigation", "About Us", "News", "Support", "Products"]
+    - let arrLinkAbout = ["ABOUT US", "Who we are", "Our team", "Careers", "Investors"]
+    - let arrLinkSupport = ["Support", "Documentation", "Community", "Get in Touch"]
+    - let subscribeTitle = "Subscribe to our newsletter"
+    - let subscribeText = "Receive our latest news and promotions in your inbox!"
+    - let subscribePlaceholder = "Your email address"
+    - let copyright = "Copyright © 2018 Toxin UI Kit. All rights reserved."
+
+    +footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
+  
+  // Footer-social
   .wrapper-footer-social
     include ../../components/footer/footer_social

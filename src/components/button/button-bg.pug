@@ -1,2 +1,3 @@
-mixin button-bg(text)
-  button.button-bg=text
+mixin button-bg(text, mod)
+  a(href="#")
+    button(class=`button-bg button-bg_${mod}`)=text

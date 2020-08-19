@@ -4,7 +4,7 @@
   &__inner {
     width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 105px 20px 100px 20px;
   }
   &__border {
     border-bottom: 1px solid $darkShade25;
@@ -13,22 +13,20 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    padding: 102px 0;
   }
 
   &__text {
-    width: 240px;
+    width: 250px;
     @include text(normal, 14px, 24px, $darkShade75, none);
-    letter-spacing: 0.5px;
-    word-spacing: 0.4px;
-    margin-top: 16px;
+    letter-spacing: 0.9px;
+    word-spacing: 0.9px;
+    margin-top: 13px;
   }
 
   &__nav {
     &-title {
       @include text(bold, 12px, 15px, $darkShade100, uppercase);
-      letter-spacing: 0.5px;
-      word-spacing: 0.4px;
+      letter-spacing: 0.7px;
     }
     &-item {
       &:not(:last-child) {
@@ -38,8 +36,8 @@
     &-link {
       cursor: pointer;
       @include text(normal, 14px, 17px, $darkShade50, none);
-      letter-spacing: 0.5px;
-      word-spacing: 0.4px;
+      letter-spacing: 0.9px;
+      word-spacing: 0.9px;
       transition: all 0.2s linear;
       &:hover {
         color: $darkShade100;
@@ -50,15 +48,15 @@
   &__subscribe {
     &-title {
       @include text(bold, 12px, 15px, $darkShade100, uppercase);
-      word-spacing: 0.4px;
-      letter-spacing: 0.5px;
+      word-spacing: 0.5px;
+      letter-spacing: 0.3px;
     }
     &-text {
-      width: 200px;
+      width: 240px;
       @include text(normal, 14px, 24px, $darkShade75, none);
-      letter-spacing: 0.5px;
-      word-spacing: 0.4px;
-      margin-top: 20px;
+      letter-spacing: 0.9px;
+      word-spacing: 0.9px;
+      margin-top: 18px;
     }
     &-form {
       margin-top: 22px;
@@ -72,7 +70,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 23px 20px 23px 20px;
+      padding: 23px 20px 25px 20px;
     }
     &-text {
       @include text(normal, 14px, 17px, $darkShade75, none);
