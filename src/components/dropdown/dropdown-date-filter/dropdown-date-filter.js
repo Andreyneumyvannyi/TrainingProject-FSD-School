@@ -4,7 +4,7 @@ $(function() {
     range: true,
     multipleDatesSeparator: " - ",
     offset: 9,
-    dateFormat: "d.mm",
+    dateFormat: "d M",
     position: "bottom left",
     classes: "dropdown-date_filter",
     clearButton: true,
@@ -16,6 +16,20 @@ $(function() {
     },
     language: {
       today: "Применить",
+      monthsShort: [
+        "янв",
+        "фев",
+        "мар",
+        "апр",
+        "май",
+        "июн",
+        "мюл",
+        "авг",
+        "сен",
+        "окт",
+        "ноя",
+        "дек",
+      ],
     },
     onRenderCell: function(date, cellType) {
       if (cellType == "day") {

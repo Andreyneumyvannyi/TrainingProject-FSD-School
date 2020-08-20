@@ -19,7 +19,6 @@ import "./components/dropdown/dropdown-date-filter/dropdown-date-filter";
 import "./style.scss";
 
 //CSS
-import "flatpickr/dist/flatpickr.min.css";
 import "nouislider/distribute/nouislider.min.css";
 import "slick-carousel/slick/slick.css";
 import "jquery-bar-rating/dist/themes/css-stars.css";

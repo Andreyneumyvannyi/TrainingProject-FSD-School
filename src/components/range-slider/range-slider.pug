@@ -1,4 +1,4 @@
-mixin range-slider(name)
+mixin range-slider(name, id, text)
   .range-slider
     .range-slider__description
       .range-slider__name=name
@@ -6,5 +6,7 @@ mixin range-slider(name)
         span#range-slider__price-lower
         span.range-slider__price-separate -
         span#range-slider__price-upper
-    #skipstep
+    div(id=`${id}`)
+    if text
+      .range-slider__text= text
 

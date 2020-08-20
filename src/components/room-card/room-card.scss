@@ -6,6 +6,10 @@
   height: 258px;
   overflow: hidden;
 
+  &__photo {
+    margin: 0 auto;
+  }
+
   &__slider {
     overflow: hidden;
     width: 270px;

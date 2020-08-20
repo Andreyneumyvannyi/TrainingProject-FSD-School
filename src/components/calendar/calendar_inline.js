@@ -3,6 +3,7 @@ $(function() {
     minDate: new Date(),
     range: true,
     multipleDatesSeparator: "-",
+    classes: "datepicker_block",
     inline: true,
     clearButton: true,
     prevHtml: `<div class="arrow_prew"></div>`,

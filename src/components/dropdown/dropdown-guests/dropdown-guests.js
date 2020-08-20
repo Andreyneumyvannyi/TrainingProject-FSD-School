@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#dropdown-guests-button").click(function(e) {
+  $("#dropdown-guests__enter").click(function(e) {
     e.preventDefault();
     $("#dropdown-guests-button").toggleClass("dropdown-guests__arrow_gray");
     $(".dropdown-guests").toggleClass("dropdown-guests_default");

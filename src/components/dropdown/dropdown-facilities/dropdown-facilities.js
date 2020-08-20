@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#dropdown-facilities-button").click(function(e) {
+  $("#dropdown-facilities__enter").click(function(e) {
     e.preventDefault();
     $(".dropdown-facilities").toggleClass("dropdown-facilities_default");
     $(".dropdown-facilities__enter").toggleClass(

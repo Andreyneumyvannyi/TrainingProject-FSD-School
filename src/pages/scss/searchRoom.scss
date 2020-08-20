@@ -1,0 +1,68 @@
+.container {
+  &-search-room {
+    border-bottom: 1px solid $darkShade25;
+  }
+  &-content {
+    display: flex;
+    width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  &-filter {
+    max-width: 266px;
+    margin-right: 60px;
+  }
+  &-form-name {
+    margin-bottom: 5px;
+  }
+
+  &-dropdown-guests {
+    margin-top: 20px;
+  }
+
+  &-range-slider {
+    margin-top: 30px;
+  }
+
+  &-checkbox-buttons {
+    margin-top: 30px;
+  }
+
+  &-checkbox-availability {
+    margin-top: 31px;
+  }
+
+  &-dropdown-facilities {
+    margin-top: 30px;
+  }
+
+  &-checkbox-list {
+    margin-top: 30px;
+  }
+
+  &-room-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-room-card {
+    margin-bottom: 21px;
+    &:not(:nth-child(3n + 3)) {
+      margin-right: 12px;
+    }
+  }
+
+  &-pagination {
+    margin-top: 41px;
+    margin-bottom: 70px;
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.title__room-card {
+  @include text(bold, 24px, 30px, $darkShade100, none);
+  font-family: $Quicksand;
+}

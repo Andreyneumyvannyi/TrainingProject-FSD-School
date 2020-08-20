@@ -1,6 +1,6 @@
-mixin bar-ratting (countStar)
+mixin bar-ratting(numberRoom)
   .bar-ratting
-    select(id=`${countStar}`)
+    select(id=`rating_room${numberRoom}`)
       option(value="1") 1
       option(value="2") 2
       option(value="3") 3

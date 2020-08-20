@@ -1,23 +1,55 @@
-.dropdown-facilities.dropdown-facilities_default
-  .dropdown-facilities__enter.dropdown-facilities__enter_default
-    #text.dropdown-facilities__text 2 спальни, 2 кровати, 2 кровати.
-    button#dropdown-facilities-button.dropdown-facilities__arrow.dropdown-facilities__arrow_down.dropdown-facilities__arrow_gray
-  .dropdown-facilities__choice
-    .dropdown-facilities__criterion
-      #bedroom-name.dropdown-facilities__criterion-name спальни
-      #bedroom.dropdown-facilities__criterion-quantity
-        button#bedroom-minus.dropdown-facilities__criterion-quantity-minus
-        #bedroom-result.dropdown-facilities__criterion-quantity-result 0
-        button#bedroom-plus.dropdown-facilities__criterion-quantity-plus
-    .dropdown-facilities__criterion
-      #bed-name.dropdown-facilities__criterion-name кровати
-      #bed.dropdown-facilities__criterion-quantity
-        button#bed-minus.dropdown-facilities__criterion-quantity-minus
-        #bed-result.dropdown-facilities__criterion-quantity-result 0
-        button#bed-plus.dropdown-facilities__criterion-quantity-plus
-    .dropdown-facilities__criterion
-      #bathroom-name.dropdown-facilities__criterion-name ванные комнаты
-      #bathroom.dropdown-facilities__criterion-quantity
-        button#bathroom-minus.dropdown-facilities__criterion-quantity-minus
-        #bathroom-result.dropdown-facilities__criterion-quantity-result 0
-        button#bathroom-plus.dropdown-facilities__criterion-quantity-plus
+mixin dropdown-facilities(state)
+  case state
+    when "standard"
+      .dropdown-facilities.dropdown-facilities_default
+        #dropdown-facilities__enter.dropdown-facilities__enter.dropdown-facilities__enter_default
+          #text.dropdown-facilities__text 2 спальни, 2 кровати, 2 кровати.
+          .dropdown-facilities__arrow.dropdown-facilities__arrow_down.dropdown-facilities__arrow_gray
+        .dropdown-facilities__choice
+          .dropdown-facilities__criterion
+            #bedroom-name.dropdown-facilities__criterion-name спальни
+            #bedroom.dropdown-facilities__criterion-quantity
+              button#bedroom-minus.dropdown-facilities__criterion-quantity-minus
+              #bedroom-result.dropdown-facilities__criterion-quantity-result 0
+              button#bedroom-plus.dropdown-facilities__criterion-quantity-plus
+          .dropdown-facilities__criterion
+            #bed-name.dropdown-facilities__criterion-name кровати
+            #bed.dropdown-facilities__criterion-quantity
+              button#bed-minus.dropdown-facilities__criterion-quantity-minus
+              #bed-result.dropdown-facilities__criterion-quantity-result 0
+              button#bed-plus.dropdown-facilities__criterion-quantity-plus
+          .dropdown-facilities__criterion
+            #bathroom-name.dropdown-facilities__criterion-name ванные комнаты
+            #bathroom.dropdown-facilities__criterion-quantity
+              button#bathroom-minus.dropdown-facilities__criterion-quantity-minus
+              #bathroom-result.dropdown-facilities__criterion-quantity-result 0
+              button#bathroom-plus.dropdown-facilities__criterion-quantity-plus
+    when "all"
+      .dropdown-facilities
+        .dropdown-facilities__enter
+          .dropdown-facilities__text 2 спальни, 2 кровати, 2 кровати.
+          button.dropdown-facilities__arrow.dropdown-facilities__arrow_down.dropdown-facilities__arrow_gray
+        .dropdown-facilities__choice.dropdown-facilities__choice_activated.dropdown-facilities__choice_static
+          .dropdown-facilities__criterion
+            .dropdown-facilities__criterion-name спальни
+            .dropdown-facilities__criterion-quantity
+              button.dropdown-facilities__criterion-quantity-minus
+              .dropdown-facilities__criterion-quantity-result 2
+              button.dropdown-facilities__criterion-quantity-plus
+          .dropdown-facilities__criterion
+            .dropdown-facilities__criterion-name кровати
+            .dropdown-facilities__criterion-quantity
+              button.dropdown-facilities__criterion-quantity-minus
+              .dropdown-facilities__criterion-quantity-result 2
+              button.dropdown-facilities__criterion-quantity-plus
+          .dropdown-facilities__criterion
+            .dropdown-facilities__criterion-name ванные комнаты
+            .dropdown-facilities__criterion-quantity
+              button.dropdown-facilities__criterion-quantity-minus.dropdown-facilities__criterion-quantity-minus_deactivated
+              .dropdown-facilities__criterion-quantity-result 0
+              button.dropdown-facilities__criterion-quantity-plus
+    when "default"
+      .dropdown-facilities.dropdown-facilities_default
+        .dropdown-facilities__enter.dropdown-facilities__enter_default
+          .dropdown-facilities__text 2 спальни, 2 кровати, 2 кровати.
+          button.dropdown-facilities__arrow.dropdown-facilities__arrow_down.dropdown-facilities__arrow_gray

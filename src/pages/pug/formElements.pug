@@ -32,7 +32,8 @@ block content
         .wrapper-dropdown-guests-default
           .wrapper-form-name
             +form-name("Dropdown", "Default")
-          include ../../components/dropdown/dropdown-guests/dropdown-guests_default
+          include ../../components/dropdown/dropdown-guests/dropdown-guests
+          +dropdown-guests("default")
         .wrapper-text-field-masked
           .wrapper-form-name
             +form-name("masked text field", "Default")
@@ -53,17 +54,19 @@ block content
         .wrapper-dropdown-facilities-default
           .wrapper-form-name
             +form-name("dropdown", "Default")
-          include ../../components/dropdown/dropdown-facilities/dropdown-facilities_default
+          include ../../components/dropdown/dropdown-facilities/dropdown-facilities
+          +dropdown-facilities("default")
         .wrapper-dropdown-facilities
           .wrapper-form-name
             +form-name("dropdown", "expanded")
-          include ../../components/dropdown/dropdown-facilities/dropdown-facilities_all
+          include ../../components/dropdown/dropdown-facilities/dropdown-facilities
+          +dropdown-facilities("all")
         .wrapper-checkbox-list-default
-          include ../../components/checkbox/checkbox-list/checkbox-list_default
-          +checkbox-list_default("expandable checkbox list")
+          include ../../components/checkbox/checkbox-list/checkbox-list
+          +checkbox-list("expandable checkbox list", "default")
         .wrapper-checkbox-list
-          include ../../components/checkbox/checkbox-list/checkbox-list_all
-          +checkbox-list("expandable checkbox list")
+          include ../../components/checkbox/checkbox-list/checkbox-list
+          +checkbox-list("expandable checkbox list", "all")
 
       // Column 2
       .wrapper-form-elements__column
@@ -98,13 +101,14 @@ block content
           .wrapper-button-rate-form
             .wrapper-button-rate-btn
               include ../../components/bar-ratting/bar-ratting
-              +bar-ratting("ratefour")
+              +bar-ratting("ui-4")
             .wrapper-button-rate-btn
-              +bar-ratting("ratefive")
+              +bar-ratting("ui-5")
         .wrapper-dropdown-guests_clear
           .wrapper-form-name
             +form-name("Dropdown")
-          include ../../components/dropdown/dropdown-guests/dropdown-guests_clear
+          include ../../components/dropdown/dropdown-guests/dropdown-guests
+          +dropdown-guests("clear")
         .wrapper-checkbox-availability
           include ../../components/checkbox/checkbox-availability
           +checkbox-availability("rich Checkbox Buttons")
@@ -115,7 +119,7 @@ block content
       .wrapper-form-elements__column
         .wrapper-range-slider
           include ../../components/range-slider/range-slider
-          +range-slider("range-slider")
+          +range-slider("range-slider", "range-slider_ui")
         .wrapper-buttons
           .wrapper-form-name-button
             +form-name("buttons")
@@ -148,7 +152,8 @@ block content
         .wrapper-dropdown-guests
           .wrapper-form-name
             +form-name("Dropdown")
-          include ../../components/dropdown/dropdown-guests/dropdown-guests_all
+          include ../../components/dropdown/dropdown-guests/dropdown-guests
+          +dropdown-guests("all")
         .wrapper-rules
           include ../../components/rules/rules
           +rules('bullet list')

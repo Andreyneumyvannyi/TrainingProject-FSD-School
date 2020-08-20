@@ -1,6 +1,8 @@
 .dropdown-date-filter {
   position: relative;
+
   &__input {
+    cursor: pointer;
     width: 266px;
     height: 44px;
     display: flex;
@@ -21,6 +23,7 @@
   }
 
   &__arrow {
+    cursor: pointer;
     position: absolute;
     top: 16.5px;
     right: 16.5px;

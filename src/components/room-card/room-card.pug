@@ -1,32 +1,27 @@
-mixin room-card(imgSrcOne, imgSrcTwo, imgSrcThree, imgSrcFour, numberRoom, typeNumber, price, raitingId, countReview)
+mixin room-card(dataInfo, imgSrc)
   .room-card
     .room-card__slider
       .room-card__nav
-        div(class=`room-card__arrow room-card__arrow_prev room-card__arrow_prev_${numberRoom}`)
-        div(class=`room-card__arrow room-card__arrow_next room-card__arrow_next_${numberRoom}`)
-      div(class=`room-card__slide room-card__slide_${numberRoom}`)
-        .room-card__photo
-          img(src=`${imgSrcOne}`, alt="roomPhoto")
-        .room-card__photo
-          img(src=`${imgSrcTwo}`, alt="roomPhoto")
-        .room-card__photo
-          img(src=`${imgSrcThree}`, alt="roomPhoto")
-        .room-card__photo
-          img(src=`${imgSrcFour}`, alt="roomPhoto")
+        div(class=`room-card__arrow room-card__arrow_prev room-card__arrow_prev_${dataInfo[0]}`)
+        div(class=`room-card__arrow room-card__arrow_next room-card__arrow_next_${dataInfo[0]}`)
+      div(class=`room-card__slide room-card__slide_${dataInfo[0]}`)
+        each val, index in imgSrc
+          .room-card__photo
+            img(src=`${imgSrc[index]}`, alt="roomPhoto")
     .room-card__info
       .room-card__description
         .room-card__number
           span.room-card__num №
-          span.room-card__figures= numberRoom
-          span.room-card__type= typeNumber
+          span.room-card__figures= dataInfo[0]
+          span.room-card__type= dataInfo[1]
         .room-card__price
-          span.room-card__price-money= `${price}₽`
+          span.room-card__price-money= `${dataInfo[2]}₽`
           span.room-card__price-day в сутки
       .room-card__raiting
         include ../bar-ratting/bar-ratting
-        +bar-ratting(`${raitingId}`)
+        +bar-ratting(`${dataInfo[0]}`)
         .room-card__count-rewiew
-          span.room-card__count= countReview
+          span.room-card__count= dataInfo[3]
           span.room-card__text Отзывов
     
     

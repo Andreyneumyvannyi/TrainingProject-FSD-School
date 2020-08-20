@@ -1,23 +1,26 @@
-$(document).ready(function() {
-  $(".room-card__slide_888").slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: "linear",
-    prevArrow: $(".room-card__arrow_prev_888"),
-    nextArrow: $(".room-card__arrow_next_888"),
+function generateRating(numberRoom) {
+  $(document).ready(function() {
+    $(`.room-card__slide_${numberRoom}`).slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: "linear",
+      prevArrow: $(`.room-card__arrow_prev_${numberRoom}`),
+      nextArrow: $(`.room-card__arrow_next_${numberRoom}`),
+    });
   });
-});
+}
 
-$(document).ready(function() {
-  $(".room-card__slide_840").slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: "linear",
-    prevArrow: $(".room-card__arrow_prev_840"),
-    nextArrow: $(".room-card__arrow_next_840"),
-  });
-});
+generateRating(888);
+generateRating(840);
+generateRating(980);
+generateRating(856);
+generateRating(740);
+generateRating(982);
+generateRating(678);
+generateRating(450);
+generateRating(350);
+generateRating(666);
+generateRating(444);
+generateRating(352);

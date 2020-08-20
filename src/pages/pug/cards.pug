@@ -18,7 +18,7 @@ block content
       // Column 1
       .wrapper-cards-column
         .wrapper-form-find-room
-          include ../../components/form/form-find-room/form-find-room_ui
+          include ../../components/form/form-find-room
         .wrapper-form-registration
           include ../../components/form/form-registration
       
@@ -33,8 +33,19 @@ block content
       .wrapper-card-column
         .wrapper-calendar
           include ../../components/calendar/calendar_inline
-        .wrapper-room-card_888
           include ../../components/room-card/room-card
-          +room-card("assets/img/slide-room.png", "assets/img/slide-room-2.png", "assets/img/slide-room.png", "assets/img/slide-room-2.png", "888", "люкс", "9 990", "ratefive", "145")
+          -
+            let dateRoom = { 
+              room888:{
+                imgSrc: ["assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png"],
+                roomInfo: ["888", "люкс", "9 990", "65"],
+              },
+              room840:{
+                imgSrc: ["assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png"],
+                roomInfo: ["840", "люкс", "9 990", "65"],
+              },
+            }
+        .wrapper-room-card_888
+          +room-card(dateRoom.room888.roomInfo, dateRoom.room888.imgSrc)
         .wrapper-room-card_840
-          +room-card("assets/img/slide-room-2.png", "assets/img/slide-room.png", "assets/img/slide-room-2.png", "assets/img/slide-room.png", "840", "", "9 990", "ratefour", "65")
+          +room-card(dateRoom.room840.roomInfo, dateRoom.room840.imgSrc)

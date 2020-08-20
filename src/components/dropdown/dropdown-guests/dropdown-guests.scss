@@ -1,6 +1,12 @@
 .dropdown-guests {
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   width: 320px;
+  position: relative;
+  cursor: pointer;
+
+  &_sm {
+    width: 266px;
+  }
 
   &_default {
     box-shadow: none;
@@ -16,6 +22,8 @@
   }
 
   &__clear {
+    transition: all 0.2s linear;
+    visibility: hidden;
     opacity: 0;
     @include text(bold, 12px, 15px, $darkShade50, uppercase);
     text-align: justify;
@@ -23,6 +31,7 @@
     word-spacing: 0.2px;
     padding: 0;
     &_active {
+      visibility: visible;
       opacity: 1;
     }
   }
@@ -94,11 +103,14 @@
     position: absolute;
     z-index: 1000;
     transition: all 0.2s linear;
+
     &_activated {
-      display: block;
+      visibility: visible;
+      opacity: 1;
     }
-    display: none;
-    width: 320px;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
     height: auto;
     background: #ffffff;
     border: 1px solid $darkShade50;
@@ -132,6 +144,7 @@
       }
 
       &-minus {
+        transition: all 0.2s linear;
         border-radius: 50%;
         width: 30px;
         height: 30px;
@@ -156,6 +169,7 @@
         }
       }
       &-plus {
+        transition: all 0.2s linear;
         border-radius: 50%;
         display: inline-block;
         width: 30px;

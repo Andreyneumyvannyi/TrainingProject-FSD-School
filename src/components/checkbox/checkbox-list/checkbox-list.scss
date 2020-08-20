@@ -1,4 +1,6 @@
 .checkbox-list {
+  cursor: pointer;
+  user-select: none;
   &__enter {
     width: 248px;
     height: 100%;
@@ -17,7 +19,14 @@
   &__arrow {
     position: relative;
     top: 2px;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
+    top: -3px;
+    width: 5px;
+    height: 5px;
+    border: solid $darkShade50;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
 
     &_up {
       position: relative;
@@ -30,31 +39,20 @@
       padding: 3px;
       transform: rotate(-135deg);
     }
-
-    &_down {
-      position: relative;
-      top: -3px;
-      width: 5px;
-      height: 5px;
-      border: solid $darkShade50;
-      border-width: 0 2px 2px 0;
-      padding: 3px;
-      transform: rotate(45deg);
-    }
   }
 
   &__choice {
     transition: all 0.2s linear;
     position: absolute;
     width: 248px;
+    visibility: hidden;
     opacity: 0;
-    display: flex;
-    flex-direction: column;
     margin-top: 18px;
     &_static {
       position: static;
     }
     &_activated {
+      visibility: visible;
       opacity: 1;
     }
 

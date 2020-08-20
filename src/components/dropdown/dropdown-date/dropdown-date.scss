@@ -11,22 +11,20 @@
 
   &__form {
     position: relative;
+  }
+
+  &__range {
+    position: relative;
     display: flex;
     align-items: center;
     width: 150px;
     height: 44px;
     background: #ffffff;
     border: 1px solid $darkShade25;
-    box-sizing: border-box;
     border-radius: 4px;
-  }
-
-  &__range {
+    cursor: pointer;
+    padding-left: 15px;
     @include text(normal, 14px, 18px, $darkShade75, none);
-    background: transparent;
-    width: 140px;
-    height: 20px;
-    padding: 12px 15px;
     &::placeholder {
       @include text(normal, 14px, 18px, $darkShade75, none);
       text-align: justify;
@@ -34,9 +32,11 @@
     }
   }
   &__arrow {
+    cursor: pointer;
     position: absolute;
     top: 16px;
     right: 16.5px;
+    z-index: 10000;
 
     &_down {
       align-self: center;
