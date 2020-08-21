@@ -8,18 +8,19 @@ block content
 
   // Logo
   .wrapper-logo-gray
-    include ../../components/logo/logo-gray
+    include ../../components/logo/logo
+    +logo("gray")
 
   // Header
   .wrapper-header
     include ../../components/header/header
     - let arrLink = ["Home", "About Us", "Services", "Careers", "News", "Documentation"]
     - let arrowPos = ["Services"]
-    +header(arrLink, arrowPos, "Login", "REGISTER")
+    +header("standard", arrLink, arrowPos, "Login", "REGISTER")
 
   // Header-account
   .wrapper-header-account
-    include ../../components/header/header_login
+    +header("login", arrLink, arrowPos, "Login", "REGISTER")
 
   // Footer
   .wrapper-footer

@@ -31,7 +31,7 @@
 
 /* Logo
 =================*/
-@import "./src/components/logo/logo-gray";
+@import "./src/components/logo/logo";
 
 .wrapper-logo-gray {
   position: absolute;
@@ -82,7 +82,7 @@
   margin-bottom: 42px;
 }
 
-@import "./src/components/text-field/text-field-subscription";
+@import "./src/components/text-field/text-field-subscription/text-field-subscription";
 .wrapper-text-field-subscription {
   margin-bottom: 101px;
 }
@@ -208,7 +208,7 @@
   }
 }
 
-@import "./src/components/button/button-big";
+@import "./src/components/button/button-big/button-big";
 .wrapper-button-big {
   margin-bottom: 41px;
 }

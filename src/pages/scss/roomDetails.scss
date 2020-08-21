@@ -1,0 +1,98 @@
+@import "../../components/statistics/statistics";
+
+.room-photo {
+  display: flex;
+  overflow: hidden;
+  height: 485px;
+
+  &__main {
+    flex-basis: 70%;
+    &-figure {
+      width: 100%; /* Ширина области */
+      height: 100%; /* Высота области */
+      margin: 0; /* Обнуляем отступы */
+    }
+    &-img {
+      width: 100%; /* Ширина изображений */
+      height: 100%; /* Высота изображении */
+      object-fit: cover; /* Вписываем фотографию в область */
+    }
+  }
+
+  &__additional {
+    flex-basis: 30%;
+    &-figure {
+      width: 100%; /* Ширина области */
+      height: 50%; /* Высота области */
+      margin: 0; /* Обнуляем отступы */
+    }
+    &-img {
+      width: 100%; /* Ширина изображений */
+      height: 100%; /* Высота изображении */
+      object-fit: cover; /* Вписываем фотографию в область */
+    }
+  }
+}
+
+.container-room-info {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.room-info {
+  display: flex;
+  &__description {
+    &-opinion {
+      display: flex;
+      &-intelligence {
+        margin-right: 70px;
+        &-title {
+          @include text(bold, 19px, 24px, $darkShade100, none);
+          font-family: $Quicksand;
+          margin-bottom: 20px;
+        }
+        &-dignity {
+          width: 280px;
+          &:not(:last-child) {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+          }
+        }
+      }
+
+      &-statistics {
+        &-title {
+          @include text(bold, 19px, 24px, $darkShade100, none);
+          font-family: $Quicksand;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &-review {
+      margin-top: 30px;
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        &-text {
+          @include text(bold, 19px, 24px, $darkShade100, none);
+          font-family: $Quicksand;
+        }
+        &-count {
+          @include text(normal, 14px, 14px, $darkShade50, none);
+        }
+      }
+
+      &-item {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  &__form {
+    margin-left: auto;
+  }
+}

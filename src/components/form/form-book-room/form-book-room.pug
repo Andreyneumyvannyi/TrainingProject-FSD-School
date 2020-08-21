@@ -1,3 +1,6 @@
+include ../../form-name/form-name
+include ../../button/button-big/button-big
+
 form.book-room
   .book-room__description
     .book-room__number
@@ -8,15 +11,13 @@ form.book-room
       span.book-room__price-money 9 990₽
       span.book-room__price-day в сутки
   .book-room__find-date
-    include ../dropdown/dropdown-date/dropdown-date
+    include ../../dropdown/dropdown-date/dropdown-date
     +dropdown-date("Прибытие", "Выезд")
   .book-room__find-guests
     .book-room__form-name
       +form-name("гости")
-    include ../dropdown/dropdown-guests/dropdown-guests
+    include ../../dropdown/dropdown-guests/dropdown-guests
     +dropdown-guests("standard")
-
-  
   .book-room__calculate
     .book-room__calculate-item
       span.book-room__calculate-text 9 990₽ х 4 суток
@@ -24,12 +25,14 @@ form.book-room
     .book-room__calculate-item
       .book-room__calculate-info
         span.book-room__calculate-text Сбор за услуги: скидка 2 179₽
-        img.book-room__calculate-icon(src="assets/img/calculate-info.svg", alt="calculate-info")
+        .book-room__calculate-icon
+          include calculate-info.svg
       span.book-room__calculate-price 0₽
     .book-room__calculate-item
       .book-room__calculate-info
         span.book-room__calculate-text Сбор за дополнительные услуги
-        img.book-room__calculate-icon(src="assets/img/calculate-info.svg", alt="calculate-info")
+        .book-room__calculate-icon
+          include calculate-info.svg
       span.book-room__calculate-price 300₽
   .book-room__total
     .book-room__total-text Итого

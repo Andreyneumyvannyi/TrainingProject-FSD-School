@@ -1,0 +1,8 @@
+mixin logo(state)
+  case state
+    when "color"
+      .logo.logo_color
+        include logo.svg
+    when "gray"
+      .logo.logo_gray
+        include logo-gray.svg

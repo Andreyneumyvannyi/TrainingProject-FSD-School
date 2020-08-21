@@ -1,0 +1,34 @@
+<svg width="120" height="121" viewBox="0 0 120 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="59" height="121">
+<path d="M0 0H59V121H0V0Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0)">
+  <circle cx="60" cy="61" r="58" stroke="url(#MyGradient1)" stroke-width="4"/>
+</g>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="61" y="1" width="59" height="59">
+  <path d="M61 1H120V60H61V1Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask1)">
+  <circle cx="60" cy="61" r="58" stroke="url(#MyGradient2)" stroke-width="4"/>
+</g>
+<mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="61" y="62" width="59" height="59">
+  <path d="M120 62V121H61L61 62L120 62Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask2)">
+  <circle cx="60" cy="61" r="58" transform="rotate(90 60 61)" stroke="url(#MyGradient3)" stroke-width="4"/>
+</g>
+<defs>
+  <linearGradient id="MyGradient1">
+    <stop offset="0%"  stop-color="#FFE39C"/>
+    <stop offset="100%" stop-color="#FFBA9C"/>
+  </linearGradient>
+  <linearGradient id="MyGradient2">
+    <stop offset="0%"  stop-color="#BC9CFF"/>
+    <stop offset="100%" stop-color="#8BA4F9"/>
+  </linearGradient>
+  <linearGradient id="MyGradient3">
+    <stop offset="0%"  stop-color="#6FCF97"/>
+    <stop offset="100%" stop-color="#66D2EA"/>
+  </linearGradient>
+</defs>
+</svg>

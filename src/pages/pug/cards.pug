@@ -7,7 +7,8 @@ block content
   // Logo
 
   .wrapper-logo-gray
-    include ../../components/logo/logo-gray
+    include ../../components/logo/logo
+    +logo("gray")
   
   // Container
   .container-cards
@@ -25,7 +26,7 @@ block content
       // Column 2
       .wrapper-card-column
         .wrapper-form-book-room
-          include ../../components/form/form-book-room
+          include ../../components/form/form-book-room/form-book-room
         .wrapper-form-login
           include ../../components/form/form-login
 

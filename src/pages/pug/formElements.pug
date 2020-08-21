@@ -9,7 +9,8 @@ block content
   
   // Logo
   .wrapper-logo-gray
-    include ../../components/logo/logo-gray
+    include ../../components/logo/logo
+    +logo("gray")
 
   // Container
   .container-form-elements
@@ -49,7 +50,7 @@ block content
         .wrapper-text-field-subscription
           .wrapper-form-name
             +form-name("subscription text field")
-          include ../../components/text-field/text-field-subscription
+          include ../../components/text-field/text-field-subscription/text-field-subscription
           +text-field-subscription("Email")
         .wrapper-dropdown-facilities-default
           .wrapper-form-name
@@ -143,7 +144,7 @@ block content
               include ../../components/button/button-click
           .wrapper-button-big
             .wrapper-button-big-btn
-              include ../../components/button/button-big
+              include ../../components/button/button-big/button-big
               +button-big("перейти к оплате")
         .wrapper-pagination
           .wrapper-form-name-button
@@ -164,10 +165,12 @@ block content
       .wrapper-dignity
         include ../../components/dignity/dignity
         .wrapper-dignity-item
-          +dignity("dignity_emoticon.svg", "Комфорт","Шумопоглощающие стены")
+          +dignity("emoticon.png", "Комфорт","Шумопоглощающие стены")
         .wrapper-dignity-item
-          +dignity("dignity_city.svg", "Удобство","Окно в каждой из спален")
+          +dignity("city.png", "Удобство","Окно в каждой из спален")
       .wrapper-review
         include ../../components/review/review
+        - let textReview = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+        +review("review-photo.png", "Мурад Сарафанов", "5 дней назад", textReview)
 
 

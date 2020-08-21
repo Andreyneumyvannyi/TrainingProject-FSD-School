@@ -5,8 +5,8 @@ mixin footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subsc
           .footer__content
             .footer__info
               .footer__logo
-                a(href="#")
-                  img(src="assets/img/logo.svg")
+                include ../../components/logo/logo
+                +logo("color")
               .footer__text= contentText
             
             ul.footer__nav
@@ -38,7 +38,7 @@ mixin footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subsc
               .footer__subscribe-title= subscribeTitle
               .footer__subscribe-text= subscribeText
               .footer__subscribe-form
-                include ../text-field/text-field-subscription
+                include ../text-field/text-field-subscription/text-field-subscription
                 +text-field-subscription(subscribePlaceholder)
       
       
