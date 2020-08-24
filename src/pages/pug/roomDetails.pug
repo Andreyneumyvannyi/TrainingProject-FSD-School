@@ -22,37 +22,44 @@ block content
         figure.room-photo__additional-figure
           img.room-photo__additional-img(src="assets/img/roomPhoto-3.png", alt="")
   
-  .container-room-info
-    .room-info
-      .room-info__description
-        .room-info__description-opinion
-          .room-info__description-opinion-intelligence
-            h2.room-info__description-opinion-intelligence-title Сведения о номере
-            include ../../components/dignity/dignity
-            .room-info__description-opinion-intelligence-dignity
-              +dignity("emoticon.png", "Комфорт","Шумопоглощающие стены")
-            .room-info__description-opinion-intelligence-dignity
-              +dignity("city.png", "Удобство","Окно в каждой из спален")
-            .room-info__description-opinion-intelligence-dignity
-              +dignity("whatshot.png", "Уют","Номер оснащен камином")
-          .room-info__description-opinion-statistics
-            h2.room-info__description-opinion-statistics-title Впечатления от номера
-            include ../../components/statistics/statistics
-        .room-info__description-review
-          .room-info__description-review-title
-            .room-info__description-review-title-text Отзывы посетителей номера
-            .room-info__description-review-title-count 2 отзыва
-          .room-info__description-review-list
-            .room-info__description-review-item
-              include ../../components/review/review
-              - let textReviewMurad = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
-              +review("review-photo.png", "Мурад Сарафанов", "5 дней назад", textReviewMurad)
-            .room-info__description-review-item
-              - let textReviewPatrisia = "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
-              +review("review-photo-Patricia.png", "Патрисия Стёклышкова", "неделю назад", textReviewPatrisia)
-
-      .room-info__form
-        include ../../components/form/form-book-room/form-book-room
+  .container-room-info-border
+    .container-room-info
+      .room-info
+        .room-info__description
+          .room-info__description-opinion
+            .room-info__description-opinion-intelligence
+              h2.room-info__description-opinion-intelligence-title Сведения о номере
+              include ../../components/dignity/dignity
+              .room-info__description-opinion-intelligence-dignity
+                +dignity("emoticon.png", "Комфорт","Шумопоглощающие стены")
+              .room-info__description-opinion-intelligence-dignity
+                +dignity("city.png", "Удобство","Окно в каждой из спален")
+              .room-info__description-opinion-intelligence-dignity
+                +dignity("whatshot.png", "Уют","Номер оснащен камином")
+            .room-info__description-opinion-statistics
+              h2.room-info__description-opinion-statistics-title Впечатления от номера
+              include ../../components/statistics/statistics
+          .room-info__description-review
+            .room-info__description-review-title
+              .room-info__description-review-title-text Отзывы посетителей номера
+              .room-info__description-review-title-count 2 отзыва
+            .room-info__description-review-list
+              .room-info__description-review-item
+                include ../../components/review/review
+                - let textReviewMurad = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                +review("review-photo.png", "Мурад Сарафанов", "5 дней назад", textReviewMurad)
+              .room-info__description-review-item
+                - let textReviewPatrisia = "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+                +review("review-photo-Patricia.png", "Патрисия Стёклышкова", "неделю назад", textReviewPatrisia)
+          .room-info__description-other
+            .room-info__description-other-rules
+              .room-info__description-other-title Правила
+              include ../../components/rules/rules
+            .room-info__description-other-canceling
+              .room-info__description-other-title Отмена
+              .room-info__description-other-canceling-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        .room-info__form
+          include ../../components/form/form-book-room/form-book-room
   // Footer
   .container-footer
     include ../../components/footer/footer

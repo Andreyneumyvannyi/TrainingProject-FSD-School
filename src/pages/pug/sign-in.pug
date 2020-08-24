@@ -1,7 +1,7 @@
 extends ../layout/main
 
 block title
-  | registration
+  | signIn
 
 
 block content
@@ -11,14 +11,11 @@ block content
     - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
     - let arrowPos = ["Услуги","Соглашения"]
     +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
-    .container-form-registration
-      .wrapper-form-registration-inner
-        .wrapper-form-registration
-          include ../../components/form/form-registration
+    .container-form-sign-in
+      .wrapper-form-sign-in-inner
+        .wrapper-form-sign-in
+          include ../../components/form/form-login
 
-
-
-  
   // Footer
   .container-footer
     include ../../components/footer/footer

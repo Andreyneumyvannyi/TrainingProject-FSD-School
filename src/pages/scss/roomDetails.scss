@@ -39,9 +39,13 @@
   padding: 0 20px;
   margin: 0 auto;
   margin-top: 70px;
+  &-border {
+    border-bottom: 1px solid $darkShade25;
+  }
 }
 .room-info {
   display: flex;
+  margin-bottom: 70px;
   &__description {
     &-opinion {
       display: flex;
@@ -88,6 +92,27 @@
 
       &-item {
         margin-bottom: 22px;
+      }
+    }
+
+    &-other {
+      margin-top: 30px;
+
+      display: flex;
+      justify-content: space-between;
+
+      &-title {
+        @include text(bold, 19px, 24px, $darkShade100, none);
+        font-family: $Quicksand;
+        margin-bottom: 20px;
+      }
+
+      &-canceling {
+        &-text {
+          width: 330px;
+          @include text(normal, 14px, 24px, $darkShade75, none);
+          letter-spacing: 0.5px;
+        }
       }
     }
   }
