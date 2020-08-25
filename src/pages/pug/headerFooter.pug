@@ -1,41 +1,47 @@
-extends ../layout/main-header
-
-block title
-  | HeaderFooter
-
-
-block content
-
-  // Logo
-  .wrapper-logo-gray
-    include ../../components/logo/logo
-    +logo("gray")
-
-  // Header
-  .wrapper-header
-    include ../../components/header/header
-    - let arrLink = ["Home", "About Us", "Services", "Careers", "News", "Documentation"]
-    - let arrowPos = ["Services"]
-    +header("standard", arrLink, arrowPos, "Login", "REGISTER")
-
-  // Header-account
-  .wrapper-header-account
-    +header("login", arrLink, arrowPos, "Login", "REGISTER")
-
-  // Footer
-  .wrapper-footer
-    include ../../components/footer/footer
-    - let contentText = "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
-    - let arrLinkNavigation = ["Navigation", "About Us", "News", "Support", "Products"]
-    - let arrLinkAbout = ["ABOUT US", "Who we are", "Our team", "Careers", "Investors"]
-    - let arrLinkSupport = ["Support", "Documentation", "Community", "Get in Touch"]
-    - let subscribeTitle = "Subscribe to our newsletter"
-    - let subscribeText = "Receive our latest news and promotions in your inbox!"
-    - let subscribePlaceholder = "Your email address"
-    - let copyright = "Copyright © 2018 Toxin UI Kit. All rights reserved."
-
-    +footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
+doctype html
+html(lang='en')
+  head
+    title
+      | HeaderFooter
   
-  // Footer-social
-  .wrapper-footer-social
-    include ../../components/footer/footer_social
+  body.body_gray
+
+    //- Includes
+    include ../../components/header/header
+    include ../../components/footer/footer
+    include ../../components/logo/logo
+
+    // Logo
+    .component__logo
+      +logo("gray")
+
+
+    // Header
+    .component__header
+      - let arrLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
+      - let arrowPos = ["Услуги","Соглашения"]
+      +header("standard", arrLink, arrowPos, "Войти", "Зарегистрироваться")
+    
+
+    // Header-account
+    .component__header-account
+      +header("login", arrLink, arrowPos)
+
+
+    // Footer
+    .component__footer
+      //-Data footer
+      - let contentText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+      - let arrLinkNavigation = ["навигация", "О нас", "Новости", "Служба поддержки", "Услуги"]
+      - let arrLinkAbout = ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+      - let arrLinkSupport = ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"]
+      - let subscribeTitle = "Подписка"
+      - let subscribeText = "Получайте специальные предложения и новости сервиса"
+      - let subscribePlaceholder = "Email"
+      - let copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
+      +footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
+    
+
+    // Footer-social
+    .component__footer-social
+      include ../../components/footer/footer_social

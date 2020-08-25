@@ -16,7 +16,7 @@
 
     &-item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 26px;
       }
     }
     &-arrow {
@@ -32,8 +32,8 @@
     &-link {
       cursor: pointer;
       @include text(normal, 14px, 17px, $darkShade50, none);
-      word-spacing: 0.4px;
-      letter-spacing: 0.7px;
+      word-spacing: 0.5px;
+      letter-spacing: 0.8px;
       transition: all 0.2s linear;
       &:hover {
         color: $darkShade100;
@@ -48,7 +48,7 @@
   }
 
   &__login {
-    margin-left: 33px;
+    margin-left: 35px;
     display: none;
     &_active {
       display: flex;
@@ -57,7 +57,7 @@
 
   &__button {
     &-login {
-      margin-right: 18px;
+      margin-right: 23px;
     }
   }
 
@@ -73,7 +73,7 @@
       width: 1px;
       height: 30px;
       background: rgba(31, 32, 65, 0.1);
-      margin: 0 33px;
+      margin: 0 24px 0 27px;
     }
 
     &-name {

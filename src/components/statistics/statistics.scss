@@ -5,11 +5,11 @@
   &__circle {
     width: 120px;
     height: 120px;
-    margin-right: 20px;
+    margin-right: 30px;
   }
   &__votes {
     position: absolute;
-    top: 35px;
+    top: 37px;
     left: 30px;
     display: flex;
     flex-direction: column;
@@ -32,8 +32,11 @@
 
   &__text {
     margin-left: 15px;
-    @include text(normal, 14px, 24px, $darkShade75, none);
+
+    @include text(normal, 14px, 14px, $darkShade75, none);
+    letter-spacing: 1.1px;
     &_sumptuously {
+      margin-bottom: 10px;
       &::before {
         top: -1px;
         left: 0;
@@ -42,6 +45,7 @@
       }
     }
     &_well {
+      margin-bottom: 10px;
       &::before {
         top: -1px;
         left: 0;
@@ -50,6 +54,7 @@
       }
     }
     &_satisfactorily {
+      margin-bottom: 10px;
       &::before {
         top: -1px;
         left: 0;

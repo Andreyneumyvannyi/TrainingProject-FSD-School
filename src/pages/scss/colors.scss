@@ -1,0 +1,30 @@
+@import "./src/components/palette/palette-color";
+@import "./src/components/palette/palette-description";
+@import "./src/components/type/type";
+.colors {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 145px 20px;
+  display: flex;
+}
+.component {
+  &__palette {
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      margin-right: 427px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__type {
+    &-wrapper {
+      display: flex;
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

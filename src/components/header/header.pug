@@ -19,10 +19,10 @@ mixin header(state, arrLink, arrowPos, btnBorderName, btnBgName)
                   span.header__nav-arrow
           .header__login.header__login_active
             .header__button-login
-              include ../button/button-border
+              include ../button/button-border/button-border
               +button-border(`${btnBorderName}`, "sm")
             .header__button-register
-              include ../button/button-bg
+              include ../button/button-bg/button-bg
               +button-bg(`${btnBgName}`, "sm")
           .header__account
             .header__account-separate
@@ -45,11 +45,11 @@ mixin header(state, arrLink, arrowPos, btnBorderName, btnBgName)
                   span.header__nav-arrow
           .header__login
             .header__button-login
-              include ../button/button-border
+              include ../button/button-border/button-border
               +button-border(`${btnBorderName}`, "sm")
             .header__button-register
-              include ../button/button-bg
+              include ../button/button-bg/button-bg
               +button-bg(`${btnBgName}`, "sm")
           .header__account.header__account_active
             .header__account-separate
-            .header__account-name Cosmin Negoita
+            .header__account-name Юлий Цезарь

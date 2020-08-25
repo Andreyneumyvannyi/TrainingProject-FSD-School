@@ -1,13 +1,13 @@
-include ../text-field/text-field
-include ../button/button-big/button-big
-include ../button/button-border
+include ../../text-field/text-field
+include ../../button/button-big/button-big
+include ../../button/button-border/button-border
 
 form.login
   .login__title Войти
   .login__email
-    +text-field("email", "Email", "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+    +text-field("","email", "Email", "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
   .login__password
-    +text-field("password", "Пароль")
+    +text-field("","password", "Пароль")
   .login__button-big
     +button-big("Войти")
   .login__footer

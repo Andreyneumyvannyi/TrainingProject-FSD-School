@@ -1,0 +1,204 @@
+@import "./src/components/form-name/form-name";
+@import "./src/components/logo/logo";
+@import "./src/components/text-field/text-field";
+@import "./src/components/dropdown/dropdown-guests/dropdown-guests";
+@import "./src/components/dropdown/dropdown-date/dropdown-date";
+@import "./src/components/calendar/calendar";
+@import "./src/components/dropdown/dropdown-date-filter/dropdown-date-filter";
+@import "./src/components/text-field/text-field-subscription/text-field-subscription";
+@import "./src/components/dropdown/dropdown-facilities/dropdown-facilities";
+@import "./src/components/checkbox/checkbox-list/checkbox-list";
+@import "./src/components/checkbox/checkbox-buttons/checkbox-buttons";
+@import "./src/components/button/button-radio/button-radio";
+@import "./src/components/button/button-toggle/button-toggle";
+@import "./src/components/button/button-like/button-like";
+@import "./src/components/checkbox/checkbox-availability/checkbox-availability";
+@import "./src/components/bar-ratting/bar-ratting";
+@import "./src/components/range-slider/range-slider";
+@import "./src/components/button/button-bg/button-bg";
+@import "./src/components/button/button-border/button-border";
+@import "./src/components/button/button-click/button-click";
+@import "./src/components/button/button-big/button-big";
+@import "./src/components/pagination/pagination";
+@import "./src/components/rules/rules";
+@import "./src/components/dignity/dignity";
+@import "./src/components/review/review";
+
+.components {
+  margin: 0 auto;
+  width: 1240px;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 145px;
+  padding-bottom: 131px;
+
+  &__col {
+    width: 320px;
+    &:nth-child(2) {
+      margin-left: 126px;
+    }
+    &:nth-child(3) {
+      margin-left: 72px;
+    }
+    &_bottom {
+      display: flex;
+    }
+  }
+}
+
+.component {
+  &__logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  &__text-field {
+    margin-bottom: 23px;
+    &-hover {
+      margin-bottom: 22px;
+    }
+    &-masked {
+      margin-bottom: 41px;
+    }
+
+    &-subscription {
+      margin-bottom: 102px;
+    }
+  }
+
+  &__dropdown-guests {
+    margin-bottom: 99px;
+
+    &-default {
+      margin-bottom: 24px;
+    }
+
+    &-clear {
+      margin-top: 200px;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__dropdown-date {
+    width: 320px;
+    margin-bottom: 44px;
+
+    &-filter {
+      width: 266px;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__dropdown-facilities {
+    width: 266px;
+    margin-bottom: 55px;
+
+    &-default {
+      width: 266px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__checkbox-list {
+    margin-bottom: 97px;
+    &-default {
+      margin-bottom: 51px;
+    }
+  }
+
+  &__bar-ratting {
+    &-wrapper {
+      margin-top: 16px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__checkbox-buttons {
+    margin-bottom: 41px;
+  }
+  &__buttons {
+    width: 218px;
+  }
+  &__button {
+    &-radio {
+      & > .button-radio-wrapper {
+        margin-top: 16px;
+      }
+      margin-bottom: 42px;
+    }
+
+    &-toggle {
+      &-wrapper {
+        margin-top: 17px;
+        &-btn:last-child {
+          margin-top: 14px;
+        }
+      }
+      margin-bottom: 45px;
+    }
+
+    &-like {
+      &-wrapper {
+        width: 90px;
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+      }
+      margin-bottom: 41px;
+    }
+
+    &-bg,
+    &-border {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+
+    &-click {
+      width: 142px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 31px;
+    }
+
+    &-big {
+      margin-bottom: 41px;
+    }
+  }
+
+  &__range-slider {
+    margin-bottom: 45px;
+  }
+
+  &__pagination {
+    margin-bottom: 235px;
+
+    & > .pagination {
+      margin-top: 17px;
+    }
+  }
+
+  &__rules {
+    & > .rules {
+      margin-top: 14px;
+    }
+  }
+
+  &__dignity {
+    margin-right: 165px;
+    & > .dignity {
+      margin-bottom: 22px;
+      border-bottom: 1px solid $darkShade10;
+    }
+  }
+
+  &__review {
+    width: auto;
+    margin-top: 12px;
+  }
+}

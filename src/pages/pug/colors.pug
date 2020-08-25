@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+	head
+		title
+			| Colors
+		body
+			
+			//- Includes
+			include ../../components/logo/logo
+			include ../../components/palette/palette-color
+			include ../../components/palette/palette-description
+			include ../../components/type/type
+			
+			// Logo
+			.component__logo
+				+logo("gray")
+
+			// Components
+			.colors
+				
+				// Palette
+				.component__palette
+					.component__palette-wrapper
+						+palette-color('100')
+						+palette-color__description('Dark Shade 100%', '#1F2041')
+					.component__palette-wrapper
+						+palette-color('75')
+						+palette-color__description('Dark Shade 75%', '#1F2041')
+					.component__palette-wrapper
+						+palette-color('50')
+						+palette-color__description('Dark Shade 50%', '#1F2041')
+					.component__palette-wrapper
+						+palette-color('25')
+						+palette-color__description('Dark Shade 25%', '#1F2041')
+					.component__palette-wrapper
+						+palette-color('5')
+						+palette-color__description('Dark Shade 5%', '#1F2041')
+					.component__palette-wrapper
+						+palette-color('purple')
+						+palette-color__description('Purple', '#BC9CFF')
+					.component__palette-wrapper
+						+palette-color('green')
+						+palette-color__description('Green', '#6FCF97')
+				
+				// Palette
+				.component__type
+					.component__type-wrapper
+						+type("h1","H1", "This one is the sub-section or widget title")
+					.component__type-wrapper
+						+type("h2", "H2", "Next one is the item title inside widgets")
+					.component__type-wrapper
+						+type("h3", "H3", "This is a label or CTA text")
+					.component__type-wrapper
+						+type("body", "Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")

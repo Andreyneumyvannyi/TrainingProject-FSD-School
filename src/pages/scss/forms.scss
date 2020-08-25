@@ -1,0 +1,41 @@
+@import "./src/components/form/form-find-room/form-find-room";
+@import "./src/components/form/form-registration/form-registration";
+@import "./src/components/form/form-book-room/form-book-room";
+@import "./src/components/form/form-login/form-login";
+@import "./src/components/calendar/calendar";
+@import "./src/components/room-card/room-card";
+.forms {
+  margin: 0 auto;
+  width: 1240px;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 150px;
+  padding-bottom: 140px;
+  &__col {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+.component {
+  &__form {
+    &-find-room {
+      margin-bottom: 40px;
+    }
+
+    &-book-room {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__calendar {
+    margin-bottom: 40px;
+  }
+
+  &__room-card {
+    &-888 {
+      margin-bottom: 40px;
+    }
+  }
+}

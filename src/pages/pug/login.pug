@@ -2,32 +2,28 @@ doctype html
 html(lang='en')
   head
     title
-      | Registration
+      | Login
   body
 
-    //-Includes
+    //- Includes
     include ../../components/header/header
     include ../../components/footer/footer
-
+  
     // Header
     .header
-      
       - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
       - let arrowPos = ["Услуги","Соглашения"]
       +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
+      
+      // Form Login
+      .container-form-sign-in
+        .wrapper-form-sign-in-inner
+          .wrapper-form-sign-in
+            include ../../components/form/form-login/form-login
 
-      // Form registration
-      .container-form-registration
-        .wrapper-form-registration-inner
-          .wrapper-form-registration
-            include ../../components/form/form-registration/form-registration
-
-
-
-    
     // Footer
     .container-footer
-      //- Data Footer
+      //-Data Footer
       - let contentText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
       - let arrLinkNavigation = ["навигация", "О нас", "Новости", "Служба поддержки", "Услуги"]
       - let arrLinkAbout = ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"]

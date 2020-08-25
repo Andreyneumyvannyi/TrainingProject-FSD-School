@@ -2,7 +2,6 @@
   @include text(bold, 12px, 15px, #ffffff, uppercase);
   text-align: justify;
   letter-spacing: 0.8px;
-
   text-align: center;
   width: 320px;
   height: 44px;
@@ -10,7 +9,7 @@
   border-radius: 22px;
   position: relative;
   transition: all 0.2s linear;
-  &__arrow {
+  svg {
     position: absolute;
     top: 12px;
     right: 12px;

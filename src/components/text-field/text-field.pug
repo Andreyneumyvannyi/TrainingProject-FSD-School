@@ -1,2 +1,2 @@
-mixin text-field(type, placeholder, pattern)
-  input.text-field(type=type placeholder=placeholder pattern=pattern)
+mixin text-field(mod, type, placeholder, pattern)
+  input(class=`text-field text-field_${mod}` placeholder=placeholder pattern= pattern type= type)

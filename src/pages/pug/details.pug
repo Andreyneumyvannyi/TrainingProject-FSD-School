@@ -1,17 +1,24 @@
-extends ../layout/main
+doctype html
+html(lang='en')
+  head
+    title
+      | Details
+  body
 
-block title
-  | roomDetails
-
-
-block content
-  // Header
-  .container-header
+    //-Includes
     include ../../components/header/header
-    - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
-    - let arrowPos = ["Услуги","Соглашения"]
-    +header("standard", arrTextLink, arrowPos, "войти", "зарегистрироваться")
-  .container-room-photo
+    include ../../components/dignity/dignity
+    include ../../components/review/review
+    include ../../components/footer/footer
+
+
+    // Header
+    .header 
+      - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
+      - let arrowPos = ["Услуги","Соглашения"]
+      +header("standard", arrTextLink, arrowPos, "войти", "зарегистрироваться")
+    
+    // Header-banner
     .room-photo
       .room-photo__main
         figure.room-photo__main-figure
@@ -21,15 +28,14 @@ block content
           img.room-photo__additional-img(src="assets/img/roomPhoto-2.png", alt="")
         figure.room-photo__additional-figure
           img.room-photo__additional-img(src="assets/img/roomPhoto-3.png", alt="")
-  
-  .container-room-info-border
-    .container-room-info
+    
+    // Room-info
+    .room-info-border
       .room-info
         .room-info__description
           .room-info__description-opinion
             .room-info__description-opinion-intelligence
-              h2.room-info__description-opinion-intelligence-title Сведения о номере
-              include ../../components/dignity/dignity
+              h2.room-info__description-opinion-intelligence-title Сведения о номере  
               .room-info__description-opinion-intelligence-dignity
                 +dignity("emoticon.png", "Комфорт","Шумопоглощающие стены")
               .room-info__description-opinion-intelligence-dignity
@@ -45,7 +51,6 @@ block content
               .room-info__description-review-title-count 2 отзыва
             .room-info__description-review-list
               .room-info__description-review-item
-                include ../../components/review/review
                 - let textReviewMurad = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
                 +review("review-photo.png", "Мурад Сарафанов", "5 дней назад", textReviewMurad)
               .room-info__description-review-item
@@ -53,23 +58,26 @@ block content
                 +review("review-photo-Patricia.png", "Патрисия Стёклышкова", "неделю назад", textReviewPatrisia)
           .room-info__description-other
             .room-info__description-other-rules
-              .room-info__description-other-title Правила
+              .room-info__description-other-rules-title Правила
               include ../../components/rules/rules
             .room-info__description-other-canceling
-              .room-info__description-other-title Отмена
+              .room-info__description-other-canceling-title Отмена
               .room-info__description-other-canceling-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         .room-info__form
           include ../../components/form/form-book-room/form-book-room
-  // Footer
-  .container-footer
-    include ../../components/footer/footer
-    - let contentText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
-    - let arrLinkNavigation = ["навигация", "О нас", "Новости", "Служба поддержки", "Услуги"]
-    - let arrLinkAbout = ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
-    - let arrLinkSupport = ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"]
-    - let subscribeTitle = "Подписка"
-    - let subscribeText = "Получайте специальные предложения и новости сервиса"
-    - let subscribePlaceholder = "Email"
-    - let copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
-    +footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
+    
+    
+    // Footer
+    .container-footer
+      
+      //-Data footer
+      - let contentText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+      - let arrLinkNavigation = ["навигация", "О нас", "Новости", "Служба поддержки", "Услуги"]
+      - let arrLinkAbout = ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+      - let arrLinkSupport = ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"]
+      - let subscribeTitle = "Подписка"
+      - let subscribeText = "Получайте специальные предложения и новости сервиса"
+      - let subscribePlaceholder = "Email"
+      - let copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
+      +footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
 

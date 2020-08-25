@@ -2,7 +2,7 @@ $(function() {
   $(".dropdown-date__range_from").datepicker({
     minDate: new Date(),
     range: true,
-    offset: 18,
+    offset: 10,
     multipleDatesSeparator: "-",
     classes: "dropdown-date",
     clearButton: true,

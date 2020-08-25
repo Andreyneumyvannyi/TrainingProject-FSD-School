@@ -8,58 +8,56 @@
   &__main {
     flex-basis: 70%;
     &-figure {
-      width: 100%; /* Ширина области */
-      height: 100%; /* Высота области */
-      margin: 0; /* Обнуляем отступы */
+      width: 100%;
+      height: 100%;
+      margin: 0;
     }
     &-img {
-      width: 100%; /* Ширина изображений */
-      height: 100%; /* Высота изображении */
-      object-fit: cover; /* Вписываем фотографию в область */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
   &__additional {
     flex-basis: 30%;
     &-figure {
-      width: 100%; /* Ширина области */
-      height: 50%; /* Высота области */
-      margin: 0; /* Обнуляем отступы */
+      width: 100%;
+      height: 50%;
+      margin: 0;
     }
     &-img {
-      width: 100%; /* Ширина изображений */
-      height: 100%; /* Высота изображении */
-      object-fit: cover; /* Вписываем фотографию в область */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
 
-.container-room-info {
-  width: 1200px;
-  padding: 0 20px;
-  margin: 0 auto;
-  margin-top: 70px;
+.room-info {
   &-border {
     border-bottom: 1px solid $darkShade25;
   }
-}
-.room-info {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 70px auto 63px auto;
   display: flex;
-  margin-bottom: 70px;
+
   &__description {
     &-opinion {
       display: flex;
       &-intelligence {
-        margin-right: 70px;
+        margin-right: 80px;
         &-title {
           @include text(bold, 19px, 24px, $darkShade100, none);
+          letter-spacing: 0.5px;
           font-family: $Quicksand;
           margin-bottom: 20px;
         }
         &-dignity {
           width: 280px;
           &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 19px;
             border-bottom: 1px solid rgba(31, 32, 65, 0.1);
           }
         }
@@ -68,6 +66,8 @@
       &-statistics {
         &-title {
           @include text(bold, 19px, 24px, $darkShade100, none);
+          letter-spacing: 0.8px;
+          word-spacing: 0.7px;
           font-family: $Quicksand;
           margin-bottom: 20px;
         }
@@ -75,7 +75,7 @@
     }
 
     &-review {
-      margin-top: 30px;
+      margin-top: 17px;
       &-title {
         display: flex;
         align-items: center;
@@ -83,6 +83,8 @@
         margin-bottom: 20px;
         &-text {
           @include text(bold, 19px, 24px, $darkShade100, none);
+          letter-spacing: 0.6px;
+          word-spacing: 0.5px;
           font-family: $Quicksand;
         }
         &-count {
@@ -96,22 +98,31 @@
     }
 
     &-other {
-      margin-top: 30px;
-
+      margin-top: 33px;
       display: flex;
-      justify-content: space-between;
-
-      &-title {
-        @include text(bold, 19px, 24px, $darkShade100, none);
-        font-family: $Quicksand;
-        margin-bottom: 20px;
+      &-rules {
+        &-title {
+          @include text(bold, 19px, 24px, $darkShade100, none);
+          letter-spacing: 0.7px;
+          font-family: $Quicksand;
+          margin-left: 19px;
+          margin-bottom: 15px;
+        }
       }
 
       &-canceling {
+        &-title {
+          @include text(bold, 19px, 24px, $darkShade100, none);
+          letter-spacing: 0.7px;
+          font-family: $Quicksand;
+          margin-bottom: 15px;
+        }
+        margin-left: 125px;
         &-text {
           width: 330px;
           @include text(normal, 14px, 24px, $darkShade75, none);
-          letter-spacing: 0.5px;
+          letter-spacing: 0.8px;
+          word-spacing: 0.5px;
         }
       }
     }

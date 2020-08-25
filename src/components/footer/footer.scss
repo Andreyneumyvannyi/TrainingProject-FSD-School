@@ -4,7 +4,7 @@
   &__inner {
     width: 1200px;
     margin: 0 auto;
-    padding: 105px 20px 100px 20px;
+    padding: 100px 20px 100px 20px;
   }
   &__border {
     border-bottom: 1px solid $darkShade25;
@@ -12,7 +12,10 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+  }
+
+  &__info {
+    margin-right: 49px;
   }
 
   &__text {
@@ -20,10 +23,14 @@
     @include text(normal, 14px, 24px, $darkShade75, none);
     letter-spacing: 0.9px;
     word-spacing: 0.9px;
-    margin-top: 13px;
+    margin-top: 18px;
   }
 
   &__nav {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     &-title {
       @include text(bold, 12px, 15px, $darkShade100, uppercase);
       letter-spacing: 0.7px;
@@ -46,6 +53,8 @@
   }
 
   &__subscribe {
+    margin-top: 5px;
+    margin-left: 51px;
     &-title {
       @include text(bold, 12px, 15px, $darkShade100, uppercase);
       word-spacing: 0.5px;

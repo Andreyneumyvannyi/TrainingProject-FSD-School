@@ -1,7 +1,7 @@
 if (
   $(document)
     .find("title")
-    .text() === "FormElements"
+    .text() === "Components"
 ) {
   const noUiSlider = require("nouislider/distribute/nouislider");
 
@@ -42,7 +42,7 @@ if (
 if (
   $(document)
     .find("title")
-    .text() === "searchRoom"
+    .text() === "Search"
 ) {
   const noUiSlider = require("nouislider/distribute/nouislider");
 

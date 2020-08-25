@@ -1,0 +1,135 @@
+doctype html
+html(lang='en')
+  head
+    title
+      | Components
+  body
+
+    //-Includes 
+    include ../../components/form-name/form-name
+    include ../../components/logo/logo
+    include ../../components/text-field/text-field
+    include ../../components/dropdown/dropdown-guests/dropdown-guests
+    include ../../components/dropdown/dropdown-date/dropdown-date
+    include ../../components/text-field/text-field-subscription/text-field-subscription
+    include ../../components/dropdown/dropdown-facilities/dropdown-facilities
+    include ../../components/checkbox/checkbox-list/checkbox-list
+    include ../../components/checkbox/checkbox-buttons/checkbox-buttons
+    include ../../components/button/button-like/button-like
+    include ../../components/button/button-bg/button-bg
+    include ../../components/button/button-border/button-border
+    include ../../components/button/button-big/button-big
+    include ../../components/bar-ratting/bar-ratting
+    include ../../components/checkbox/checkbox-availability/checkbox-availability
+    include ../../components/range-slider/range-slider
+    include ../../components/dignity/dignity
+    include ../../components/review/review
+    
+    // Logo
+    .component__logo
+      +logo("gray")
+    
+
+    // Components
+    .components
+      // Col
+      .components__col
+        .component__text-field
+          +form-name("Text Field", "Default")
+          +text-field("","email", "Email", "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+        .component__text-field-hover
+          +form-name("Text Field", "Hover / Focus")
+          +text-field("hover","email", "This is pretty awesome", "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+        .component__dropdown-guests-default
+          +form-name("Dropdown", "Default")
+          +dropdown-guests("default")
+        .component__text-field-masked
+          +form-name("masked text field", "Default")
+          +text-field("masked","email", "ДД.ММ.ГГГГ", "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
+        .component__dropdown-date
+          +dropdown-date("date Dropdown", "date Dropdown")  
+        .component__dropdown-date-filter
+          +form-name("filter date dropdown")
+          include ../../components/dropdown/dropdown-date-filter/dropdown-date-filter
+        .component__text-field-subscription
+          +form-name("subscription text field")
+          +text-field-subscription("Email")
+        .component__dropdown-facilities-default
+          +form-name("dropdown", "Default")
+          +dropdown-facilities("default")
+        .component__dropdown-facilities
+          +form-name("dropdown", "expanded")
+          +dropdown-facilities("all")
+        .component__checkbox-list-default
+          +checkbox-list("expandable checkbox list", "default")
+        .component__checkbox-list
+          +checkbox-list("expandable checkbox list", "all")
+
+      // Col
+      .components__col
+        .component__checkbox-buttons  
+          +checkbox-buttons("checkbox-buttons")
+        .component__button-radio
+          +form-name("Radio Buttons")
+          include ../../components/button/button-radio/button-radio
+        .component__button-toggle
+          +form-name("Toggle")
+          .component__button-toggle-wrapper
+            .component__button-toggle-wrapper-btn
+              include ../../components/button/button-toggle/button-toggle
+            .component__button-toggle-wrapper-btn
+              include ../../components/button/button-toggle/button-toggle
+        .component__button-like
+          +form-name("like button")
+          .component__button-like-wrapper
+            +button-like("main","2")
+            +button-like("secondary", "12")
+        .component__bar-ratting
+          +form-name("rate button")
+          .component__bar-ratting-wrapper
+            +bar-ratting("ui-4")
+            +bar-ratting("ui-5")
+        .component__dropdown-guests-clear
+          +form-name("Dropdown")
+          +dropdown-guests("clear")
+        .component__checkbox-availability
+          +checkbox-availability("rich Checkbox Buttons")
+        
+      
+      // Col
+      .components__col
+        .component__range-slider
+          +range-slider("range-slider", "range-slider_ui")
+        .component__buttons
+          +form-name("buttons")
+          .component__button-bg
+            +button-bg("click me")
+            +button-bg("click me")
+          .component__button-border
+            +button-border("click me")
+            +button-border("click me")
+          .component__button-click
+            include ../../components/button/button-click/button-click
+            include ../../components/button/button-click/button-click
+          .component__button-big  
+            +button-big("перейти к оплате")
+        .component__pagination
+          +form-name("pagination")
+          include ../../components/pagination/pagination
+        .component__dropdown-guests
+          +form-name("Dropdown")
+          +dropdown-guests("all")
+        .component__rules
+          +form-name("bullet list")
+          include ../../components/rules/rules
+      
+        // Col bottom
+      .components__col.components__col_bottom
+        .component__dignity
+          +dignity("emoticon.png", "Комфорт","Шумопоглощающие стены")
+          +dignity("city.png", "Удобство","Окно в каждой из спален")
+        .component__review
+          - let textReview = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+          +review("review-photo.png", "Мурад Сарафанов", "5 дней назад", textReview)
+
+

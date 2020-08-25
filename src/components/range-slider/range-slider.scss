@@ -27,9 +27,9 @@
 
   &__text {
     @include text(normal, 12px, 14px, $darkShade50, none);
-    letter-spacing: 0.5px;
-    word-spacing: 0.5px;
-    margin-top: 11px;
+    letter-spacing: 0.7px;
+    word-spacing: 0.4px;
+    margin-top: 15px;
   }
 }
 

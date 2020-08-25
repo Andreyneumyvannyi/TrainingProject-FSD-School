@@ -7,12 +7,16 @@
 
 /* Modules
 ========================================== */
-@import "../src/pages/scss/colorsType.scss";
-@import "../src/pages/scss/formElements.scss";
-@import "../src/pages/scss/cards.scss";
+@import "../src/pages/scss/colors.scss";
+@import "../src/pages/scss/components.scss";
+@import "../src/pages/scss/forms.scss";
 @import "../src/pages/scss/headerFooter.scss";
-@import "../src/pages/scss/landingPage.scss";
+@import "../src/pages/scss/landing.scss";
 @import "../src/pages/scss/registration.scss";
-@import "../src/pages/scss/roomDetails.scss";
-@import "../src/pages/scss/searchRoom.scss";
-@import "../src/pages/scss/sign-in.scss";
+@import "../src/pages/scss/details.scss";
+@import "../src/pages/scss/search.scss";
+@import "../src/pages/scss/login.scss";
+
+.body_gray {
+  background: #e5e5e5;
+}
