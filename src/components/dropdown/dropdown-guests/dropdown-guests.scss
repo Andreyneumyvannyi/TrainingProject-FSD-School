@@ -3,6 +3,9 @@
   width: 320px;
   position: relative;
   cursor: pointer;
+  @media all and (max-width: $smPhoneWidth) {
+    width: 250px;
+  }
 
   &_sm {
     width: 266px;

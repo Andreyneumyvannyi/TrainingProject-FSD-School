@@ -5,6 +5,10 @@
     width: 1200px;
     margin: 0 auto;
     padding: 100px 20px 100px 20px;
+    @media all and (max-width: $smDesktopWidth) {
+      width: auto;
+      padding: 50px 20px 50px 20px;
+    }
   }
   &__border {
     border-bottom: 1px solid $darkShade25;
@@ -12,10 +16,29 @@
 
   &__content {
     display: flex;
+    @media all and (max-width: $smDesktopWidth) {
+      flex-wrap: wrap;
+    }
   }
 
   &__info {
     margin-right: 49px;
+    @media all and (max-width: $smDesktopWidth) {
+      margin-right: 0;
+      display: flex;
+      align-items: center;
+      align-self: center;
+      order: 2;
+    }
+    @media all and (max-width: $tableWidth) {
+      display: none;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
   }
 
   &__text {
@@ -24,6 +47,22 @@
     letter-spacing: 0.9px;
     word-spacing: 0.9px;
     margin-top: 18px;
+    @media all and (max-width: $phoneWidth) {
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    @media all and (max-width: $smDesktopWidth) {
+      text-align: center;
+      margin-left: 100px;
+      margin-right: 50px;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      text-align: center;
+      margin: 0;
+    }
   }
 
   &__nav {
@@ -31,6 +70,22 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media all and (max-width: $smDesktopWidth) {
+      margin-bottom: 20px;
+      justify-content: space-around;
+      order: 1;
+    }
+
+    @media all and (max-width: $tableWidth) {
+      margin-bottom: 0;
+      justify-content: space-around;
+      order: 1;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      display: none;
+    }
+
     &-title {
       @include text(bold, 12px, 15px, $darkShade100, uppercase);
       letter-spacing: 0.7px;
@@ -55,10 +110,23 @@
   &__subscribe {
     margin-top: 5px;
     margin-left: 51px;
+    @media all and (max-width: $smDesktopWidth) {
+      align-self: center;
+      order: 3;
+      margin-left: 0px;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      margin: 0 auto;
+    }
+
     &-title {
       @include text(bold, 12px, 15px, $darkShade100, uppercase);
       word-spacing: 0.5px;
       letter-spacing: 0.3px;
+      @media all and (max-width: $smDesktopWidth) {
+        display: none;
+      }
     }
     &-text {
       width: 240px;
@@ -66,9 +134,24 @@
       letter-spacing: 0.9px;
       word-spacing: 0.9px;
       margin-top: 18px;
+      @media all and (max-width: $smDesktopWidth) {
+        display: none;
+      }
     }
     &-form {
       margin-top: 22px;
+      @media all and (max-width: $smDesktopWidth) {
+        margin-bottom: 10px;
+        margin-left: 50px;
+      }
+      @media all and (max-width: $tableWidth) {
+        display: none;
+      }
+
+      @media all and (max-width: $phoneWidth) {
+        display: block;
+        margin: 0;
+      }
     }
   }
 
@@ -80,11 +163,25 @@
       justify-content: space-between;
       align-items: center;
       padding: 23px 20px 25px 20px;
+      @media all and (max-width: $smDesktopWidth) {
+        width: auto;
+      }
+
+      @media all and (max-width: $phoneWidth) {
+        flex-direction: column;
+      }
     }
     &-text {
       @include text(normal, 14px, 17px, $darkShade75, none);
       letter-spacing: 0.5px;
       word-spacing: 0.9px;
+      @media all and (max-width: $phoneWidth) {
+        margin-bottom: 20px;
+      }
+
+      @media all and (max-width: $smPhoneWidth) {
+        text-align: center;
+      }
     }
   }
 }

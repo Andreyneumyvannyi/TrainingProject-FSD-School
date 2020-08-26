@@ -7,12 +7,18 @@
     display: flex;
     padding: 15px 20px;
     align-items: center;
+    @media all and (max-width: $smDesktopWidth) {
+      width: auto;
+    }
   }
 
   &__nav {
     margin-left: auto;
     display: flex;
     align-items: center;
+    @media all and (max-width: $smDesktopWidth) {
+      display: none;
+    }
 
     &-item {
       &:not(:last-child) {
@@ -48,7 +54,7 @@
   }
 
   &__login {
-    margin-left: 35px;
+    margin-left: 8px;
     display: none;
     &_active {
       display: flex;
@@ -73,7 +79,7 @@
       width: 1px;
       height: 30px;
       background: rgba(31, 32, 65, 0.1);
-      margin: 0 24px 0 27px;
+      margin: 0 24px 0 0px;
     }
 
     &-name {

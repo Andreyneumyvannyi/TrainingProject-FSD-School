@@ -9,10 +9,17 @@
   border-radius: 22px;
   position: relative;
   transition: all 0.2s linear;
+  @media all and (max-width: $smPhoneWidth) {
+    width: 250px;
+    @include text(bold, 11px, 15px, #ffffff, uppercase);
+  }
   svg {
     position: absolute;
     top: 12px;
     right: 12px;
+    @media all and (max-width: $smPhoneWidth) {
+      width: 15px;
+    }
   }
   &:hover {
     opacity: 0.5;

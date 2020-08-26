@@ -3,6 +3,9 @@
     display: flex;
     width: 320px;
     justify-content: space-between;
+    @media all and (max-width: $smPhoneWidth) {
+      width: 250px;
+    }
   }
 
   &__name {
@@ -29,6 +32,13 @@
       @include text(normal, 14px, 18px, $darkShade75, none);
       text-align: justify;
       letter-spacing: 0.8px;
+      @media all and (max-width: $smPhoneWidth) {
+        @include text(normal, 11px, 14px, $darkShade75, none);
+      }
+    }
+
+    @media all and (max-width: $smPhoneWidth) {
+      width: 120px;
     }
   }
   &__arrow {
@@ -37,7 +47,13 @@
     top: 16px;
     right: 16.5px;
     z-index: 10000;
+    width: 5px;
+    height: 5px;
 
+    @media all and (max-width: $smPhoneWidth) {
+      width: 3px;
+      height: 3px;
+    }
     &_down {
       align-self: center;
       width: 5px;
@@ -46,6 +62,10 @@
       border-width: 0 2px 2px 0;
       padding: 3px;
       transform: rotate(45deg);
+      @media all and (max-width: $smPhoneWidth) {
+        width: 3px;
+        height: 3px;
+      }
     }
   }
 }
