@@ -1,0 +1,13 @@
+.banner {
+  &__bg {
+    &-img {
+      width: 100%;
+      height: 900px;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}
+.content {
+  position: absolute;
+}

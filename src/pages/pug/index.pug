@@ -1,6 +1,7 @@
 doctype html
 html(lang='en')
   head
+    meta(name="viewport" content="width=device-width")
     title
       | Landing
   body
@@ -10,19 +11,19 @@ html(lang='en')
     include ../../components/footer/footer
 
     // Header
-    .header
-      // Header-banner
-      .header-inner
-        - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
-        - let arrowPos = ["Услуги","Соглашения"]
-        +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
+
+    - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
+    - let arrowPos = ["Услуги","Соглашения"]
+    +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
         
-        // Header-banner-text
-        .header-inner__wrapper
-          include ../../components/form/form-find-room/form-find-room
-          p.header-inner__text
-            | Лучшие номера для вашей работы, отдыха и просто вдохновения
-    
+    .banner
+      .banner__bg
+        img.banner__bg-img(src="assets/img/bg-header.png")
+    .content
+      include ../../components/form/form-find-room/form-find-room
+      p.content__text
+        | Лучшие номера для вашей работы, отдыха и просто вдохновения
+  
     // Footer
     .footer
 
