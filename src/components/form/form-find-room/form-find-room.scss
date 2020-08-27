@@ -4,6 +4,11 @@
     width: auto;
     padding: 20px 10px;
   }
+
+  @media all and (max-width: $iPhoneXWidth) {
+    width: auto;
+    padding: 20px 15px;
+  }
   &__title {
     width: 260px;
     @include text(bold, 24px, 30px, $darkShade100, none);

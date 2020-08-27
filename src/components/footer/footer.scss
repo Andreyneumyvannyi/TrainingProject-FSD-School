@@ -182,6 +182,9 @@
       @media all and (max-width: $smPhoneWidth) {
         text-align: center;
       }
+      @media all and (max-width: $iPhoneXWidth) {
+        text-align: center;
+      }
     }
   }
 }

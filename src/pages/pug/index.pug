@@ -15,16 +15,18 @@ html(lang='en')
     - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
     - let arrowPos = ["Услуги","Соглашения"]
     +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
+    
+    .banner__content
+      .banner__content-form
+        include ../../components/form/form-find-room/form-find-room
+      p.banner__content-text
+        | Лучшие номера для вашей работы, отдыха и просто вдохновения
         
     .banner
-      .banner__bg
-        img.banner__bg-img(src="assets/img/bg-header.png")
-    .content
-      include ../../components/form/form-find-room/form-find-room
-      p.content__text
-        | Лучшие номера для вашей работы, отдыха и просто вдохновения
-  
-    // Footer
+      img.banner__img(src="assets/img/bg-header.png")
+
+    
+      // Footer
     .footer
 
       //- Data footer
