@@ -10,9 +10,10 @@
   position: relative;
   transition: all 0.2s linear;
   @media all and (max-width: $smPhoneWidth) {
-    width: 250px;
+    width: 248px;
     @include text(bold, 11px, 15px, #ffffff, uppercase);
   }
+
   svg {
     position: absolute;
     top: 12px;

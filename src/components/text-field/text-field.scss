@@ -1,5 +1,8 @@
 .text-field {
   @include text-field(320px);
+  @media all and (max-width: $smPhoneWidth) {
+    @include text-field(248px);
+  }
 
   &::placeholder {
     @include text-field-placeholder($darkShade25);
@@ -18,8 +21,5 @@
   &_hover {
     border: 1px solid $darkShade50;
     color: $darkShade75;
-  }
-
-  &_masked {
   }
 }

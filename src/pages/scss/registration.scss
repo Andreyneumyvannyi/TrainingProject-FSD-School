@@ -1,17 +1,19 @@
-.container-form-registration {
-  height: auto;
-  background: url(/assets/img/bg-header.png) no-repeat bottom;
-  background-size: cover;
-}
+.banner-registration {
+  max-height: 760px;
+  position: relative;
 
-.wrapper-form-registration-inner {
-  width: 1200px;
-  padding: 0 20px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.wrapper-form-registration {
-  margin: 19px 0;
+  &__img {
+    width: 100%;
+    height: 760px;
+    object-fit: cover;
+  }
+  &__content {
+    &-form {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }

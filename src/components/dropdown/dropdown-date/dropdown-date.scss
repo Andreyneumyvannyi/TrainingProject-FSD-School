@@ -1,10 +1,11 @@
 .dropdown-date {
+  -webkit-tap-highlight-color: transparent;
   &__wrapper {
     display: flex;
     width: 320px;
     justify-content: space-between;
     @media all and (max-width: $smPhoneWidth) {
-      width: 250px;
+      width: 240px;
     }
   }
 
@@ -38,7 +39,8 @@
     }
 
     @media all and (max-width: $smPhoneWidth) {
-      width: 120px;
+      width: 115px;
+      padding-left: 12px;
     }
   }
   &__arrow {
@@ -53,6 +55,7 @@
     @media all and (max-width: $smPhoneWidth) {
       width: 3px;
       height: 3px;
+      right: 13px;
     }
     &_down {
       align-self: center;

@@ -2,13 +2,9 @@
   @include form;
   @media all and (max-width: $smPhoneWidth) {
     width: auto;
-    padding: 20px 10px;
-  }
-
-  @media all and (max-width: $iPhoneXWidth) {
-    width: auto;
     padding: 20px 15px;
   }
+
   &__title {
     width: 260px;
     @include text(bold, 24px, 30px, $darkShade100, none);
@@ -20,32 +16,21 @@
     @media all and (max-width: $smPhoneWidth) {
       @include text(bold, 20px, 26px, $darkShade100, none);
       text-align: center;
+      width: 240px;
     }
   }
   &__find {
     &-date {
       margin-bottom: 20px;
-      @media all and (max-width: $smPhoneWidth) {
-        margin-left: 5px;
-      }
     }
 
     &-guests {
       margin-bottom: 31px;
-      @media all and (max-width: $smPhoneWidth) {
-        margin-left: 5px;
-      }
     }
   }
   &__form {
     &-name {
       margin-bottom: 6px;
-    }
-  }
-
-  &__button-big {
-    @media all and (max-width: $smPhoneWidth) {
-      margin-left: 5px;
     }
   }
 }

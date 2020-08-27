@@ -1,5 +1,9 @@
 .login {
   @include form;
+  @media all and (max-width: $smPhoneWidth) {
+    width: 280px;
+    padding: 15px;
+  }
 
   &__title {
     @include text(bold, 24px, 30px, $darkShade100, none);
@@ -7,6 +11,9 @@
     word-spacing: 1px;
     font-family: $Quicksand;
     margin-bottom: 18px;
+    @media all and (max-width: $smPhoneWidth) {
+      width: 240px;
+    }
   }
 
   &__email {
@@ -19,15 +26,26 @@
 
   &__button-big {
     margin-bottom: 30px;
+    @media all and (max-width: $smPhoneWidth) {
+      margin-bottom: 20px;
+    }
   }
   &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media all and (max-width: $smPhoneWidth) {
+      flex-direction: column;
+      justify-content: center;
+      width: auto;
+    }
 
     &-text {
       @include text(normal, 14px, 18px, $darkShade100, none);
       letter-spacing: 0.8px;
+      @media all and (max-width: $smPhoneWidth) {
+        margin-bottom: 10px;
+      }
     }
   }
 }

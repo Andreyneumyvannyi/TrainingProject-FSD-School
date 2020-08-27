@@ -28,8 +28,9 @@
   visibility: hidden;
   opacity: 0;
   @media all and (max-width: $smPhoneWidth) {
-    width: 210px;
+    width: 202px;
   }
+
   &.active {
     visibility: visible;
     opacity: 1;

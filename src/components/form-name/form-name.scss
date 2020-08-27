@@ -2,7 +2,6 @@
   @include text(bold, 12px, 14px, $darkShade100, uppercase);
   display: flex;
   justify-content: space-between;
-  text-align: justify;
   letter-spacing: 0.5px;
   word-spacing: 0.8px;
   margin-bottom: 2px;
@@ -10,7 +9,6 @@
   &__state {
     color: $darkShade50;
     font-weight: normal;
-    text-align: justify;
     letter-spacing: 0.2px;
     word-spacing: 0.2px;
     margin-bottom: 2px;

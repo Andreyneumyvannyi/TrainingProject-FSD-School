@@ -11,16 +11,15 @@ html(lang='en')
     include ../../components/footer/footer
   
     // Header
-    .header
-      - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
-      - let arrowPos = ["Услуги","Соглашения"]
-      +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
-      
-      // Form Login
-      .container-form-sign-in
-        .wrapper-form-sign-in-inner
-          .wrapper-form-sign-in
-            include ../../components/form/form-login/form-login
+
+    - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
+    - let arrowPos = ["Услуги","Соглашения"]
+    +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
+            
+    .banner-login
+      img.banner-login__img(src="assets/img/bg-header-form.png")
+      .banner-login__content-form
+        include ../../components/form/form-login/form-login
 
     // Footer
     .container-footer
