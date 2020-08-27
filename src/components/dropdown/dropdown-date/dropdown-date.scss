@@ -4,7 +4,8 @@
     display: flex;
     width: 320px;
     justify-content: space-between;
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       width: 240px;
     }
   }
@@ -33,12 +34,14 @@
       @include text(normal, 14px, 18px, $darkShade75, none);
       text-align: justify;
       letter-spacing: 0.8px;
-      @media all and (max-width: $smPhoneWidth) {
+      @media all and (max-width: $smPhoneWidth),
+        all and (max-width: $smPhoneEdgeWidth) {
         @include text(normal, 11px, 14px, $darkShade75, none);
       }
     }
 
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       width: 115px;
       padding-left: 12px;
     }
@@ -52,7 +55,8 @@
     width: 5px;
     height: 5px;
 
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       width: 3px;
       height: 3px;
       right: 13px;
@@ -65,7 +69,8 @@
       border-width: 0 2px 2px 0;
       padding: 3px;
       transform: rotate(45deg);
-      @media all and (max-width: $smPhoneWidth) {
+      @media all and (max-width: $smPhoneWidth),
+        all and (max-width: $smPhoneEdgeWidth) {
         width: 3px;
         height: 3px;
       }

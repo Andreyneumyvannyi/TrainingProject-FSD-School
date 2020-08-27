@@ -1,6 +1,7 @@
 .login {
   @include form;
-  @media all and (max-width: $smPhoneWidth) {
+  @media all and (max-width: $smPhoneWidth),
+    all and (max-width: $smPhoneEdgeWidth) {
     width: 280px;
     padding: 15px;
   }
@@ -11,7 +12,8 @@
     word-spacing: 1px;
     font-family: $Quicksand;
     margin-bottom: 18px;
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       width: 240px;
     }
   }
@@ -26,7 +28,8 @@
 
   &__button-big {
     margin-bottom: 30px;
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       margin-bottom: 20px;
     }
   }
@@ -34,7 +37,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       flex-direction: column;
       justify-content: center;
       width: auto;

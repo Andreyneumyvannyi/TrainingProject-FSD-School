@@ -9,8 +9,9 @@
   border-radius: 22px;
   position: relative;
   transition: all 0.2s linear;
-  @media all and (max-width: $smPhoneWidth) {
-    width: 248px;
+  @media all and (max-width: $smPhoneWidth),
+    all and (max-width: $smPhoneEdgeWidth) {
+    width: 240px;
     @include text(bold, 11px, 15px, #ffffff, uppercase);
   }
 
@@ -18,7 +19,8 @@
     position: absolute;
     top: 12px;
     right: 12px;
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       width: 15px;
     }
   }

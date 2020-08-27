@@ -1,6 +1,7 @@
 .find-room {
   @include form;
-  @media all and (max-width: $smPhoneWidth) {
+  @media all and (max-width: $smPhoneWidth),
+    all and (max-width: $smPhoneEdgeWidth) {
     width: auto;
     padding: 20px 15px;
   }
@@ -13,7 +14,8 @@
     letter-spacing: 1.1px;
     word-spacing: 1px;
 
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       @include text(bold, 20px, 26px, $darkShade100, none);
       text-align: center;
       width: 240px;

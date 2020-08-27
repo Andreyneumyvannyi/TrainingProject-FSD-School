@@ -1,6 +1,7 @@
 .registration {
   @include form;
-  @media all and (max-width: $smPhoneWidth) {
+  @media all and (max-width: $smPhoneWidth),
+    all and (max-width: $smPhoneEdgeWidth) {
     width: 280px;
     padding: 20px 15px;
   }
@@ -10,7 +11,8 @@
     word-spacing: 1px;
     font-family: $Quicksand;
     margin-bottom: 18px;
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       @include text(bold, 20px, 26px, $darkShade100, none);
     }
   }
@@ -51,7 +53,8 @@
 
   &__button-big {
     margin-bottom: 30px;
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       margin-bottom: 20px;
     }
   }
@@ -60,7 +63,8 @@
     &-text {
       @include text(normal, 14px, 18px, $darkShade100, none);
       letter-spacing: 0.8px;
-      @media all and (max-width: $smPhoneWidth) {
+      @media all and (max-width: $smPhoneWidth),
+        all and (max-width: $smPhoneEdgeWidth) {
         margin-bottom: 10px;
       }
     }
@@ -68,7 +72,8 @@
     justify-content: space-between;
     align-items: center;
 
-    @media all and (max-width: $smPhoneWidth) {
+    @media all and (max-width: $smPhoneWidth),
+      all and (max-width: $smPhoneEdgeWidth) {
       flex-direction: column;
       justify-content: center;
       margin-bottom: 10px;

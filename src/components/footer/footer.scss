@@ -163,7 +163,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 23px 20px 25px 20px;
-      @media all and (max-width: $smDesktopWidth) {
+      @media all and (max-width: $smDesktopWidth),
+        all and (max-width: $smPhoneEdgeWidth) {
         width: auto;
       }
 
@@ -179,10 +180,8 @@
         margin-bottom: 20px;
       }
 
-      @media all and (max-width: $smPhoneWidth) {
-        text-align: center;
-      }
-      @media all and (max-width: $iPhoneXWidth) {
+      @media all and (max-width: $smPhoneWidth),
+        all and (max-width: $smPhoneEdgeWidth) {
         text-align: center;
       }
     }
