@@ -19,6 +19,9 @@
     @media all and (max-width: $smDesktopWidth) {
       flex-wrap: wrap;
     }
+    @media all and (max-width: $phoneWidth) {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -30,12 +33,13 @@
       align-self: center;
       order: 2;
     }
+
     @media all and (max-width: $tableWidth) {
       display: none;
     }
 
     @media all and (max-width: $phoneWidth) {
-      display: block;
+      display: block !important;
       margin: 0 auto;
       margin-bottom: 30px;
     }

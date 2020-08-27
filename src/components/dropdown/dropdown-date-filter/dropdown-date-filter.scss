@@ -1,5 +1,10 @@
 .dropdown-date-filter {
   position: relative;
+  width: 266px;
+  @media all and (max-width: $smPhoneEdgeWidth),
+    all and (max-width: $smPhoneWidth) {
+    width: 240px;
+  }
 
   &__input {
     cursor: pointer;
@@ -19,6 +24,11 @@
       text-align: justify;
       word-spacing: 0.2px;
       letter-spacing: 0.1px;
+    }
+
+    @media all and (max-width: $smPhoneEdgeWidth),
+      all and (max-width: $smPhoneWidth) {
+      width: 240px;
     }
   }
 

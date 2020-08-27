@@ -1,4 +1,11 @@
 .checkbox-availability {
+  @media all and (max-width: $smDesktopWidth) {
+    display: flex;
+  }
+
+  @media all and (max-width: $phoneWidth) {
+    display: block;
+  }
   &__name {
     @include text(bold, 12px, 15px, $darkShade100, uppercase);
     text-align: justify;

@@ -8,48 +8,213 @@
     padding: 0 20px;
     margin: 0 auto;
     margin-top: 32px;
+    @media all and (max-width: $smDesktopWidth) {
+      flex-direction: column;
+      width: 900px;
+    }
+
+    @media all and (max-width: $tableWidth) {
+      width: 600px;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      width: 400px;
+      justify-content: center;
+    }
+
+    @media all and (max-width: $smPhoneEdgeWidth),
+      all and (max-width: $smPhoneWidth) {
+      width: 300px;
+    }
   }
 
   &-filter {
-    max-width: 266px;
+    width: 266px;
     margin-right: 60px;
+    @media all and (max-width: $smDesktopWidth) {
+      width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media all and (max-width: $tableWidth) {
+      width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 0;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      width: 266px;
+      flex-direction: column;
+    }
+
+    &_deactivated {
+      @media all and (max-width: $smDesktopWidth) {
+        display: none;
+      }
+      @media all and (max-width: $tableWidth) {
+        display: none;
+      }
+    }
+    &_active {
+      @media all and (max-width: $smDesktopWidth) {
+        display: flex;
+      }
+
+      @media all and (max-width: $tableWidth) {
+        display: flex;
+      }
+    }
   }
   &-form-name {
     margin-bottom: 5px;
   }
 
+  &-date-filter {
+    @media all and (max-width: $smDesktopWidth) {
+      order: 1;
+    }
+  }
+
   &-dropdown-guests {
     margin-top: 21px;
+    @media all and (max-width: $smDesktopWidth) {
+      order: 2;
+      margin-left: 30px;
+      margin-top: 0px;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      margin-left: 0px;
+      margin-top: 15px;
+    }
   }
 
   &-range-slider {
     margin-top: 30px;
+    @media all and (max-width: $smDesktopWidth) {
+      margin-top: 30px;
+      order: 4;
+    }
+
+    @media all and (max-width: $tableWidth) {
+      margin-top: 35px;
+      margin-left: 30px;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      margin-top: 35px;
+      margin-left: 0px;
+    }
   }
 
   &-checkbox-buttons {
     margin-top: 30px;
+    @media all and (max-width: $smDesktopWidth) {
+      order: 5;
+      margin-left: 32px;
+      margin-top: 30px;
+    }
+    @media all and (max-width: $tableWidth) {
+      margin-top: 30px;
+      margin-left: 0px;
+    }
   }
 
   &-checkbox-availability {
     margin-top: 33px;
+    @media all and (max-width: $smDesktopWidth) {
+      order: 7;
+      margin-top: 5px;
+    }
+
+    @media all and (max-width: $tableWidth) {
+      margin-top: 60px;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      order: 6;
+      margin-left: 0px;
+      margin-top: 15px;
+    }
   }
 
   &-dropdown-facilities {
     margin-top: 30px;
+    @media all and (max-width: $smDesktopWidth) {
+      order: 3;
+      margin-left: 30px;
+      margin-top: 0px;
+    }
+
+    @media all and (max-width: $tableWidth) {
+      margin-left: 0px;
+      margin-top: 30px;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      margin-left: 0px;
+      margin-top: 15px;
+    }
   }
 
   &-checkbox-list {
     margin-top: 31px;
+    @media all and (max-width: $smDesktopWidth) {
+      order: 6;
+      margin-left: 95px;
+      margin-top: 30px;
+    }
+
+    @media all and (max-width: $tableWidth) {
+      margin-left: 95px;
+      margin-top: 30px;
+    }
+
+    @media all and (max-width: $phoneWidth) {
+      margin-top: 35px;
+      margin-left: 0px;
+      margin-bottom: 200px;
+    }
   }
 
-  &-room-cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &-room-card {
-    margin-bottom: 20px;
-    &:not(:nth-child(3n + 3)) {
-      margin-right: 12px;
+  &-room {
+    @media all and (max-width: $smDesktopWidth) {
+      flex-direction: column;
+    }
+
+    &-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &-card {
+      margin-bottom: 20px;
+      &:not(:nth-child(3n + 3)) {
+        margin-right: 12px;
+      }
+
+      @media all and (max-width: $smDesktopWidth) {
+        &:not(:nth-child(3n + 3)) {
+          margin-right: 22px;
+        }
+      }
+
+      @media all and (max-width: $tableWidth) {
+        &:not(:nth-child(3n + 3)) {
+          margin-right: 0;
+        }
+        &:not(:nth-child(2n)) {
+          margin-right: 20px;
+        }
+      }
+
+      @media all and (max-width: $phoneWidth) {
+        &:not(:nth-child(2n)) {
+          margin-right: 0px;
+        }
+      }
     }
   }
 
@@ -68,4 +233,43 @@
   font-family: $Quicksand;
   letter-spacing: 0.7px;
   word-spacing: 0.4px;
+  @media all and (max-width: $smDesktopWidth) {
+    margin-top: 30px;
+  }
+
+  @media all and (max-width: $phoneWidth) {
+    text-align: center;
+    @include text(bold, 20px, 26px, $darkShade100, none);
+  }
+
+  @media all and (max-width: $smPhoneEdgeWidth),
+    all and (max-width: $smPhoneWidth) {
+    @include text(bold, 10px, 26px, $darkShade100, none);
+  }
+}
+
+.filter {
+  margin-top: 20px;
+  display: none;
+  @media all and (max-width: $smDesktopWidth) {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__title {
+    @include text(bold, 24px, 20px, $darkShade100, none);
+    margin-bottom: 20px;
+  }
+
+  &__arrow {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    transition: all 0.3s linear;
+    width: 5px;
+    height: 5px;
+    border: solid $darkShade100;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+  }
 }

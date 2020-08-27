@@ -4,7 +4,7 @@
     width: 100%;
     height: 900px;
     object-fit: cover;
-    @media all and (min-width: $smDesktopWidth) {
+    @media all and (max-width: $smDesktopWidth) {
       height: 100%;
     }
 

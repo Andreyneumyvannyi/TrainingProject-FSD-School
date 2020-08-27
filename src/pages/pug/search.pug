@@ -28,7 +28,11 @@ html(lang='en')
     .container-search-room
       .container-content
         // Filter
-        .container-filter
+        .filter
+          h2.filter__title Фильтры
+          button#filter__btn.filter__arrow
+
+        .container-filter.container-filter_deactivated
           .container-date-filter
             .container-form-name
               +form-name("даты пребывания в отеле")
@@ -50,12 +54,15 @@ html(lang='en')
           .container-checkbox-list
             +checkbox-list("дополнительные удобства", "standard")
 
-        // Rooms
-        .container-room
-          h1.title__room-card Номера, которые мы для вас подобрали
           
+
+        // Rooms
+        
+        .container-room
           // Room cards
+          h1.title__room-card Номера, которые мы для вас подобрали
           .container-room-cards
+
             //-Data Room
             -
               let dateRoom = { 
