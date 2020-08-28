@@ -21,6 +21,7 @@
     }
     @media all and (max-width: $phoneWidth) {
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -33,15 +34,8 @@
       align-self: center;
       order: 2;
     }
-
-    @media all and (max-width: $tableWidth) {
-      display: none;
-    }
-
     @media all and (max-width: $phoneWidth) {
-      display: block !important;
-      margin: 0 auto;
-      margin-bottom: 30px;
+      flex-direction: column;
     }
   }
 
@@ -51,21 +45,16 @@
     letter-spacing: 0.9px;
     word-spacing: 0.9px;
     margin-top: 18px;
-    @media all and (max-width: $phoneWidth) {
-      text-align: center;
-    }
+  }
+
+  @media all and (max-width: $phoneWidth) {
+    text-align: center;
   }
 
   &__logo {
     @media all and (max-width: $smDesktopWidth) {
       text-align: center;
-      margin-left: 100px;
-      margin-right: 50px;
-    }
-
-    @media all and (max-width: $phoneWidth) {
-      text-align: center;
-      margin: 0;
+      margin-right: 20px;
     }
   }
 
@@ -75,18 +64,6 @@
     display: flex;
     justify-content: space-between;
     @media all and (max-width: $smDesktopWidth) {
-      margin-bottom: 20px;
-      justify-content: space-around;
-      order: 1;
-    }
-
-    @media all and (max-width: $tableWidth) {
-      margin-bottom: 0;
-      justify-content: space-around;
-      order: 1;
-    }
-
-    @media all and (max-width: $phoneWidth) {
       display: none;
     }
 
@@ -117,11 +94,11 @@
     @media all and (max-width: $smDesktopWidth) {
       align-self: center;
       order: 3;
-      margin-left: 0px;
+      margin-left: auto;
     }
-
     @media all and (max-width: $phoneWidth) {
-      margin: 0 auto;
+      align-self: center;
+      margin-left: 0;
     }
 
     &-title {
@@ -148,13 +125,10 @@
         margin-bottom: 10px;
         margin-left: 50px;
       }
-      @media all and (max-width: $tableWidth) {
-        display: none;
-      }
 
       @media all and (max-width: $phoneWidth) {
-        display: block;
-        margin: 0;
+        margin-bottom: 0;
+        margin-left: 0;
       }
     }
   }
