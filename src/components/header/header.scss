@@ -7,18 +7,12 @@
     display: flex;
     padding: 15px 20px;
     align-items: center;
-    @media all and (max-width: $smDesktopWidth) {
-      width: auto;
-    }
   }
 
   &__nav {
     margin-left: auto;
     display: flex;
     align-items: center;
-    @media all and (max-width: $smDesktopWidth) {
-      display: none;
-    }
 
     &-item {
       &:not(:last-child) {

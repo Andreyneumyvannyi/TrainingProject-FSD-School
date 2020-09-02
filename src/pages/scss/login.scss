@@ -6,10 +6,6 @@
     width: 100%;
     height: 760px;
     object-fit: cover;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      height: 400px;
-    }
   }
   &__content {
     &-form {

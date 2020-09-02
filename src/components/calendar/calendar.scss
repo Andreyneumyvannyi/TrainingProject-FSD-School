@@ -27,10 +27,6 @@
   border-radius: 4px;
   visibility: hidden;
   opacity: 0;
-  @media all and (max-width: $smPhoneWidth),
-    all and (max-width: $smPhoneEdgeWidth) {
-    width: 202px;
-  }
 
   &.active {
     visibility: visible;
@@ -48,10 +44,6 @@
     padding: 0;
     border: none;
     margin-bottom: 25px;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      margin-bottom: 15px;
-    }
 
     &-title {
       h2 {
@@ -60,10 +52,6 @@
         word-spacing: 0.8px;
         font-weight: bold;
         font-family: $Quicksand;
-        @media all and (max-width: $smPhoneWidth),
-          all and (max-width: $smPhoneEdgeWidth) {
-          @include text(bold, 16px, 22px, $darkShade100, none);
-        }
       }
       &:hover {
         background: none;
@@ -87,10 +75,7 @@
   &--days {
     width: 280px;
     text-align: center;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      width: 210px;
-    }
+
     &-names {
       margin: 0;
     }
@@ -108,11 +93,6 @@
       display: flex;
       align-items: center;
       @include text(bold, 12px, 15px, $purple, none);
-      @media all and (max-width: $smPhoneWidth),
-        all and (max-width: $smPhoneEdgeWidth) {
-        width: 30px;
-        height: 30px;
-      }
     }
   }
 
@@ -124,11 +104,7 @@
       align-items: center;
       @include text(normal, 12px, 15px, $darkShade50, none);
       transition: all 0.2s linear;
-      @media all and (max-width: $smPhoneWidth),
-        all and (max-width: $smPhoneEdgeWidth) {
-        width: 30px;
-        height: 30px;
-      }
+
       &:hover {
         border-radius: 50%;
       }
@@ -164,11 +140,6 @@
               z-index: -1;
               border-radius: 50%;
               background: transparent;
-              @media all and (max-width: $smPhoneWidth),
-                all and (max-width: $smPhoneEdgeWidth) {
-                width: 30px;
-                height: 30px;
-              }
             }
           }
           &.-selected- {
@@ -184,11 +155,6 @@
               z-index: -1;
               border-radius: 50%;
               background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-              @media all and (max-width: $smPhoneWidth),
-                all and (max-width: $smPhoneEdgeWidth) {
-                width: 30px;
-                height: 30px;
-              }
             }
           }
         }
@@ -242,11 +208,6 @@
             z-index: -1;
             border-radius: 50%;
             background: transparent;
-            @media all and (max-width: $smPhoneWidth),
-              all and (max-width: $smPhoneEdgeWidth) {
-              width: 30px;
-              height: 30px;
-            }
           }
         }
         &.-selected- {
@@ -262,11 +223,6 @@
             z-index: -1;
             border-radius: 50%;
             background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-            @media all and (max-width: $smPhoneWidth),
-              all and (max-width: $smPhoneEdgeWidth) {
-              width: 30px;
-              height: 30px;
-            }
           }
         }
       }
@@ -287,11 +243,6 @@
             z-index: -1;
             border-radius: 50%;
             background: transparent;
-            @media all and (max-width: $smPhoneWidth),
-              all and (max-width: $smPhoneEdgeWidth) {
-              width: 30px;
-              height: 30px;
-            }
           }
         }
         border: none;
@@ -308,11 +259,6 @@
             z-index: -1;
             border-radius: 50%;
             background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-            @media all and (max-width: $smPhoneWidth),
-              all and (max-width: $smPhoneEdgeWidth) {
-              width: 30px;
-              height: 30px;
-            }
           }
         }
       }
@@ -354,11 +300,6 @@
     flex-flow: wrap;
     padding: 0;
     border: none;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      width: 210px;
-      margin-top: 10px;
-    }
   }
   &--button {
     display: flex;
