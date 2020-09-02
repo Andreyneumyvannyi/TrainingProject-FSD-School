@@ -4,21 +4,27 @@
   }
   &-content {
     display: flex;
-    width: 1200px;
-    padding: 0 20px;
     margin: 0 auto;
     margin-top: 32px;
+    padding: 0 20px;
   }
 
   &-filter {
-    width: 266px;
-    margin-right: 60px;
+    display: block;
+
+    @media (min-width: 1025px) {
+      margin-right: 60px;
+      width: 266px;
+    }
+
+    &_deactivated {
+    }
+
+    &_active {
+    }
   }
   &-form-name {
     margin-bottom: 5px;
-  }
-
-  &-date-filter {
   }
 
   &-dropdown-guests {
@@ -49,49 +55,52 @@
     &-cards {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+
+      @media (min-width: 1200px) {
+        justify-content: space-between;
+      }
     }
+
     &-card {
       margin-bottom: 20px;
-      &:not(:nth-child(3n + 3)) {
-        margin-right: 12px;
-      }
     }
   }
 
   &-pagination {
     margin-top: 20px;
     margin-bottom: 70px;
-
     display: flex;
     justify-content: center;
   }
 }
 
 .title__room-card {
+  letter-spacing: 0.7px;
+  word-spacing: 0.4px;
   @include text(bold, 24px, 30px, $darkShade100, none);
   margin-bottom: 19px;
   font-family: $Quicksand;
-  letter-spacing: 0.7px;
-  word-spacing: 0.4px;
+  @media (min-width: 1200px) {
+    text-align: left;
+  }
+
+  @media (min-width: 1025px) {
+    text-align: center;
+  }
 }
 
 .filter {
-  margin-top: 20px;
   display: none;
-
   &__title {
-    @include text(bold, 24px, 20px, $darkShade100, none);
-    margin-bottom: 20px;
+    @include text(bold, 18px, 14px, $darkShade100, none);
   }
-
   &__arrow {
     position: relative;
-    top: 5px;
+    top: 2px;
     left: 10px;
     transition: all 0.3s linear;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border: solid $darkShade100;
     border-width: 0 2px 2px 0;
     padding: 3px;

@@ -1,5 +1,7 @@
 .range-slider {
-  width: 266px;
+  @media (min-width: 1025px) {
+    width: 266px;
+  }
 
   &__description {
     display: flex;

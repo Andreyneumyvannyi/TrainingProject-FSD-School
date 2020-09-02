@@ -1,14 +1,13 @@
 .dropdown-date-filter {
   position: relative;
-  width: 266px;
-  @media all and (max-width: $smPhoneEdgeWidth),
-    all and (max-width: $smPhoneWidth) {
-    width: 240px;
+
+  @media (min-width: 1281px) {
+    width: 266px;
   }
 
   &__input {
     cursor: pointer;
-    width: 266px;
+    width: 100%;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -24,11 +23,6 @@
       text-align: justify;
       word-spacing: 0.2px;
       letter-spacing: 0.1px;
-    }
-
-    @media all and (max-width: $smPhoneEdgeWidth),
-      all and (max-width: $smPhoneWidth) {
-      width: 240px;
     }
   }
 

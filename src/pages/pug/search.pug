@@ -23,129 +23,130 @@ html(lang='en')
       - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
       - let arrowPos = ["Услуги","Соглашения"]
       +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
+    // Filter
+    .container
+      .filter
+        h2.filter__title Фильтры
+        button#filter__btn.filter__arrow
+      // Content
+      .container-search-room
+        .container-content
 
-    // Content
-    .container-search-room
-      .container-content
-        // Filter
-        .filter
-          h2.filter__title Фильтры
-          button#filter__btn.filter__arrow
 
-        .container-filter.container-filter_deactivated
-          .container-date-filter
-            .container-form-name
-              +form-name("даты пребывания в отеле")
-            include ../../components/dropdown/dropdown-date-filter/dropdown-date-filter
-          .container-dropdown-guests
-            .container-form-name
-              +form-name("гости")
-            +dropdown-guests("sm")
-          .container-range-slider
-            +range-slider("диапазон цены", "range-slider", "Стоимость за сутки пребывания в номере")
-          .container-checkbox-buttons
-            +checkbox-buttons("Checkbox Buttons")
-          .container-checkbox-availability
-            +checkbox-availability("Доступность")
-          .container-dropdown-facilities
-            .container-form-name
-              +form-name("удобства номера")
-            +dropdown-facilities("standard")
-          .container-checkbox-list
-            +checkbox-list("дополнительные удобства", "standard")
-
-          
-
-        // Rooms
-        
-        .container-room
-          // Room cards
-          h1.title__room-card Номера, которые мы для вас подобрали
-          .container-room-cards
-
-            //-Data Room
-            -
-              let dateRoom = { 
-                room888:{
-                  imgSrc: ["assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png"],
-                  roomInfo: ["888", "люкс", "9 990", "65"],
-                },
-                room840:{
-                  imgSrc: ["assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png"],
-                  roomInfo: ["840", "", "9 990", "65"],
-                },
-                room980:{
-                  imgSrc: ["assets/img/room-num-980.png", "assets/img/room-num-980.png", "assets/img/room-num-980.png", "assets/img/room-num-980.png"],
-                  roomInfo: ["980", "люкс", "8 500", "35"],
-                },
-                room856:{
-                  imgSrc: ["assets/img/room-num-856.png", "assets/img/room-num-856.png", "assets/img/room-num-856.png", "assets/img/room-num-856.png"],
-                  roomInfo: ["856", "", "7 300", "19"],
-                },
-
-                room740:{
-                  imgSrc: ["assets/img/room-num-740.png", "assets/img/room-num-740.png", "assets/img/room-num-740.png", "assets/img/room-num-740.png"],
-                  roomInfo: ["740", "", "6 000", "44"],
-                },
-                room982:{
-                  imgSrc: ["assets/img/room-num-982.png", "assets/img/room-num-982.png", "assets/img/room-num-982.png", "assets/img/room-num-982.png"],
-                  roomInfo: ["982", "", "5 800", "56"],
-                },
-                room678:{
-                  imgSrc: ["assets/img/room-num-678.png", "assets/img/room-num-678.png", "assets/img/room-num-678.png", "assets/img/room-num-678.png"],
-                  roomInfo: ["678", "", "5 500", "45"],
-                },
-                room450:{
-                  imgSrc: ["assets/img/room-num-450.png", "assets/img/room-num-450.png", "assets/img/room-num-450.png", "assets/img/room-num-450.png"],
-                  roomInfo: ["450", "", "5 300", "39"],
-                },
-                room350:{
-                  imgSrc: ["assets/img/room-num-350.png", "assets/img/room-num-350.png", "assets/img/room-num-350.png", "assets/img/room-num-350.png"],
-                  roomInfo: ["350", "", "5 000", "77"],
-                },
-                room666:{
-                  imgSrc: ["assets/img/room-num-666.png", "assets/img/room-num-666.png", "assets/img/room-num-666.png", "assets/img/room-num-666.png"],
-                  roomInfo: ["666", "", "5 000", "25"],
-                },
-                room444:{
-                  imgSrc: ["assets/img/room-num-444.png", "assets/img/room-num-444.png", "assets/img/room-num-444.png", "assets/img/room-num-444.png"],
-                  roomInfo: ["444", "", "5 000", "15"],
-                },
-                room352:{
-                  imgSrc: ["assets/img/room-num-352.png", "assets/img/room-num-352.png", "assets/img/room-num-352.png", "assets/img/room-num-352.png"],
-                  roomInfo: ["352", "", "5 000", "55"],
-                },
-              }
+          .container-filter
+            .container-date-filter
+              .container-form-name
+                +form-name("даты пребывания в отеле")
+              include ../../components/dropdown/dropdown-date-filter/dropdown-date-filter
+            .container-dropdown-guests
+              .container-form-name
+                +form-name("гости")
+              +dropdown-guests("sm")
+            .container-range-slider
+              +range-slider("диапазон цены", "range-slider", "Стоимость за сутки пребывания в номере")
+            .container-checkbox-buttons
+              +checkbox-buttons("Checkbox Buttons")
+            .container-checkbox-availability
+              +checkbox-availability("Доступность")
+            .container-dropdown-facilities
+              .container-form-name
+                +form-name("удобства номера")
+              +dropdown-facilities("standard")
+            .container-checkbox-list
+              +checkbox-list("дополнительные удобства", "standard")
 
             
-            .container-room-card
-              +room-card(dateRoom.room888.roomInfo, dateRoom.room888.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room840.roomInfo, dateRoom.room840.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room980.roomInfo, dateRoom.room980.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room856.roomInfo, dateRoom.room856.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room740.roomInfo, dateRoom.room740.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room982.roomInfo, dateRoom.room982.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room678.roomInfo, dateRoom.room678.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room450.roomInfo, dateRoom.room450.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room350.roomInfo, dateRoom.room350.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room666.roomInfo, dateRoom.room666.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room444.roomInfo, dateRoom.room444.imgSrc)
-            .container-room-card
-              +room-card(dateRoom.room352.roomInfo, dateRoom.room352.imgSrc)
 
-          // Pagination
-          .container-pagination
-            include ../../components/pagination/pagination
+          // Rooms
+          
+          .container-room
+            // Room cards
+            h1.title__room-card Номера, которые мы для вас подобрали
+            .container-room-cards
+
+              //-Data Room
+              -
+                let dateRoom = { 
+                  room888:{
+                    imgSrc: ["assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png"],
+                    roomInfo: ["888", "люкс", "9 990", "65"],
+                  },
+                  room840:{
+                    imgSrc: ["assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png"],
+                    roomInfo: ["840", "", "9 990", "65"],
+                  },
+                  room980:{
+                    imgSrc: ["assets/img/room-num-980.png", "assets/img/room-num-980.png", "assets/img/room-num-980.png", "assets/img/room-num-980.png"],
+                    roomInfo: ["980", "люкс", "8 500", "35"],
+                  },
+                  room856:{
+                    imgSrc: ["assets/img/room-num-856.png", "assets/img/room-num-856.png", "assets/img/room-num-856.png", "assets/img/room-num-856.png"],
+                    roomInfo: ["856", "", "7 300", "19"],
+                  },
+
+                  room740:{
+                    imgSrc: ["assets/img/room-num-740.png", "assets/img/room-num-740.png", "assets/img/room-num-740.png", "assets/img/room-num-740.png"],
+                    roomInfo: ["740", "", "6 000", "44"],
+                  },
+                  room982:{
+                    imgSrc: ["assets/img/room-num-982.png", "assets/img/room-num-982.png", "assets/img/room-num-982.png", "assets/img/room-num-982.png"],
+                    roomInfo: ["982", "", "5 800", "56"],
+                  },
+                  room678:{
+                    imgSrc: ["assets/img/room-num-678.png", "assets/img/room-num-678.png", "assets/img/room-num-678.png", "assets/img/room-num-678.png"],
+                    roomInfo: ["678", "", "5 500", "45"],
+                  },
+                  room450:{
+                    imgSrc: ["assets/img/room-num-450.png", "assets/img/room-num-450.png", "assets/img/room-num-450.png", "assets/img/room-num-450.png"],
+                    roomInfo: ["450", "", "5 300", "39"],
+                  },
+                  room350:{
+                    imgSrc: ["assets/img/room-num-350.png", "assets/img/room-num-350.png", "assets/img/room-num-350.png", "assets/img/room-num-350.png"],
+                    roomInfo: ["350", "", "5 000", "77"],
+                  },
+                  room666:{
+                    imgSrc: ["assets/img/room-num-666.png", "assets/img/room-num-666.png", "assets/img/room-num-666.png", "assets/img/room-num-666.png"],
+                    roomInfo: ["666", "", "5 000", "25"],
+                  },
+                  room444:{
+                    imgSrc: ["assets/img/room-num-444.png", "assets/img/room-num-444.png", "assets/img/room-num-444.png", "assets/img/room-num-444.png"],
+                    roomInfo: ["444", "", "5 000", "15"],
+                  },
+                  room352:{
+                    imgSrc: ["assets/img/room-num-352.png", "assets/img/room-num-352.png", "assets/img/room-num-352.png", "assets/img/room-num-352.png"],
+                    roomInfo: ["352", "", "5 000", "55"],
+                  },
+                }
+
+              
+              .container-room-card
+                +room-card(dateRoom.room888.roomInfo, dateRoom.room888.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room840.roomInfo, dateRoom.room840.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room980.roomInfo, dateRoom.room980.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room856.roomInfo, dateRoom.room856.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room740.roomInfo, dateRoom.room740.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room982.roomInfo, dateRoom.room982.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room678.roomInfo, dateRoom.room678.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room450.roomInfo, dateRoom.room450.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room350.roomInfo, dateRoom.room350.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room666.roomInfo, dateRoom.room666.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room444.roomInfo, dateRoom.room444.imgSrc)
+              .container-room-card
+                +room-card(dateRoom.room352.roomInfo, dateRoom.room352.imgSrc)
+
+            // Pagination
+            .container-pagination
+              include ../../components/pagination/pagination
 
     // Footer
     .container-footer

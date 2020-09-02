@@ -27,9 +27,8 @@
   border-radius: 4px;
   visibility: hidden;
   opacity: 0;
-  @media all and (max-width: $smPhoneWidth),
-    all and (max-width: $smPhoneEdgeWidth) {
-    width: 202px;
+  @media (min-width: 320px) {
+    width: 180px;
   }
 
   &.active {
@@ -48,8 +47,7 @@
     padding: 0;
     border: none;
     margin-bottom: 25px;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
+    @media (min-width: 320px) {
       margin-bottom: 15px;
     }
 
@@ -60,9 +58,8 @@
         word-spacing: 0.8px;
         font-weight: bold;
         font-family: $Quicksand;
-        @media all and (max-width: $smPhoneWidth),
-          all and (max-width: $smPhoneEdgeWidth) {
-          @include text(bold, 16px, 22px, $darkShade100, none);
+        @media (min-width: 320px) {
+          @include text(bold, 14px, 18px, $darkShade100, none);
         }
       }
       &:hover {
@@ -73,6 +70,7 @@
     &-action {
       width: 24px;
       height: 24px;
+
       &:hover {
         background: none;
       }
@@ -87,17 +85,11 @@
   &--days {
     width: 280px;
     text-align: center;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      width: 210px;
+    @media (min-width: 320px) {
+      width: 177px;
     }
     &-names {
       margin: 0;
-    }
-  }
-
-  &--cells {
-    &-days {
     }
   }
 
@@ -108,10 +100,9 @@
       display: flex;
       align-items: center;
       @include text(bold, 12px, 15px, $purple, none);
-      @media all and (max-width: $smPhoneWidth),
-        all and (max-width: $smPhoneEdgeWidth) {
-        width: 30px;
-        height: 30px;
+      @media (min-width: 320px) {
+        width: 25px;
+        height: 25px;
       }
     }
   }
@@ -124,10 +115,9 @@
       align-items: center;
       @include text(normal, 12px, 15px, $darkShade50, none);
       transition: all 0.2s linear;
-      @media all and (max-width: $smPhoneWidth),
-        all and (max-width: $smPhoneEdgeWidth) {
-        width: 30px;
-        height: 30px;
+      @media (min-width: 320px) {
+        width: 25px;
+        height: 25px;
       }
       &:hover {
         border-radius: 50%;
@@ -164,10 +154,9 @@
               z-index: -1;
               border-radius: 50%;
               background: transparent;
-              @media all and (max-width: $smPhoneWidth),
-                all and (max-width: $smPhoneEdgeWidth) {
-                width: 30px;
-                height: 30px;
+              @media (min-width: 320px) {
+                width: 25px;
+                height: 25px;
               }
             }
           }
@@ -184,10 +173,9 @@
               z-index: -1;
               border-radius: 50%;
               background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-              @media all and (max-width: $smPhoneWidth),
-                all and (max-width: $smPhoneEdgeWidth) {
-                width: 30px;
-                height: 30px;
+              @media (min-width: 320px) {
+                width: 25px;
+                height: 25px;
               }
             }
           }
@@ -242,10 +230,9 @@
             z-index: -1;
             border-radius: 50%;
             background: transparent;
-            @media all and (max-width: $smPhoneWidth),
-              all and (max-width: $smPhoneEdgeWidth) {
-              width: 30px;
-              height: 30px;
+            @media (min-width: 320px) {
+              width: 25px;
+              height: 25px;
             }
           }
         }
@@ -262,10 +249,9 @@
             z-index: -1;
             border-radius: 50%;
             background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-            @media all and (max-width: $smPhoneWidth),
-              all and (max-width: $smPhoneEdgeWidth) {
-              width: 30px;
-              height: 30px;
+            @media (min-width: 320px) {
+              width: 25px;
+              height: 25px;
             }
           }
         }
@@ -287,10 +273,9 @@
             z-index: -1;
             border-radius: 50%;
             background: transparent;
-            @media all and (max-width: $smPhoneWidth),
-              all and (max-width: $smPhoneEdgeWidth) {
-              width: 30px;
-              height: 30px;
+            @media (min-width: 320px) {
+              width: 25px;
+              height: 25px;
             }
           }
         }
@@ -308,10 +293,9 @@
             z-index: -1;
             border-radius: 50%;
             background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-            @media all and (max-width: $smPhoneWidth),
-              all and (max-width: $smPhoneEdgeWidth) {
-              width: 30px;
-              height: 30px;
+            @media (min-width: 320px) {
+              width: 25px;
+              height: 25px;
             }
           }
         }
@@ -354,19 +338,20 @@
     flex-flow: wrap;
     padding: 0;
     border: none;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      width: 210px;
+    @media (min-width: 320px) {
+      width: 180px;
       margin-top: 10px;
     }
   }
   &--button {
-    display: flex;
     @include text(bold, 12px, 15px, $purple, uppercase);
     letter-spacing: 0.5px;
-
     max-width: 80px;
     height: auto;
+    @media (min-width: 320px) {
+      @include text(bold, 10px, 12px, $purple, uppercase);
+      max-width: 60px;
+    }
     &:hover {
       color: $purple;
       background-color: transparent;

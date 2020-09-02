@@ -1,43 +1,42 @@
 mixin footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
   footer.footer
       .footer__border
-        .footer__inner
+        .container
           .footer__content
-            .footer__info
-              .footer__logo
+            .footer__content-info
+              .footer__content-info-logo
                 include ../../components/logo/logo
                 +logo("color")
-              .footer__text= contentText
-            .footer__nav
-              ul.footer__nav-list
+              .footer__content-info-text= contentText
+            ul.footer__content-list
                 each val, index in arrLinkNavigation
                   if index === 0
-                    li.footer__nav-item
-                      .footer__nav-title= arrLinkNavigation[index]
+                    li.footer__content-list-item
+                      .footer__content-list-title= arrLinkNavigation[index]
                   else
-                    li.footer__nav-item
-                      a(href="#").footer__nav-link= arrLinkNavigation[index]
-              ul.footer__nav-list
+                    li.footer__content-list-item
+                      a(href="#").footer__content-list-link= arrLinkNavigation[index]
+            ul.footer__content-list
                 each val, index in arrLinkAbout
                   if index === 0
-                    li.footer__nav-item
-                      .footer__nav-title= arrLinkAbout[index]
+                    li.footer__content-list-item
+                      .footer__content-list-title= arrLinkAbout[index]
                   else
-                    li.footer__nav-item
-                      a(href="#").footer__nav-link= arrLinkAbout[index]
-              ul.footer__nav-list
+                    li.footer__content-list-item
+                      a(href="#").footer__content-list-link= arrLinkAbout[index]
+            ul.footer__content-list
                 each val, index in arrLinkSupport
                   if index === 0
-                    li.footer__nav-item
-                      .footer__nav-title= arrLinkSupport[index]
+                    li.footer__content-list-item
+                      .footer__content-list-title= arrLinkSupport[index]
                   else
-                    li.footer__nav-item
-                      a(href="#").footer__nav-link= arrLinkSupport[index]
+                    li.footer__content-list-item
+                      a(href="#").footer__content-list-link= arrLinkSupport[index]
           
-            .footer__subscribe
-              .footer__subscribe-title= subscribeTitle
-              .footer__subscribe-text= subscribeText
-              .footer__subscribe-form
+            .footer__content-subscribe
+              .footer__content-subscribe-title= subscribeTitle
+              .footer__content-subscribe-text= subscribeText
+              .footer__content-subscribe-form
                 include ../text-field/text-field-subscription/text-field-subscription
                 +text-field-subscription(subscribePlaceholder)
 

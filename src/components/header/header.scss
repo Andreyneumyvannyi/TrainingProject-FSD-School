@@ -1,25 +1,18 @@
 .header {
   background: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
   &__inner {
-    width: 1200px;
-    margin: 0 auto;
     display: flex;
-    padding: 15px 20px;
     align-items: center;
-    @media all and (max-width: $smDesktopWidth) {
-      width: auto;
+    margin: 0 auto;
+    padding: 15px 20px;
+    @media (min-width: 1200px) {
+      width: 1200px;
     }
   }
 
   &__nav {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    @media all and (max-width: $smDesktopWidth) {
-      display: none;
-    }
-
     &-item {
       &:not(:last-child) {
         margin-right: 26px;
@@ -51,6 +44,21 @@
         cursor: inherit;
       }
     }
+    // Media
+    @media (min-width: 1025px) {
+      align-items: center;
+      margin-left: auto;
+      display: flex;
+    }
+    @media (min-width: 961px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    &-login {
+      margin-right: 23px;
+    }
   }
 
   &__login {
@@ -58,12 +66,6 @@
     display: none;
     &_active {
       display: flex;
-    }
-  }
-
-  &__button {
-    &-login {
-      margin-right: 23px;
     }
   }
 

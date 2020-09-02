@@ -1,167 +1,83 @@
 .footer {
   background: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  &__inner {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 100px 20px 100px 20px;
-    @media all and (max-width: $smDesktopWidth) {
-      width: auto;
-      padding: 50px 20px 50px 20px;
-    }
-  }
+
   &__border {
     border-bottom: 1px solid $darkShade25;
   }
 
   &__content {
     display: flex;
-    @media all and (max-width: $smDesktopWidth) {
-      flex-wrap: wrap;
-    }
-    @media all and (max-width: $phoneWidth) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__info {
-    margin-right: 49px;
-    @media all and (max-width: $smDesktopWidth) {
-      margin-right: 0;
-      display: flex;
-      align-items: center;
-      align-self: center;
-      order: 2;
-    }
-    @media all and (max-width: $phoneWidth) {
-      flex-direction: column;
-    }
-  }
-
-  &__text {
-    width: 250px;
-    @include text(normal, 14px, 24px, $darkShade75, none);
-    letter-spacing: 0.9px;
-    word-spacing: 0.9px;
-    margin-top: 18px;
-  }
-
-  @media all and (max-width: $phoneWidth) {
-    text-align: center;
-  }
-
-  &__logo {
-    @media all and (max-width: $smDesktopWidth) {
-      text-align: center;
-      margin-right: 20px;
-    }
-  }
-
-  &__nav {
-    margin-top: 5px;
-    width: 100%;
-    display: flex;
     justify-content: space-between;
-    @media all and (max-width: $smDesktopWidth) {
-      display: none;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-info {
+      &-text {
+        width: 250px;
+        @include text(normal, 14px, 24px, $darkShade75, none);
+        letter-spacing: 0.9px;
+        word-spacing: 0.9px;
+        margin-top: 18px;
+      }
     }
 
-    &-title {
-      @include text(bold, 12px, 15px, $darkShade100, uppercase);
-      letter-spacing: 0.7px;
-    }
-    &-item {
-      &:not(:last-child) {
+    &-list {
+      &-title {
+        @include text(bold, 12px, 15px, $darkShade100, uppercase);
+        letter-spacing: 0.7px;
+      }
+
+      &-item {
         margin-bottom: 20px;
       }
-    }
-    &-link {
-      cursor: pointer;
-      @include text(normal, 14px, 17px, $darkShade50, none);
-      letter-spacing: 0.9px;
-      word-spacing: 0.9px;
-      transition: all 0.2s linear;
-      &:hover {
-        color: $darkShade100;
+      &-link {
+        cursor: pointer;
+        @include text(normal, 14px, 17px, $darkShade50, none);
+        letter-spacing: 0.9px;
+        word-spacing: 0.9px;
+        transition: all 0.2s linear;
+        &:hover {
+          color: $darkShade100;
+        }
       }
-    }
-  }
-
-  &__subscribe {
-    margin-top: 5px;
-    margin-left: 51px;
-    @media all and (max-width: $smDesktopWidth) {
-      align-self: center;
-      order: 3;
-      margin-left: auto;
-    }
-    @media all and (max-width: $phoneWidth) {
-      align-self: center;
-      margin-left: 0;
     }
 
-    &-title {
-      @include text(bold, 12px, 15px, $darkShade100, uppercase);
-      word-spacing: 0.5px;
-      letter-spacing: 0.3px;
-      @media all and (max-width: $smDesktopWidth) {
-        display: none;
+    &-subscribe {
+      margin-top: 5px;
+
+      &-title {
+        @include text(bold, 12px, 15px, $darkShade100, uppercase);
+        word-spacing: 0.5px;
+        letter-spacing: 0.3px;
       }
-    }
-    &-text {
-      width: 240px;
-      @include text(normal, 14px, 24px, $darkShade75, none);
-      letter-spacing: 0.9px;
-      word-spacing: 0.9px;
-      margin-top: 18px;
-      @media all and (max-width: $smDesktopWidth) {
-        display: none;
-      }
-    }
-    &-form {
-      margin-top: 22px;
-      @media all and (max-width: $smDesktopWidth) {
-        margin-bottom: 10px;
-        margin-left: 50px;
+      &-text {
+        width: 240px;
+        @include text(normal, 14px, 24px, $darkShade75, none);
+        letter-spacing: 0.9px;
+        word-spacing: 0.9px;
+        margin-top: 18px;
       }
 
-      @media all and (max-width: $phoneWidth) {
-        margin-bottom: 0;
-        margin-left: 0;
+      &-form {
+        margin-top: 22px;
       }
     }
   }
 
   &__copyright {
     &-content {
-      width: 1200px;
-      margin: 0 auto;
       display: flex;
       justify-content: space-between;
+      flex-direction: row;
       align-items: center;
-      padding: 23px 20px 25px 20px;
-      @media all and (max-width: $smDesktopWidth),
-        all and (max-width: $smPhoneEdgeWidth) {
-        width: auto;
-      }
-
-      @media all and (max-width: $phoneWidth) {
-        flex-direction: column;
-      }
+      margin: 0 auto;
     }
     &-text {
       @include text(normal, 14px, 17px, $darkShade75, none);
+      text-align: left;
       letter-spacing: 0.5px;
       word-spacing: 0.9px;
-      @media all and (max-width: $phoneWidth) {
-        margin-bottom: 20px;
-      }
-
-      @media all and (max-width: $smPhoneWidth),
-        all and (max-width: $smPhoneEdgeWidth) {
-        text-align: center;
-      }
+      margin-bottom: 0;
     }
   }
 }

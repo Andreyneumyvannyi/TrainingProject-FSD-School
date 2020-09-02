@@ -1,8 +1,7 @@
 .text-field {
   @include text-field(320px);
-  @media all and (max-width: $smPhoneWidth),
-    all and (max-width: $smPhoneEdgeWidth) {
-    @include text-field(248px);
+  @media (min-width: 320px) {
+    width: 240px;
   }
 
   &::placeholder {
