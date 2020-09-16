@@ -5,6 +5,10 @@
   overflow: hidden;
   height: 485px;
 
+  @media only screen and (max-width: $desktopWidth) {
+    height: auto;
+  }
+
   &__main {
     flex-basis: 70%;
     &-figure {
@@ -38,16 +42,26 @@
   &-border {
     border-bottom: 1px solid $darkShade25;
   }
-  width: 1200px;
-  padding: 0 20px;
-  margin: 70px auto 63px auto;
+  padding: 70px 0 63px 0;
   display: flex;
+
+  @media only screen and (max-width: 1080px) {
+    flex-direction: column;
+  }
 
   &__description {
     &-opinion {
       display: flex;
+      flex-wrap: wrap;
+      @media only screen and (max-width: 648px) {
+        justify-content: center;
+      }
+
       &-intelligence {
-        margin-right: 80px;
+        margin-right: auto;
+        @media only screen and (max-width: 648px) {
+          margin-right: 0;
+        }
         &-title {
           @include text(bold, 19px, 24px, $darkShade100, none);
           letter-spacing: 0.5px;
@@ -64,6 +78,15 @@
       }
 
       &-statistics {
+        margin-right: 20px;
+        @media only screen and (max-width: 1080px) {
+          margin-right: 0;
+        }
+
+        @media only screen and (max-width: 648px) {
+          margin-top: 50px;
+          margin-bottom: 50px;
+        }
         &-title {
           @include text(bold, 19px, 24px, $darkShade100, none);
           letter-spacing: 0.8px;
@@ -86,9 +109,18 @@
           letter-spacing: 0.6px;
           word-spacing: 0.5px;
           font-family: $Quicksand;
+
+          @media only screen and (max-width: $phoneWidth) {
+            @include text(bold, 16px, 18px, $darkShade100, none);
+          }
         }
         &-count {
+          margin-right: 15px;
           @include text(normal, 14px, 14px, $darkShade50, none);
+
+          @media only screen and (max-width: 1080px) {
+            margin-right: 0;
+          }
         }
       }
 
@@ -100,6 +132,8 @@
     &-other {
       margin-top: 33px;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       &-rules {
         &-title {
           @include text(bold, 19px, 24px, $darkShade100, none);
@@ -111,18 +145,30 @@
       }
 
       &-canceling {
+        margin-left: 20px;
+        @media only screen and (max-width: 641px) {
+          margin-top: 30px;
+        }
         &-title {
           @include text(bold, 19px, 24px, $darkShade100, none);
           letter-spacing: 0.7px;
           font-family: $Quicksand;
           margin-bottom: 15px;
         }
-        margin-left: 125px;
+
         &-text {
           width: 330px;
           @include text(normal, 14px, 24px, $darkShade75, none);
           letter-spacing: 0.8px;
           word-spacing: 0.5px;
+
+          @media only screen and (max-width: $phoneWidth) {
+            width: 290px;
+          }
+
+          @media only screen and (max-width: $smPhoneEdgeWidth) {
+            width: auto;
+          }
         }
       }
     }
@@ -130,5 +176,10 @@
 
   &__form {
     margin-left: auto;
+    @media only screen and (max-width: 1080px) {
+      margin-top: 50px;
+      align-self: center;
+      margin-left: 0;
+    }
   }
 }

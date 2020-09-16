@@ -1,5 +1,18 @@
 .book-room {
-  @include form;
+  width: 380px;
+  height: auto;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 29px 30px 29px;
+  @media only screen and (max-width: $phoneWidth) {
+    width: 322px;
+    padding: 30px 20px 20px 20px;
+  }
+  @media only screen and (max-width: $smPhoneEdgeWidth) {
+    width: 288px;
+  }
   &__find-date {
     display: flex;
     justify-content: space-between;
@@ -61,6 +74,9 @@
       @include text(normal, 14px, 19px, $darkShade75, normal);
       letter-spacing: 0.8px;
       width: 220px;
+      @media only screen and (max-width: $smPhoneEdgeWidth) {
+        width: 165px;
+      }
     }
     &-info {
       display: flex;
@@ -102,6 +118,13 @@
 
     &-border {
       width: 172px;
+      @media only screen and (max-width: $phoneWidth) {
+        width: 120px;
+      }
+
+      @media only screen and (max-width: $smPhoneEdgeWidth) {
+        width: 90px;
+      }
       height: 1px;
       border: 1px dashed $darkShade25;
       margin: 0 5px;

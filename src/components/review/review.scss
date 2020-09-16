@@ -40,7 +40,7 @@
   }
 
   &__text {
-    width: 653px;
+    width: auto;
     @include text(normal, 14px, 24px, $darkShade75, none);
     letter-spacing: 0.9px;
   }
