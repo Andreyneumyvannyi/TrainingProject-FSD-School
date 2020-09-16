@@ -113,6 +113,10 @@
           @media only screen and (max-width: $phoneWidth) {
             @include text(bold, 16px, 18px, $darkShade100, none);
           }
+
+          @media only screen and (max-width: $smPhoneEdgeWidth) {
+            @include text(bold, 14px, 18px, $darkShade100, none);
+          }
         }
         &-count {
           margin-right: 15px;
@@ -120,6 +124,10 @@
 
           @media only screen and (max-width: 1080px) {
             margin-right: 0;
+          }
+
+          @media only screen and (max-width: $smPhoneEdgeWidth) {
+            @include text(normal, 10px, 14px, $darkShade50, none);
           }
         }
       }

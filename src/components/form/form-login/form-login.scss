@@ -1,9 +1,19 @@
 .login {
-  @include form;
-  @media all and (max-width: $smPhoneWidth),
-    all and (max-width: $smPhoneEdgeWidth) {
+  width: 380px;
+  height: auto;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 29px 30px 29px;
+
+  @media only screen and (max-width: $phoneWidth) {
+    width: 322px;
+    padding: 30px 20px 20px 20px;
+  }
+
+  @media only screen and (max-width: $smPhoneEdgeWidth) {
     width: 280px;
-    padding: 15px;
   }
 
   &__title {
@@ -12,10 +22,6 @@
     word-spacing: 1px;
     font-family: $Quicksand;
     margin-bottom: 18px;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      width: 240px;
-    }
   }
 
   &__email {
@@ -28,27 +34,25 @@
 
   &__button-big {
     margin-bottom: 30px;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      margin-bottom: 20px;
+    @media only screen and (max-width: $phoneWidth) {
+      margin-bottom: 15px;
+      text-align: center;
     }
   }
   &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
+
+    @media only screen and (max-width: $smPhoneEdgeWidth) {
       flex-direction: column;
-      justify-content: center;
-      width: auto;
     }
 
     &-text {
       @include text(normal, 14px, 18px, $darkShade100, none);
       letter-spacing: 0.8px;
-      @media all and (max-width: $smPhoneWidth) {
-        margin-bottom: 10px;
+      @media only screen and (max-width: $smPhoneEdgeWidth) {
+        margin-bottom: 15px;
       }
     }
   }

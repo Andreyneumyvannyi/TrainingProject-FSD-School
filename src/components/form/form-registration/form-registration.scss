@@ -1,10 +1,21 @@
 .registration {
-  @include form;
-  @media all and (max-width: $smPhoneWidth),
-    all and (max-width: $smPhoneEdgeWidth) {
-    width: 280px;
-    padding: 20px 15px;
+  width: 380px;
+  height: auto;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 29px 30px 29px;
+
+  @media only screen and (max-width: $phoneWidth) {
+    width: 322px;
+    padding: 30px 20px 20px 20px;
   }
+
+  @media only screen and (max-width: $smPhoneEdgeWidth) {
+    width: 280px;
+  }
+
   &__title {
     @include text(bold, 24px, 30px, $darkShade100, none);
     letter-spacing: 1.1px;
