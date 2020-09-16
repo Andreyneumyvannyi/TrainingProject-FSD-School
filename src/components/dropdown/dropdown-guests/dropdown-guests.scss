@@ -5,6 +5,13 @@
   outline: none;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  @media only screen and (max-width: $phoneWidth) {
+    width: 280px;
+  }
+
+  @media only screen and (max-width: $smPhoneEdgeWidth) {
+    width: 248px;
+  }
 
   &_sm {
     width: 266px;

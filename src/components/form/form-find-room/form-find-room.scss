@@ -1,9 +1,18 @@
 .find-room {
-  @include form;
-  @media all and (max-width: $smPhoneWidth),
-    all and (max-width: $smPhoneEdgeWidth) {
-    width: auto;
-    padding: 20px 15px;
+  width: 380px;
+  height: auto;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 29px 30px 29px;
+
+  @media only screen and (max-width: $phoneWidth) {
+    width: 322px;
+    padding: 30px 20px 20px 20px;
+  }
+  @media only screen and (max-width: $smPhoneEdgeWidth) {
+    width: 288px;
   }
 
   &__title {
@@ -14,25 +23,47 @@
     letter-spacing: 1.1px;
     word-spacing: 1px;
 
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      @include text(bold, 20px, 26px, $darkShade100, none);
-      text-align: center;
-      width: 240px;
+    @media only screen and (max-width: $phoneWidth) {
+      width: 260px;
+      @include text(bold, 16px, 20px, $darkShade100, none);
+      letter-spacing: 0.8px;
+      word-spacing: 0.6px;
     }
   }
   &__find {
     &-date {
       margin-bottom: 20px;
+      @media only screen and (max-width: $phoneWidth) {
+        margin-bottom: 15px;
+        width: 280px;
+      }
+
+      @media only screen and (max-width: $smPhoneEdgeWidth) {
+        width: 248px;
+      }
     }
 
     &-guests {
       margin-bottom: 31px;
+      @media only screen and (max-width: $phoneWidth) {
+        margin-bottom: 20px;
+        width: 280px;
+      }
+
+      @media only screen and (max-width: $smPhoneEdgeWidth) {
+        width: 248px;
+      }
     }
   }
   &__form {
     &-name {
       margin-bottom: 6px;
+    }
+  }
+
+  &__button-big {
+    @media only screen and (max-width: $phoneWidth) {
+      text-align: center;
     }
   }
 }

@@ -9,19 +9,23 @@
   border-radius: 22px;
   position: relative;
   transition: all 0.2s linear;
-  @media all and (max-width: $smPhoneWidth),
-    all and (max-width: $smPhoneEdgeWidth) {
-    width: 240px;
-    @include text(bold, 11px, 15px, #ffffff, uppercase);
+  @media only screen and (max-width: $phoneWidth) {
+    width: 260px;
+    height: 36px;
+    @include text(bold, 12px, 12px, #ffffff, uppercase);
+  }
+
+  @media only screen and (max-width: $smPhoneEdgeWidth) {
+    width: 248px;
   }
 
   svg {
     position: absolute;
     top: 12px;
     right: 12px;
-    @media all and (max-width: $smPhoneWidth),
-      all and (max-width: $smPhoneEdgeWidth) {
-      width: 15px;
+    @media only screen and (max-width: $phoneWidth) {
+      top: 8px;
+      right: 14px;
     }
   }
   &:hover {

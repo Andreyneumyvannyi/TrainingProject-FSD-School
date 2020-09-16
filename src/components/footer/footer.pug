@@ -1,47 +1,45 @@
 mixin footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
   footer.footer
-      .footer__border
-        .footer__inner
-          .footer__content
-            .footer__info
-              .footer__logo
-                include ../../components/logo/logo
-                +logo("color")
-              .footer__text= contentText
-            .footer__nav
-              ul.footer__nav-list
-                each val, index in arrLinkNavigation
-                  if index === 0
-                    li.footer__nav-item
-                      .footer__nav-title= arrLinkNavigation[index]
-                  else
-                    li.footer__nav-item
-                      a(href="#").footer__nav-link= arrLinkNavigation[index]
-              ul.footer__nav-list
-                each val, index in arrLinkAbout
-                  if index === 0
-                    li.footer__nav-item
-                      .footer__nav-title= arrLinkAbout[index]
-                  else
-                    li.footer__nav-item
-                      a(href="#").footer__nav-link= arrLinkAbout[index]
-              ul.footer__nav-list
-                each val, index in arrLinkSupport
-                  if index === 0
-                    li.footer__nav-item
-                      .footer__nav-title= arrLinkSupport[index]
-                  else
-                    li.footer__nav-item
-                      a(href="#").footer__nav-link= arrLinkSupport[index]
-          
-            .footer__subscribe
-              .footer__subscribe-title= subscribeTitle
-              .footer__subscribe-text= subscribeText
-              .footer__subscribe-form
-                include ../text-field/text-field-subscription/text-field-subscription
-                +text-field-subscription(subscribePlaceholder)
-
-      .footer__copyright
+    .container
+      .footer__content
+        .footer__info
+          .footer__logo
+            include ../../components/logo/logo
+            +logo("color")
+          .footer__text= contentText
+        .footer__nav
+          ul.footer__nav-list
+            each val, index in arrLinkNavigation
+              if index === 0
+                li.footer__nav-item
+                  .footer__nav-title= arrLinkNavigation[index]
+              else
+                li.footer__nav-item
+                  a(href="#").footer__nav-link= arrLinkNavigation[index]
+          ul.footer__nav-list
+            each val, index in arrLinkAbout
+              if index === 0
+                li.footer__nav-item
+                  .footer__nav-title= arrLinkAbout[index]
+              else
+                li.footer__nav-item
+                  a(href="#").footer__nav-link= arrLinkAbout[index]
+          ul.footer__nav-list
+            each val, index in arrLinkSupport
+              if index === 0
+                li.footer__nav-item
+                  .footer__nav-title= arrLinkSupport[index]
+              else
+                li.footer__nav-item
+                  a(href="#").footer__nav-link= arrLinkSupport[index]
+        .footer__subscribe
+          .footer__subscribe-title= subscribeTitle
+          .footer__subscribe-text= subscribeText
+          .footer__subscribe-form
+            include ../text-field/text-field-subscription/text-field-subscription
+            +text-field-subscription(subscribePlaceholder)
+    .footer__copyright
+      .container
         .footer__copyright-content
           .footer__copyright-text= copyright
           include ../social/social

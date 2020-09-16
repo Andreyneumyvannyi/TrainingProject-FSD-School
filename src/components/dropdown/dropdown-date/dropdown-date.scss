@@ -4,6 +4,14 @@
     display: flex;
     width: 320px;
     justify-content: space-between;
+
+    @media only screen and (max-width: $phoneWidth) {
+      width: 280px;
+    }
+
+    @media only screen and (max-width: $smPhoneEdgeWidth) {
+      width: 248px;
+    }
   }
 
   &__name {
@@ -30,6 +38,24 @@
       @include text(normal, 14px, 18px, $darkShade75, none);
       text-align: justify;
       letter-spacing: 0.8px;
+
+      @media only screen and (max-width: $phoneWidth) {
+        @include text(normal, 12px, 16px, $darkShade75, none);
+      }
+
+      @media only screen and (max-width: $smPhoneEdgeWidth) {
+        @include text(normal, 11px, 14px, $darkShade75, none);
+      }
+    }
+
+    @media only screen and (max-width: $phoneWidth) {
+      padding-left: 13px;
+      width: 130px;
+    }
+
+    @media only screen and (max-width: $smPhoneEdgeWidth) {
+      padding-left: 10px;
+      width: 110px;
     }
   }
   &__arrow {
@@ -40,6 +66,11 @@
     z-index: 10000;
     width: 5px;
     height: 5px;
+    @media only screen and (max-width: $smPhoneEdgeWidth) {
+      top: 17px;
+      right: 12.5px;
+    }
+
     &_down {
       align-self: center;
       width: 5px;

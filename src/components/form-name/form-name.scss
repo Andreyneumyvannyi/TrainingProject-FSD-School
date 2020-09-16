@@ -1,10 +1,13 @@
 .form-name {
   @include text(bold, 12px, 14px, $darkShade100, uppercase);
   display: flex;
-  justify-content: space-between;
   letter-spacing: 0.5px;
   word-spacing: 0.8px;
   margin-bottom: 2px;
+
+  @media only screen and (max-width: $phoneWidth) {
+    @include text(bold, 10px, 12px, $darkShade100, uppercase);
+  }
 
   &__state {
     color: $darkShade50;

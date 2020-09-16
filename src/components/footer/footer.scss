@@ -1,21 +1,26 @@
 .footer {
   background: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  &__inner {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 100px 20px 100px 20px;
-  }
-  &__border {
-    border-bottom: 1px solid $darkShade25;
-  }
 
   &__content {
+    padding: 100px 0;
     display: flex;
+    @media only screen and (max-width: $smDesktopWidth) {
+      padding: 50px 0;
+    }
+
+    @media only screen and (max-width: $tableWidth) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__info {
     margin-right: 49px;
+    @media only screen and (max-width: $tableWidth) {
+      margin-right: 0;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -24,9 +29,10 @@
     letter-spacing: 0.9px;
     word-spacing: 0.9px;
     margin-top: 18px;
-  }
 
-  &__logo {
+    @media only screen and (max-width: $smPhoneEdgeWidth) {
+      @include text(normal, 12px, 22px, $darkShade75, none);
+    }
   }
 
   &__nav {
@@ -34,6 +40,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: $smDesktopWidth) {
+      display: none;
+    }
 
     &-title {
       @include text(bold, 12px, 15px, $darkShade100, uppercase);
@@ -59,6 +68,20 @@
   &__subscribe {
     margin-top: 5px;
     margin-left: 51px;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: $smDesktopWidth) {
+      margin-top: 0;
+      margin-left: auto;
+    }
+
+    @media only screen and (max-width: $tableWidth) {
+      margin-top: 30px;
+      margin-left: 0;
+      text-align: center;
+      align-items: center;
+    }
 
     &-title {
       @include text(bold, 12px, 15px, $darkShade100, uppercase);
@@ -71,6 +94,9 @@
       letter-spacing: 0.9px;
       word-spacing: 0.9px;
       margin-top: 18px;
+      @media only screen and (max-width: $smPhoneEdgeWidth) {
+        @include text(normal, 12px, 22px, $darkShade75, none);
+      }
     }
     &-form {
       margin-top: 22px;
@@ -78,18 +104,32 @@
   }
 
   &__copyright {
+    border-top: 1px solid $darkShade25;
     &-content {
-      width: 1200px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 23px 20px 25px 20px;
+      padding: 23px 0 25px 0;
+
+      @media only screen and (max-width: $tableWidth) {
+        flex-direction: column;
+        padding: 20px 0;
+      }
     }
     &-text {
       @include text(normal, 14px, 17px, $darkShade75, none);
       letter-spacing: 0.5px;
       word-spacing: 0.9px;
+
+      @media only screen and (max-width: $tableWidth) {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      @media only screen and (max-width: $smPhoneEdgeWidth) {
+        @include text(normal, 12px, 17px, $darkShade75, none);
+      }
     }
   }
 }

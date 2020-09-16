@@ -10,33 +10,32 @@ html(lang='en')
     include ../../components/header/header
     include ../../components/footer/footer
 
+  
     // Header
-
     - let arrTextLink = ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
     - let arrowPos = ["Услуги","Соглашения"]
     +header("standard",arrTextLink, arrowPos, "войти", "зарегистрироваться")
 
+
+    // Banner
     .banner-landing
       img.banner-landing__img(src="assets/img/bg-header.png")
-      .banner-landing__content
-        .banner-landing__content-form
-          include ../../components/form/form-find-room/form-find-room
-        p.banner-landing__content-text
-          | Лучшие номера для вашей работы, отдыха и просто вдохновения
-          
+      .container
+        .banner-landing__content
+          .banner-landing__content-form
+            include ../../components/form/form-find-room/form-find-room
+          p.banner-landing__content-text
+            | Лучшие номера для вашей работы, отдыха и просто вдохновения
+            
 
-
-    
-      // Footer
-    .footer
-
-      //- Data footer
-      - let contentText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
-      - let arrLinkNavigation = ["навигация", "О нас", "Новости", "Служба поддержки", "Услуги"]
-      - let arrLinkAbout = ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
-      - let arrLinkSupport = ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"]
-      - let subscribeTitle = "Подписка"
-      - let subscribeText = "Получайте специальные предложения и новости сервиса"
-      - let subscribePlaceholder = "Email"
-      - let copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
-      +footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
+    // Footer
+    //- Data footer
+    - let contentText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
+    - let arrLinkNavigation = ["навигация", "О нас", "Новости", "Служба поддержки", "Услуги"]
+    - let arrLinkAbout = ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+    - let arrLinkSupport = ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"]
+    - let subscribeTitle = "Подписка"
+    - let subscribeText = "Получайте специальные предложения и новости сервиса"
+    - let subscribePlaceholder = "Email"
+    - let copyright = "Copyright © 2018 Toxin отель. Все права зачищены."
+    +footer(contentText, arrLinkNavigation, arrLinkAbout, arrLinkSupport, subscribeTitle, subscribeText, subscribePlaceholder, copyright)
