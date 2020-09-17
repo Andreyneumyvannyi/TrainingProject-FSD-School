@@ -15,6 +15,9 @@
 
   &_sm {
     width: 266px;
+    @media only screen and (max-width: $phoneWidth) {
+      width: 266px;
+    }
   }
 
   &_default {

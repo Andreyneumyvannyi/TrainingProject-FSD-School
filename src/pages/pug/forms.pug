@@ -13,40 +13,41 @@ html(lang='en')
       +logo("gray")
 
     // Components
-    .forms
+    .container
+      .forms
       
-      // Col
-      .forms__col
-        .component__form-find-room
-          include ../../components/form/form-find-room/form-find-room
-        .component__form-registration
-          include ../../components/form/form-registration/form-registration
-      
-      // Col
-      .forms__col
-        .component__form-book-room
-          include ../../components/form/form-book-room/form-book-room
-        .component__form-login
-          include ../../components/form/form-login/form-login
+        // Col
+        .forms__col
+          .component__form-find-room
+            include ../../components/form/form-find-room/form-find-room
+          .component__form-registration
+            include ../../components/form/form-registration/form-registration
+        
+        // Col
+        .forms__col
+          .component__form-book-room
+            include ../../components/form/form-book-room/form-book-room
+          .component__form-login
+            include ../../components/form/form-login/form-login
 
-      // Col    
-      .forms__col
-        .component__calendar
-            include ../../components/calendar/calendar_inline
-        .component__room-card
-          include ../../components/room-card/room-card
-          -
-            let dateRoom = { 
-              room888:{
-                imgSrc: ["assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png"],
-                roomInfo: ["888", "люкс", "9 990", "65"],
-              },
-              room840:{
-                imgSrc: ["assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png"],
-                roomInfo: ["840", "", "9 990", "65"],
-              },
-            }
-          .component__room-card-888
-            +room-card(dateRoom.room888.roomInfo, dateRoom.room888.imgSrc)
-          .component__room-card-840
-            +room-card(dateRoom.room840.roomInfo, dateRoom.room840.imgSrc)
+        // Col    
+        .forms__col
+          .component__calendar
+              include ../../components/calendar/calendar_inline
+          .component__room-card
+            include ../../components/room-card/room-card
+            -
+              let dateRoom = { 
+                room888:{
+                  imgSrc: ["assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png", "assets/img/room-num-888.png"],
+                  roomInfo: ["888", "люкс", "9 990", "65"],
+                },
+                room840:{
+                  imgSrc: ["assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png", "assets/img/room-num-840.png"],
+                  roomInfo: ["840", "", "9 990", "65"],
+                },
+              }
+            .component__room-card-888
+              +room-card(dateRoom.room888.roomInfo, dateRoom.room888.imgSrc)
+            .component__room-card-840
+              +room-card(dateRoom.room840.roomInfo, dateRoom.room840.imgSrc)

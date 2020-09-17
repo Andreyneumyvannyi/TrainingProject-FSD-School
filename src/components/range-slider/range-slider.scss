@@ -1,5 +1,8 @@
 .range-slider {
   width: 266px;
+  @media only screen and (max-width: $smPhoneEdgeWidth) {
+    width: 248px;
+  }
 
   &__description {
     display: flex;
@@ -30,6 +33,10 @@
     letter-spacing: 0.7px;
     word-spacing: 0.4px;
     margin-top: 15px;
+
+    @media only screen and (max-width: $smPhoneEdgeWidth) {
+      @include text(normal, 10px, 12px, $darkShade50, none);
+    }
   }
 }
 

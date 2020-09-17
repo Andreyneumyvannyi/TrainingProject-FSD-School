@@ -25,24 +25,19 @@
 @import "./src/components/review/review";
 
 .components {
-  margin: 0 auto;
-  width: 1240px;
-  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 145px;
   padding-bottom: 131px;
 
   &__col {
-    width: 320px;
-    &:nth-child(2) {
-      margin-left: 126px;
-    }
-    &:nth-child(3) {
-      margin-left: 72px;
-    }
     &_bottom {
+      width: 100%;
       display: flex;
+      @media only screen and (max-width: $tableWidth) {
+        flex-wrap: wrap;
+      }
     }
   }
 }
@@ -198,7 +193,6 @@
   }
 
   &__review {
-    width: auto;
     margin-top: 12px;
   }
 }

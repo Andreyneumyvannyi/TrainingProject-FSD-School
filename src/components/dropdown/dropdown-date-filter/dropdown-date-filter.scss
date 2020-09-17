@@ -20,6 +20,10 @@
       word-spacing: 0.2px;
       letter-spacing: 0.1px;
     }
+
+    @media only screen and (max-width: $smPhoneEdgeWidth) {
+      width: 248px;
+    }
   }
 
   &__arrow {
@@ -27,6 +31,10 @@
     position: absolute;
     top: 16.5px;
     right: 16.5px;
+
+    @media only screen and (max-width: $smPhoneEdgeWidth) {
+      right: 33px;
+    }
 
     &_down {
       width: 5px;

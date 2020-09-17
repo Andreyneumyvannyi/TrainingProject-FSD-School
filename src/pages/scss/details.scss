@@ -78,7 +78,7 @@
       }
 
       &-statistics {
-        margin-right: 20px;
+        margin-right: 110px;
         @media only screen and (max-width: 1080px) {
           margin-right: 0;
         }
@@ -154,8 +154,10 @@
 
       &-canceling {
         margin-left: 20px;
+        margin-right: 90px;
         @media only screen and (max-width: 641px) {
           margin-top: 30px;
+          margin-right: 0;
         }
         &-title {
           @include text(bold, 19px, 24px, $darkShade100, none);

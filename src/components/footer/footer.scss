@@ -20,6 +20,7 @@
     @media only screen and (max-width: $tableWidth) {
       margin-right: 0;
       text-align: center;
+      margin-bottom: 50px;
     }
   }
 
@@ -77,8 +78,7 @@
     }
 
     @media only screen and (max-width: $tableWidth) {
-      margin-top: 30px;
-      margin-left: 0;
+      margin-right: auto;
       text-align: center;
       align-items: center;
     }

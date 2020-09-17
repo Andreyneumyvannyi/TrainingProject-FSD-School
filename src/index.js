@@ -14,6 +14,7 @@ import "air-datepicker/dist/js/datepicker";
 import "./components/calendar/calendar_inline";
 import "./components/dropdown/dropdown-date/dropdown-date";
 import "./components/dropdown/dropdown-date-filter/dropdown-date-filter";
+import "./components/header/header";
 
 // SCSS
 import "./style.scss";

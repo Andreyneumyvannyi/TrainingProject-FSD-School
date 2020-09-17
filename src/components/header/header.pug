@@ -27,7 +27,34 @@ mixin header(state, arrLink, arrowPos, btnBorderName, btnBgName)
                   +button-bg(`${btnBgName}`, "sm")
               .header__account
                 .header__account-separate
-                .header__account-name Cosmin Negoita
+                .header__account-name Cosmin Negoit
+            
+            // Burger mobile
+            button.header__burger#header__burger
+              include burger.svg
+
+          ul.header__nav-mobile
+            each val, index in arrLink
+              li.header__nav-item
+                if arrLink[index] === "Home"
+                  a.header__nav-link.header__nav-link_active= arrLink[index]
+                else
+                  a.header__nav-link= arrLink[index]
+                if arrowPos[0]  === arrLink[index]
+                  span.header__nav-arrow
+                if arrowPos[1]  === arrLink[index]
+                  span.header__nav-arrow
+            .header__login.header__login_active
+              .header__button-login
+                include ../button/button-border/button-border
+                +button-border(`${btnBorderName}`, "sm")
+              .header__button-register
+                include ../button/button-bg/button-bg
+                +button-bg(`${btnBgName}`, "sm")
+            .header__account
+              .header__account-separate
+              .header__account-name Cosmin Negoit
+
     when "login"
       header.header
         .container
