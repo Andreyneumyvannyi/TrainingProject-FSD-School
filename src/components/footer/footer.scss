@@ -1,7 +1,9 @@
 .footer {
   background: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-
+  &__border {
+    border-bottom: 1px solid $darkShade25;
+  }
   &__content {
     padding: 100px 0;
     display: flex;
@@ -44,24 +46,36 @@
     @media only screen and (max-width: $smDesktopWidth) {
       display: none;
     }
-
-    &-title {
-      @include text(bold, 12px, 15px, $darkShade100, uppercase);
-      letter-spacing: 0.7px;
-    }
-    &-item {
-      &:not(:last-child) {
-        margin-bottom: 20px;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-info {
+      &-text {
+        width: 250px;
+        @include text(normal, 14px, 24px, $darkShade75, none);
+        letter-spacing: 0.9px;
+        word-spacing: 0.9px;
+        margin-top: 18px;
       }
     }
-    &-link {
-      cursor: pointer;
-      @include text(normal, 14px, 17px, $darkShade50, none);
-      letter-spacing: 0.9px;
-      word-spacing: 0.9px;
-      transition: all 0.2s linear;
-      &:hover {
-        color: $darkShade100;
+
+    &-list {
+      &-title {
+        @include text(bold, 12px, 15px, $darkShade100, uppercase);
+        letter-spacing: 0.7px;
+      }
+      &-item {
+        margin-bottom: 20px;
+      }
+      &-link {
+        cursor: pointer;
+        @include text(normal, 14px, 17px, $darkShade50, none);
+        letter-spacing: 0.9px;
+        word-spacing: 0.9px;
+        transition: all 0.2s linear;
+        &:hover {
+          color: $darkShade100;
+        }
       }
     }
   }
@@ -109,6 +123,7 @@
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+      flex-direction: row;
       align-items: center;
       padding: 23px 0 25px 0;
 
@@ -119,6 +134,7 @@
     }
     &-text {
       @include text(normal, 14px, 17px, $darkShade75, none);
+      text-align: left;
       letter-spacing: 0.5px;
       word-spacing: 0.9px;
 

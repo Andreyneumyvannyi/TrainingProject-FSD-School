@@ -1,9 +1,13 @@
 .dropdown-date-filter {
   position: relative;
 
+  @media (min-width: 1281px) {
+    width: 266px;
+  }
+
   &__input {
     cursor: pointer;
-    width: 266px;
+    width: 100%;
     height: 44px;
     display: flex;
     justify-content: space-between;

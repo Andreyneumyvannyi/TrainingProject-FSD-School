@@ -84,13 +84,14 @@
   &-pagination {
     margin-top: 20px;
     margin-bottom: 70px;
-
     display: flex;
     justify-content: center;
   }
 }
 
 .title__room-card {
+  letter-spacing: 0.7px;
+  word-spacing: 0.4px;
   @include text(bold, 24px, 30px, $darkShade100, none);
   margin-bottom: 19px;
   font-family: $Quicksand;

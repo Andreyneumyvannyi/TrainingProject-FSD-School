@@ -353,11 +353,14 @@
     }
   }
   &--button {
-    display: flex;
     @include text(bold, 12px, 15px, $purple, uppercase);
     letter-spacing: 0.5px;
     max-width: 80px;
     height: auto;
+    @media (min-width: 320px) {
+      @include text(bold, 10px, 12px, $purple, uppercase);
+      max-width: 60px;
+    }
     &:hover {
       color: $purple;
       background-color: transparent;

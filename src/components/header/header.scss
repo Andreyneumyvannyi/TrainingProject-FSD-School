@@ -9,6 +9,7 @@
 
   background: #fff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
   &__inner {
     padding: 15px 0;
     display: flex;
@@ -81,12 +82,10 @@
         cursor: inherit;
       }
     }
-  }
-
-  &__login {
-    margin-left: 8px;
-    display: none;
-    &_active {
+    // Media
+    @media (min-width: 1025px) {
+      align-items: center;
+      margin-left: auto;
       display: flex;
     }
     @media only screen and (max-width: $smDesktopWidth) {
@@ -103,6 +102,14 @@
         margin-right: 0;
         margin-bottom: 15px;
       }
+    }
+  }
+
+  &__login {
+    margin-left: 8px;
+    display: none;
+    &_active {
+      display: flex;
     }
   }
 

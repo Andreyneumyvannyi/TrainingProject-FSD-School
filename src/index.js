@@ -24,3 +24,10 @@ import "nouislider/distribute/nouislider.min.css";
 import "slick-carousel/slick/slick.css";
 import "jquery-bar-rating/dist/themes/css-stars.css";
 import "air-datepicker/dist/css/datepicker.css";
+
+$(document).ready(function() {
+  $("#filter__btn").click(function(e) {
+    e.preventDefault();
+    $(".container-filter_deactivated").toggleClass("container-filter_active");
+  });
+});
