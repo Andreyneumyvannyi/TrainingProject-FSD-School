@@ -1,8 +1,6 @@
 .dropdown-facilities {
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  @media (min-width: 1025px) {
-    width: 266px;
-  }
+  width: 266px;
 
   cursor: pointer;
   &_default {
@@ -83,14 +81,7 @@
     border-radius: 0 0 4px 4px;
     padding: 7px 7px 7px 15px;
     transition: all 0.2s linear;
-
-    @media (min-width: 1025px) {
-      width: 266px;
-    }
-
-    @media (min-width: 320px) {
-      width: 220px;
-    }
+    width: 266px;
   }
 
   &__criterion {
@@ -106,9 +97,6 @@
       text-align: justify;
       letter-spacing: 0.6px;
       word-spacing: 0.2px;
-      @media screen and (max-width: $phoneWidth) {
-        @include text(bold, 10px, 8px, $darkShade100, uppercase);
-      }
     }
 
     &-quantity {

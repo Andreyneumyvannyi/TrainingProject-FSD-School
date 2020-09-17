@@ -82,12 +82,7 @@
         cursor: inherit;
       }
     }
-    // Media
-    @media (min-width: 1025px) {
-      align-items: center;
-      margin-left: auto;
-      display: flex;
-    }
+
     @media only screen and (max-width: $smDesktopWidth) {
       margin-left: 0;
       flex-direction: column;
@@ -107,9 +102,16 @@
 
   &__login {
     margin-left: 8px;
+    @media only screen and (max-width: $smDesktopWidth) {
+      width: 240px;
+      margin-left: 0;
+    }
     display: none;
     &_active {
       display: flex;
+      @media only screen and (max-width: $smDesktopWidth) {
+        flex-direction: column;
+      }
     }
   }
 

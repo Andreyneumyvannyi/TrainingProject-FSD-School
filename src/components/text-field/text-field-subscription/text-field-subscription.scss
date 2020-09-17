@@ -2,9 +2,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  @media (min-width: 1025px) {
-    @include text-field(266px);
-  }
+  @include text-field(266px);
 
   &__arrow {
     position: absolute;

@@ -22,19 +22,11 @@
         letter-spacing: 1.1px;
         word-spacing: 1px;
         margin-bottom: 6px;
-
-        @media (min-width: 1025px) {
-          @include text(bold, 14px, 19px, $darkShade75, none);
-        }
+        @include text(bold, 14px, 19px, $darkShade75, none);
       }
 
       &-text {
-        @media (min-width: 1025px) {
-          width: 225px;
-          @include text(normal, 12px, 14px, $darkShade50, none);
-          letter-spacing: 0.2px;
-          word-spacing: 2px;
-        }
+        @include text(normal, 12px, 14px, $darkShade50, none);
       }
     }
 
